@@ -2,11 +2,11 @@
   "profile": {
     "name": "Shubham Pandey",
     "title": "Software Engineer | Frontend Engineer",
-    "subTitle": "React · Next.js · TypeScript",
+    "subTitle": "React \u00b7 Next.js \u00b7 TypeScript",
     "location": "India",
-    "education": "B.Tech in Information Technology · IIIT Vadodara",
+    "education": "B.Tech in Information Technology \u00b7 IIIT Vadodara",
     "company": "MAQ Software",
-    "availability": "Currently open to new opportunities · availability TBD",
+    "availability": "Currently open to new opportunities \u00b7 availability TBD",
     "biography": "I build thoughtful web experiences and practical software with React, Next.js, TypeScript, and JavaScript. My work spans frontend engineering, full-stack applications, business data platforms, and AI-enabled tools.",
     "email": "YOUR_EMAIL@example.com",
     "github": "https://github.com/YOUR_GITHUB_URL",
@@ -18,38 +18,194 @@
     {
       "company": "MAQ Software",
       "role": "Software Engineer 1",
-      "date": "YOUR_START_DATE – Present",
-      "text": "Building business-facing experiences across Power BI, Microsoft Fabric, Dataverse, React, and TypeScript."
+      "date": "YOUR_START_DATE \u2013 Present",
+      "text": "Building business-facing experiences across Power BI, Microsoft Fabric, Dataverse, React, and TypeScript.",
+      "location": "PLACEHOLDER LOCATION",
+      "employmentType": "PLACEHOLDER EMPLOYMENT TYPE",
+      "methodology": "PLACEHOLDER METHODOLOGY",
+      "collaboration": "PLACEHOLDER TEAM",
+      "responsibilities": [
+        "PLACEHOLDER: Add a confirmed responsibility.",
+        "PLACEHOLDER: Add a confirmed responsibility.",
+        "PLACEHOLDER: Add a confirmed responsibility."
+      ],
+      "achievements": [
+        "PLACEHOLDER: Add a verified achievement.",
+        "PLACEHOLDER: Add a verified achievement."
+      ],
+      "technologies": [
+        "PLACEHOLDER TECHNOLOGY",
+        "PLACEHOLDER TECHNOLOGY",
+        "PLACEHOLDER TECHNOLOGY",
+        "PLACEHOLDER TECHNOLOGY",
+        "PLACEHOLDER TECHNOLOGY",
+        "PLACEHOLDER TECHNOLOGY",
+        "PLACEHOLDER TECHNOLOGY",
+        "PLACEHOLDER TECHNOLOGY",
+        "PLACEHOLDER TECHNOLOGY",
+        "PLACEHOLDER TECHNOLOGY",
+        "PLACEHOLDER TECHNOLOGY"
+      ]
     },
     {
       "company": "Techolution",
       "role": "Full Stack Developer",
-      "date": "YOUR_START_DATE – YOUR_END_DATE",
-      "text": "Worked across frontend interfaces and backend integrations using modern web technologies."
+      "date": "YOUR_START_DATE \u2013 YOUR_END_DATE",
+      "text": "Worked across frontend interfaces and backend integrations using modern web technologies.",
+      "location": "PLACEHOLDER LOCATION",
+      "employmentType": "PLACEHOLDER EMPLOYMENT TYPE",
+      "methodology": "PLACEHOLDER METHODOLOGY",
+      "collaboration": "PLACEHOLDER TEAM",
+      "responsibilities": [
+        "PLACEHOLDER: Add a confirmed responsibility.",
+        "PLACEHOLDER: Add a confirmed responsibility.",
+        "PLACEHOLDER: Add a confirmed responsibility."
+      ],
+      "achievements": [
+        "PLACEHOLDER: Add a verified achievement.",
+        "PLACEHOLDER: Add a verified achievement."
+      ],
+      "technologies": [
+        "PLACEHOLDER TECHNOLOGY",
+        "PLACEHOLDER TECHNOLOGY",
+        "PLACEHOLDER TECHNOLOGY",
+        "PLACEHOLDER TECHNOLOGY",
+        "PLACEHOLDER TECHNOLOGY",
+        "PLACEHOLDER TECHNOLOGY",
+        "PLACEHOLDER TECHNOLOGY",
+        "PLACEHOLDER TECHNOLOGY",
+        "PLACEHOLDER TECHNOLOGY",
+        "PLACEHOLDER TECHNOLOGY",
+        "PLACEHOLDER TECHNOLOGY"
+      ]
     },
     {
       "company": "DrinkPrime",
       "role": "Intern",
-      "date": "YOUR_START_DATE – YOUR_END_DATE",
-      "text": "Contributed to product development tasks in a production engineering environment."
+      "date": "YOUR_START_DATE \u2013 YOUR_END_DATE",
+      "text": "Contributed to product development tasks in a production engineering environment.",
+      "location": "PLACEHOLDER LOCATION",
+      "employmentType": "PLACEHOLDER EMPLOYMENT TYPE",
+      "methodology": "PLACEHOLDER METHODOLOGY",
+      "collaboration": "PLACEHOLDER TEAM",
+      "responsibilities": [
+        "PLACEHOLDER: Add a confirmed responsibility.",
+        "PLACEHOLDER: Add a confirmed responsibility.",
+        "PLACEHOLDER: Add a confirmed responsibility."
+      ],
+      "achievements": [
+        "PLACEHOLDER: Add a verified achievement.",
+        "PLACEHOLDER: Add a verified achievement."
+      ],
+      "technologies": [
+        "PLACEHOLDER TECHNOLOGY",
+        "PLACEHOLDER TECHNOLOGY",
+        "PLACEHOLDER TECHNOLOGY",
+        "PLACEHOLDER TECHNOLOGY",
+        "PLACEHOLDER TECHNOLOGY",
+        "PLACEHOLDER TECHNOLOGY",
+        "PLACEHOLDER TECHNOLOGY",
+        "PLACEHOLDER TECHNOLOGY",
+        "PLACEHOLDER TECHNOLOGY",
+        "PLACEHOLDER TECHNOLOGY",
+        "PLACEHOLDER TECHNOLOGY"
+      ]
     },
     {
       "company": "GeeksforGeeks",
       "role": "SDE Intern",
-      "date": "YOUR_START_DATE – YOUR_END_DATE",
-      "text": "Built and improved web experiences while strengthening frontend development skills."
+      "date": "YOUR_START_DATE \u2013 YOUR_END_DATE",
+      "text": "Built and improved web experiences while strengthening frontend development skills.",
+      "location": "PLACEHOLDER LOCATION",
+      "employmentType": "PLACEHOLDER EMPLOYMENT TYPE",
+      "methodology": "PLACEHOLDER METHODOLOGY",
+      "collaboration": "PLACEHOLDER TEAM",
+      "responsibilities": [
+        "PLACEHOLDER: Add a confirmed responsibility.",
+        "PLACEHOLDER: Add a confirmed responsibility.",
+        "PLACEHOLDER: Add a confirmed responsibility."
+      ],
+      "achievements": [
+        "PLACEHOLDER: Add a verified achievement.",
+        "PLACEHOLDER: Add a verified achievement."
+      ],
+      "technologies": [
+        "PLACEHOLDER TECHNOLOGY",
+        "PLACEHOLDER TECHNOLOGY",
+        "PLACEHOLDER TECHNOLOGY",
+        "PLACEHOLDER TECHNOLOGY",
+        "PLACEHOLDER TECHNOLOGY",
+        "PLACEHOLDER TECHNOLOGY",
+        "PLACEHOLDER TECHNOLOGY",
+        "PLACEHOLDER TECHNOLOGY",
+        "PLACEHOLDER TECHNOLOGY",
+        "PLACEHOLDER TECHNOLOGY",
+        "PLACEHOLDER TECHNOLOGY"
+      ]
     },
     {
       "company": "PLACEHOLDER COMPANY",
       "role": "PLACEHOLDER ROLE",
-      "date": "YOUR_START_DATE – YOUR_END_DATE",
-      "text": "PLACEHOLDER: Add another confirmed experience if needed."
+      "date": "YOUR_START_DATE \u2013 YOUR_END_DATE",
+      "text": "PLACEHOLDER: Add another confirmed experience if needed.",
+      "location": "PLACEHOLDER LOCATION",
+      "employmentType": "PLACEHOLDER EMPLOYMENT TYPE",
+      "methodology": "PLACEHOLDER METHODOLOGY",
+      "collaboration": "PLACEHOLDER TEAM",
+      "responsibilities": [
+        "PLACEHOLDER: Add a confirmed responsibility.",
+        "PLACEHOLDER: Add a confirmed responsibility.",
+        "PLACEHOLDER: Add a confirmed responsibility."
+      ],
+      "achievements": [
+        "PLACEHOLDER: Add a verified achievement.",
+        "PLACEHOLDER: Add a verified achievement."
+      ],
+      "technologies": [
+        "PLACEHOLDER TECHNOLOGY",
+        "PLACEHOLDER TECHNOLOGY",
+        "PLACEHOLDER TECHNOLOGY",
+        "PLACEHOLDER TECHNOLOGY",
+        "PLACEHOLDER TECHNOLOGY",
+        "PLACEHOLDER TECHNOLOGY",
+        "PLACEHOLDER TECHNOLOGY",
+        "PLACEHOLDER TECHNOLOGY",
+        "PLACEHOLDER TECHNOLOGY",
+        "PLACEHOLDER TECHNOLOGY",
+        "PLACEHOLDER TECHNOLOGY"
+      ]
     },
     {
       "company": "PLACEHOLDER COMPANY",
       "role": "PLACEHOLDER ROLE",
-      "date": "YOUR_START_DATE – YOUR_END_DATE",
-      "text": "PLACEHOLDER: Add another confirmed experience if needed."
+      "date": "YOUR_START_DATE \u2013 YOUR_END_DATE",
+      "text": "PLACEHOLDER: Add another confirmed experience if needed.",
+      "location": "PLACEHOLDER LOCATION",
+      "employmentType": "PLACEHOLDER EMPLOYMENT TYPE",
+      "methodology": "PLACEHOLDER METHODOLOGY",
+      "collaboration": "PLACEHOLDER TEAM",
+      "responsibilities": [
+        "PLACEHOLDER: Add a confirmed responsibility.",
+        "PLACEHOLDER: Add a confirmed responsibility.",
+        "PLACEHOLDER: Add a confirmed responsibility."
+      ],
+      "achievements": [
+        "PLACEHOLDER: Add a verified achievement.",
+        "PLACEHOLDER: Add a verified achievement."
+      ],
+      "technologies": [
+        "PLACEHOLDER TECHNOLOGY",
+        "PLACEHOLDER TECHNOLOGY",
+        "PLACEHOLDER TECHNOLOGY",
+        "PLACEHOLDER TECHNOLOGY",
+        "PLACEHOLDER TECHNOLOGY",
+        "PLACEHOLDER TECHNOLOGY",
+        "PLACEHOLDER TECHNOLOGY",
+        "PLACEHOLDER TECHNOLOGY",
+        "PLACEHOLDER TECHNOLOGY",
+        "PLACEHOLDER TECHNOLOGY",
+        "PLACEHOLDER TECHNOLOGY"
+      ]
     }
   ]
 }

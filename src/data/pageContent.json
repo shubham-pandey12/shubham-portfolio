@@ -58,7 +58,7 @@
   },
   "about": {
     "title": "About Me",
-    "description": "PLACEHOLDER: Add a verified professional introduction.",
+    "description": "A short professional introduction can be added here once the details are confirmed.",
     "quickStats": [
       [
         "TBD",
@@ -86,12 +86,8 @@
         "title": "PLACEHOLDER COMPETENCY",
         "items": [
           "PLACEHOLDER SKILL",
-          "PLACEHOLDER SKILL"
-        ]
-      },
-      {
-        "title": "PLACEHOLDER COMPETENCY",
-        "items": [
+          "PLACEHOLDER SKILL",
+          "PLACEHOLDER SKILL",
           "PLACEHOLDER SKILL",
           "PLACEHOLDER SKILL"
         ]
@@ -100,12 +96,28 @@
         "title": "PLACEHOLDER COMPETENCY",
         "items": [
           "PLACEHOLDER SKILL",
+          "PLACEHOLDER SKILL",
+          "PLACEHOLDER SKILL",
+          "PLACEHOLDER SKILL",
           "PLACEHOLDER SKILL"
         ]
       },
       {
         "title": "PLACEHOLDER COMPETENCY",
         "items": [
+          "PLACEHOLDER SKILL",
+          "PLACEHOLDER SKILL",
+          "PLACEHOLDER SKILL",
+          "PLACEHOLDER SKILL",
+          "PLACEHOLDER SKILL"
+        ]
+      },
+      {
+        "title": "PLACEHOLDER COMPETENCY",
+        "items": [
+          "PLACEHOLDER SKILL",
+          "PLACEHOLDER SKILL",
+          "PLACEHOLDER SKILL",
           "PLACEHOLDER SKILL",
           "PLACEHOLDER SKILL"
         ]
@@ -114,35 +126,98 @@
     "careerStats": [
       [
         "TBD",
-        "PLACEHOLDER METRIC 1"
+        "Years of Experience"
       ],
       [
         "TBD",
-        "PLACEHOLDER METRIC 2"
+        "Projects Delivered"
       ],
       [
         "TBD",
-        "PLACEHOLDER METRIC 3"
+        "Cloud Certifications"
       ],
       [
         "TBD",
-        "PLACEHOLDER METRIC 4"
+        "Technologies"
       ],
       [
         "TBD",
-        "PLACEHOLDER METRIC 5"
+        "Users Served"
+      ]
+    ],
+    "badges": [
+      "PLACEHOLDER AWARD",
+      "PLACEHOLDER CERTIFICATION"
+    ],
+    "professionalSummary": [
+      "PLACEHOLDER: Add a verified professional summary.",
+      "PLACEHOLDER: Add a verified overview of recent work and contributions.",
+      "PLACEHOLDER: Add verified education and community details."
+    ],
+    "seeking": "PLACEHOLDER: Add the roles and opportunities you want to highlight.",
+    "focusAreas": "PLACEHOLDER: Add the professional areas you want to emphasize.",
+    "education": [
+      {
+        "title": "B.Tech in Information Technology",
+        "area": "Information Technology",
+        "organization": "Indian Institute of Information Technology, Vadodara",
+        "date": "YOUR_START_DATE \u2013 YOUR_END_DATE",
+        "description": "PLACEHOLDER: Add confirmed education details."
+      },
+      {
+        "title": "PLACEHOLDER DEGREE",
+        "area": "YOUR FIELD OF STUDY",
+        "organization": "YOUR INSTITUTION",
+        "date": "YOUR_START_DATE \u2013 YOUR_END_DATE",
+        "description": "PLACEHOLDER: Add verified degree details."
+      }
+    ],
+    "sectionTitles": {
+      "experience": "Professional Experience",
+      "education": "Education",
+      "recognition": "Featured Certifications & Awards",
+      "career": "Career Highlights"
+    },
+    "experienceDetails": {
+      "location": "PLACEHOLDER LOCATION",
+      "employmentType": "PLACEHOLDER EMPLOYMENT TYPE",
+      "methodology": "PLACEHOLDER METHODOLOGY",
+      "collaboration": "PLACEHOLDER TEAM",
+      "responsibilities": [
+        "PLACEHOLDER: Add a confirmed responsibility.",
+        "PLACEHOLDER: Add a confirmed responsibility.",
+        "PLACEHOLDER: Add a confirmed responsibility."
+      ],
+      "achievements": [
+        "PLACEHOLDER: Add a verified achievement.",
+        "PLACEHOLDER: Add a verified achievement."
+      ],
+      "technologies": [
+        "PLACEHOLDER TECHNOLOGY",
+        "PLACEHOLDER TECHNOLOGY",
+        "PLACEHOLDER TECHNOLOGY",
+        "PLACEHOLDER TECHNOLOGY",
+        "PLACEHOLDER TECHNOLOGY",
+        "PLACEHOLDER TECHNOLOGY",
+        "PLACEHOLDER TECHNOLOGY",
+        "PLACEHOLDER TECHNOLOGY",
+        "PLACEHOLDER TECHNOLOGY",
+        "PLACEHOLDER TECHNOLOGY",
+        "PLACEHOLDER TECHNOLOGY"
+      ]
+    },
+    "careerMetrics": [
+      [
+        "TBD",
+        "Test Coverage"
       ],
       [
         "TBD",
-        "PLACEHOLDER METRIC 6"
+        "Time Saved"
       ],
       [
         "TBD",
-        "PLACEHOLDER METRIC 7"
-      ],
-      [
-        "TBD",
-        "PLACEHOLDER METRIC 8"
+        "Response Time"
       ]
     ]
   },
