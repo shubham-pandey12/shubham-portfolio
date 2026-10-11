@@ -1,0 +1,158 @@
+{
+  "skillGroups": [
+    {
+      "title": "Frontend",
+      "color": "blue",
+      "skills": [
+        {
+          "name": "React",
+          "level": "TBD",
+          "years": "TBD"
+        },
+        {
+          "name": "TypeScript",
+          "level": "TBD",
+          "years": "TBD"
+        },
+        {
+          "name": "Next.js",
+          "level": "TBD",
+          "years": "TBD"
+        }
+      ]
+    },
+    {
+      "title": "Backend",
+      "color": "purple",
+      "skills": [
+        {
+          "name": "Node.js",
+          "level": "TBD",
+          "years": "TBD"
+        },
+        {
+          "name": "JavaScript",
+          "level": "TBD",
+          "years": "TBD"
+        },
+        {
+          "name": "REST APIs",
+          "level": "TBD",
+          "years": "TBD"
+        }
+      ]
+    },
+    {
+      "title": "Database",
+      "color": "green",
+      "skills": [
+        {
+          "name": "SQL",
+          "level": "TBD",
+          "years": "TBD"
+        },
+        {
+          "name": "Dataverse",
+          "level": "TBD",
+          "years": "TBD"
+        }
+      ]
+    },
+    {
+      "title": "DevOps",
+      "color": "orange",
+      "skills": [
+        {
+          "name": "Git",
+          "level": "TBD",
+          "years": "TBD"
+        },
+        {
+          "name": "Vite",
+          "level": "TBD",
+          "years": "TBD"
+        }
+      ]
+    },
+    {
+      "title": "AI/ML",
+      "color": "purple",
+      "skills": [
+        {
+          "name": "LLM APIs",
+          "level": "TBD",
+          "years": "TBD"
+        },
+        {
+          "name": "AI workflows",
+          "level": "TBD",
+          "years": "TBD"
+        },
+        {
+          "name": "AI Technology TBD",
+          "level": "TBD",
+          "years": "TBD"
+        },
+        {
+          "name": "AI Framework TBD",
+          "level": "TBD",
+          "years": "TBD"
+        }
+      ]
+    }
+  ],
+  "complementarySkills": [
+    "Power BI",
+    "Microsoft Fabric",
+    "Dataverse",
+    "SQL",
+    "MySQL",
+    "MongoDB",
+    "Java",
+    "Node.js",
+    "Express.js",
+    "REST APIs",
+    "Azure",
+    "LLM APIs",
+    "Prompt Engineering",
+    "Git",
+    "Vite",
+    "Figma",
+    "Tailwind CSS",
+    "Sass",
+    "TanStack Query",
+    "React Konva",
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "TypeScript",
+    "Next.js",
+    "React",
+    "PLACEHOLDER TECHNOLOGY",
+    "PLACEHOLDER TECHNOLOGY",
+    "PLACEHOLDER TECHNOLOGY",
+    "PLACEHOLDER TECHNOLOGY",
+    "PLACEHOLDER TECHNOLOGY",
+    "PLACEHOLDER TECHNOLOGY",
+    "PLACEHOLDER TECHNOLOGY",
+    "PLACEHOLDER TECHNOLOGY",
+    "PLACEHOLDER TECHNOLOGY",
+    "PLACEHOLDER TECHNOLOGY",
+    "PLACEHOLDER TECHNOLOGY",
+    "PLACEHOLDER TECHNOLOGY",
+    "PLACEHOLDER TECHNOLOGY",
+    "PLACEHOLDER TECHNOLOGY",
+    "PLACEHOLDER TECHNOLOGY",
+    "PLACEHOLDER TECHNOLOGY",
+    "PLACEHOLDER TECHNOLOGY",
+    "PLACEHOLDER TECHNOLOGY",
+    "PLACEHOLDER TECHNOLOGY",
+    "PLACEHOLDER TECHNOLOGY",
+    "PLACEHOLDER TECHNOLOGY",
+    "PLACEHOLDER TECHNOLOGY",
+    "PLACEHOLDER TECHNOLOGY",
+    "PLACEHOLDER TECHNOLOGY",
+    "PLACEHOLDER TECHNOLOGY",
+    "PLACEHOLDER TECHNOLOGY"
+  ]
+}

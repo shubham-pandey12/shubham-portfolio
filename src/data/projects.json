@@ -1,0 +1,581 @@
+[
+  {
+    "slug": "placeholder-project-01",
+    "title": "PLACEHOLDER PROJECT 01",
+    "category": "PLACEHOLDER CATEGORY",
+    "type": "PLACEHOLDER TYPE",
+    "status": "PLACEHOLDER STATUS",
+    "featured": true,
+    "description": "PLACEHOLDER: Replace with a verified project description.",
+    "stack": [
+      "PLACEHOLDER TECHNOLOGY",
+      "PLACEHOLDER TECHNOLOGY"
+    ],
+    "metrics": [
+      {
+        "value": "TBD",
+        "label": "PLACEHOLDER METRIC"
+      }
+    ],
+    "overview": "PLACEHOLDER: Add a verified project overview.",
+    "features": [
+      "PLACEHOLDER: Add a verified project feature."
+    ],
+    "challenges": [
+      {
+        "title": "PLACEHOLDER CHALLENGE",
+        "challenge": "PLACEHOLDER: Add a verified challenge.",
+        "solution": "PLACEHOLDER: Add a verified solution."
+      }
+    ],
+    "architecture": [
+      "PLACEHOLDER COMPONENT",
+      "PLACEHOLDER API"
+    ],
+    "screenshots": [
+      "PLACEHOLDER PROJECT IMAGE"
+    ]
+  },
+  {
+    "slug": "placeholder-project-02",
+    "title": "PLACEHOLDER PROJECT 02",
+    "category": "PLACEHOLDER CATEGORY",
+    "type": "PLACEHOLDER TYPE",
+    "status": "PLACEHOLDER STATUS",
+    "featured": true,
+    "description": "PLACEHOLDER: Replace with a verified project description.",
+    "stack": [
+      "PLACEHOLDER TECHNOLOGY",
+      "PLACEHOLDER TECHNOLOGY"
+    ],
+    "metrics": [
+      {
+        "value": "TBD",
+        "label": "PLACEHOLDER METRIC"
+      }
+    ],
+    "overview": "PLACEHOLDER: Add a verified project overview.",
+    "features": [
+      "PLACEHOLDER: Add a verified project feature."
+    ],
+    "challenges": [
+      {
+        "title": "PLACEHOLDER CHALLENGE",
+        "challenge": "PLACEHOLDER: Add a verified challenge.",
+        "solution": "PLACEHOLDER: Add a verified solution."
+      }
+    ],
+    "architecture": [
+      "PLACEHOLDER COMPONENT",
+      "PLACEHOLDER API"
+    ],
+    "screenshots": [
+      "PLACEHOLDER PROJECT IMAGE"
+    ]
+  },
+  {
+    "slug": "placeholder-project-03",
+    "title": "PLACEHOLDER PROJECT 03",
+    "category": "PLACEHOLDER CATEGORY",
+    "type": "PLACEHOLDER TYPE",
+    "status": "PLACEHOLDER STATUS",
+    "featured": true,
+    "description": "PLACEHOLDER: Replace with a verified project description.",
+    "stack": [
+      "PLACEHOLDER TECHNOLOGY",
+      "PLACEHOLDER TECHNOLOGY"
+    ],
+    "metrics": [
+      {
+        "value": "TBD",
+        "label": "PLACEHOLDER METRIC"
+      }
+    ],
+    "overview": "PLACEHOLDER: Add a verified project overview.",
+    "features": [
+      "PLACEHOLDER: Add a verified project feature."
+    ],
+    "challenges": [
+      {
+        "title": "PLACEHOLDER CHALLENGE",
+        "challenge": "PLACEHOLDER: Add a verified challenge.",
+        "solution": "PLACEHOLDER: Add a verified solution."
+      }
+    ],
+    "architecture": [
+      "PLACEHOLDER COMPONENT",
+      "PLACEHOLDER API"
+    ],
+    "screenshots": [
+      "PLACEHOLDER PROJECT IMAGE"
+    ]
+  },
+  {
+    "slug": "placeholder-project-04",
+    "title": "PLACEHOLDER PROJECT 04",
+    "category": "PLACEHOLDER CATEGORY",
+    "type": "PLACEHOLDER TYPE",
+    "status": "PLACEHOLDER STATUS",
+    "description": "PLACEHOLDER: Replace with a verified project description.",
+    "stack": [
+      "PLACEHOLDER TECHNOLOGY",
+      "PLACEHOLDER TECHNOLOGY"
+    ],
+    "metrics": [
+      {
+        "value": "TBD",
+        "label": "PLACEHOLDER METRIC"
+      }
+    ],
+    "overview": "PLACEHOLDER: Add a verified project overview.",
+    "features": [
+      "PLACEHOLDER: Add a verified project feature."
+    ],
+    "challenges": [
+      {
+        "title": "PLACEHOLDER CHALLENGE",
+        "challenge": "PLACEHOLDER: Add a verified challenge.",
+        "solution": "PLACEHOLDER: Add a verified solution."
+      }
+    ],
+    "architecture": [
+      "PLACEHOLDER COMPONENT",
+      "PLACEHOLDER API"
+    ],
+    "screenshots": [
+      "PLACEHOLDER PROJECT IMAGE"
+    ]
+  },
+  {
+    "slug": "placeholder-project-05",
+    "title": "PLACEHOLDER PROJECT 05",
+    "category": "PLACEHOLDER CATEGORY",
+    "type": "PLACEHOLDER TYPE",
+    "status": "PLACEHOLDER STATUS",
+    "description": "PLACEHOLDER: Replace with a verified project description.",
+    "stack": [
+      "PLACEHOLDER TECHNOLOGY",
+      "PLACEHOLDER TECHNOLOGY"
+    ],
+    "metrics": [
+      {
+        "value": "TBD",
+        "label": "PLACEHOLDER METRIC"
+      }
+    ],
+    "overview": "PLACEHOLDER: Add a verified project overview.",
+    "features": [
+      "PLACEHOLDER: Add a verified project feature."
+    ],
+    "challenges": [
+      {
+        "title": "PLACEHOLDER CHALLENGE",
+        "challenge": "PLACEHOLDER: Add a verified challenge.",
+        "solution": "PLACEHOLDER: Add a verified solution."
+      }
+    ],
+    "architecture": [
+      "PLACEHOLDER COMPONENT",
+      "PLACEHOLDER API"
+    ],
+    "screenshots": [
+      "PLACEHOLDER PROJECT IMAGE"
+    ]
+  },
+  {
+    "slug": "placeholder-project-06",
+    "title": "PLACEHOLDER PROJECT 06",
+    "category": "PLACEHOLDER CATEGORY",
+    "type": "PLACEHOLDER TYPE",
+    "status": "PLACEHOLDER STATUS",
+    "description": "PLACEHOLDER: Replace with a verified project description.",
+    "stack": [
+      "PLACEHOLDER TECHNOLOGY",
+      "PLACEHOLDER TECHNOLOGY"
+    ],
+    "metrics": [
+      {
+        "value": "TBD",
+        "label": "PLACEHOLDER METRIC"
+      }
+    ],
+    "overview": "PLACEHOLDER: Add a verified project overview.",
+    "features": [
+      "PLACEHOLDER: Add a verified project feature."
+    ],
+    "challenges": [
+      {
+        "title": "PLACEHOLDER CHALLENGE",
+        "challenge": "PLACEHOLDER: Add a verified challenge.",
+        "solution": "PLACEHOLDER: Add a verified solution."
+      }
+    ],
+    "architecture": [
+      "PLACEHOLDER COMPONENT",
+      "PLACEHOLDER API"
+    ],
+    "screenshots": [
+      "PLACEHOLDER PROJECT IMAGE"
+    ]
+  },
+  {
+    "slug": "placeholder-project-07",
+    "title": "PLACEHOLDER PROJECT 07",
+    "category": "PLACEHOLDER CATEGORY",
+    "type": "PLACEHOLDER TYPE",
+    "status": "PLACEHOLDER STATUS",
+    "description": "PLACEHOLDER: Replace with a verified project description.",
+    "stack": [
+      "PLACEHOLDER TECHNOLOGY",
+      "PLACEHOLDER TECHNOLOGY"
+    ],
+    "metrics": [
+      {
+        "value": "TBD",
+        "label": "PLACEHOLDER METRIC"
+      }
+    ],
+    "overview": "PLACEHOLDER: Add a verified project overview.",
+    "features": [
+      "PLACEHOLDER: Add a verified project feature."
+    ],
+    "challenges": [
+      {
+        "title": "PLACEHOLDER CHALLENGE",
+        "challenge": "PLACEHOLDER: Add a verified challenge.",
+        "solution": "PLACEHOLDER: Add a verified solution."
+      }
+    ],
+    "architecture": [
+      "PLACEHOLDER COMPONENT",
+      "PLACEHOLDER API"
+    ],
+    "screenshots": [
+      "PLACEHOLDER PROJECT IMAGE"
+    ]
+  },
+  {
+    "slug": "placeholder-project-08",
+    "title": "PLACEHOLDER PROJECT 08",
+    "category": "PLACEHOLDER CATEGORY",
+    "type": "PLACEHOLDER TYPE",
+    "status": "PLACEHOLDER STATUS",
+    "description": "PLACEHOLDER: Replace with a verified project description.",
+    "stack": [
+      "PLACEHOLDER TECHNOLOGY",
+      "PLACEHOLDER TECHNOLOGY"
+    ],
+    "metrics": [
+      {
+        "value": "TBD",
+        "label": "PLACEHOLDER METRIC"
+      }
+    ],
+    "overview": "PLACEHOLDER: Add a verified project overview.",
+    "features": [
+      "PLACEHOLDER: Add a verified project feature."
+    ],
+    "challenges": [
+      {
+        "title": "PLACEHOLDER CHALLENGE",
+        "challenge": "PLACEHOLDER: Add a verified challenge.",
+        "solution": "PLACEHOLDER: Add a verified solution."
+      }
+    ],
+    "architecture": [
+      "PLACEHOLDER COMPONENT",
+      "PLACEHOLDER API"
+    ],
+    "screenshots": [
+      "PLACEHOLDER PROJECT IMAGE"
+    ]
+  },
+  {
+    "slug": "placeholder-project-09",
+    "title": "PLACEHOLDER PROJECT 09",
+    "category": "PLACEHOLDER CATEGORY",
+    "type": "PLACEHOLDER TYPE",
+    "status": "PLACEHOLDER STATUS",
+    "description": "PLACEHOLDER: Replace with a verified project description.",
+    "stack": [
+      "PLACEHOLDER TECHNOLOGY",
+      "PLACEHOLDER TECHNOLOGY"
+    ],
+    "metrics": [
+      {
+        "value": "TBD",
+        "label": "PLACEHOLDER METRIC"
+      }
+    ],
+    "overview": "PLACEHOLDER: Add a verified project overview.",
+    "features": [
+      "PLACEHOLDER: Add a verified project feature."
+    ],
+    "challenges": [
+      {
+        "title": "PLACEHOLDER CHALLENGE",
+        "challenge": "PLACEHOLDER: Add a verified challenge.",
+        "solution": "PLACEHOLDER: Add a verified solution."
+      }
+    ],
+    "architecture": [
+      "PLACEHOLDER COMPONENT",
+      "PLACEHOLDER API"
+    ],
+    "screenshots": [
+      "PLACEHOLDER PROJECT IMAGE"
+    ]
+  },
+  {
+    "slug": "placeholder-project-10",
+    "title": "PLACEHOLDER PROJECT 10",
+    "category": "PLACEHOLDER CATEGORY",
+    "type": "PLACEHOLDER TYPE",
+    "status": "PLACEHOLDER STATUS",
+    "description": "PLACEHOLDER: Replace with a verified project description.",
+    "stack": [
+      "PLACEHOLDER TECHNOLOGY",
+      "PLACEHOLDER TECHNOLOGY"
+    ],
+    "metrics": [
+      {
+        "value": "TBD",
+        "label": "PLACEHOLDER METRIC"
+      }
+    ],
+    "overview": "PLACEHOLDER: Add a verified project overview.",
+    "features": [
+      "PLACEHOLDER: Add a verified project feature."
+    ],
+    "challenges": [
+      {
+        "title": "PLACEHOLDER CHALLENGE",
+        "challenge": "PLACEHOLDER: Add a verified challenge.",
+        "solution": "PLACEHOLDER: Add a verified solution."
+      }
+    ],
+    "architecture": [
+      "PLACEHOLDER COMPONENT",
+      "PLACEHOLDER API"
+    ],
+    "screenshots": [
+      "PLACEHOLDER PROJECT IMAGE"
+    ]
+  },
+  {
+    "slug": "placeholder-project-11",
+    "title": "PLACEHOLDER PROJECT 11",
+    "category": "PLACEHOLDER CATEGORY",
+    "type": "PLACEHOLDER TYPE",
+    "status": "PLACEHOLDER STATUS",
+    "description": "PLACEHOLDER: Replace with a verified project description.",
+    "stack": [
+      "PLACEHOLDER TECHNOLOGY",
+      "PLACEHOLDER TECHNOLOGY"
+    ],
+    "metrics": [
+      {
+        "value": "TBD",
+        "label": "PLACEHOLDER METRIC"
+      }
+    ],
+    "overview": "PLACEHOLDER: Add a verified project overview.",
+    "features": [
+      "PLACEHOLDER: Add a verified project feature."
+    ],
+    "challenges": [
+      {
+        "title": "PLACEHOLDER CHALLENGE",
+        "challenge": "PLACEHOLDER: Add a verified challenge.",
+        "solution": "PLACEHOLDER: Add a verified solution."
+      }
+    ],
+    "architecture": [
+      "PLACEHOLDER COMPONENT",
+      "PLACEHOLDER API"
+    ],
+    "screenshots": [
+      "PLACEHOLDER PROJECT IMAGE"
+    ]
+  },
+  {
+    "slug": "placeholder-project-12",
+    "title": "PLACEHOLDER PROJECT 12",
+    "category": "PLACEHOLDER CATEGORY",
+    "type": "PLACEHOLDER TYPE",
+    "status": "PLACEHOLDER STATUS",
+    "description": "PLACEHOLDER: Replace with a verified project description.",
+    "stack": [
+      "PLACEHOLDER TECHNOLOGY",
+      "PLACEHOLDER TECHNOLOGY"
+    ],
+    "metrics": [
+      {
+        "value": "TBD",
+        "label": "PLACEHOLDER METRIC"
+      }
+    ],
+    "overview": "PLACEHOLDER: Add a verified project overview.",
+    "features": [
+      "PLACEHOLDER: Add a verified project feature."
+    ],
+    "challenges": [
+      {
+        "title": "PLACEHOLDER CHALLENGE",
+        "challenge": "PLACEHOLDER: Add a verified challenge.",
+        "solution": "PLACEHOLDER: Add a verified solution."
+      }
+    ],
+    "architecture": [
+      "PLACEHOLDER COMPONENT",
+      "PLACEHOLDER API"
+    ],
+    "screenshots": [
+      "PLACEHOLDER PROJECT IMAGE"
+    ]
+  },
+  {
+    "slug": "placeholder-project-13",
+    "title": "PLACEHOLDER PROJECT 13",
+    "category": "PLACEHOLDER CATEGORY",
+    "type": "PLACEHOLDER TYPE",
+    "status": "PLACEHOLDER STATUS",
+    "description": "PLACEHOLDER: Replace with a verified project description.",
+    "stack": [
+      "PLACEHOLDER TECHNOLOGY",
+      "PLACEHOLDER TECHNOLOGY"
+    ],
+    "metrics": [
+      {
+        "value": "TBD",
+        "label": "PLACEHOLDER METRIC"
+      }
+    ],
+    "overview": "PLACEHOLDER: Add a verified project overview.",
+    "features": [
+      "PLACEHOLDER: Add a verified project feature."
+    ],
+    "challenges": [
+      {
+        "title": "PLACEHOLDER CHALLENGE",
+        "challenge": "PLACEHOLDER: Add a verified challenge.",
+        "solution": "PLACEHOLDER: Add a verified solution."
+      }
+    ],
+    "architecture": [
+      "PLACEHOLDER COMPONENT",
+      "PLACEHOLDER API"
+    ],
+    "screenshots": [
+      "PLACEHOLDER PROJECT IMAGE"
+    ]
+  },
+  {
+    "slug": "placeholder-project-14",
+    "title": "PLACEHOLDER PROJECT 14",
+    "category": "PLACEHOLDER CATEGORY",
+    "type": "PLACEHOLDER TYPE",
+    "status": "PLACEHOLDER STATUS",
+    "description": "PLACEHOLDER: Replace with a verified project description.",
+    "stack": [
+      "PLACEHOLDER TECHNOLOGY",
+      "PLACEHOLDER TECHNOLOGY"
+    ],
+    "metrics": [
+      {
+        "value": "TBD",
+        "label": "PLACEHOLDER METRIC"
+      }
+    ],
+    "overview": "PLACEHOLDER: Add a verified project overview.",
+    "features": [
+      "PLACEHOLDER: Add a verified project feature."
+    ],
+    "challenges": [
+      {
+        "title": "PLACEHOLDER CHALLENGE",
+        "challenge": "PLACEHOLDER: Add a verified challenge.",
+        "solution": "PLACEHOLDER: Add a verified solution."
+      }
+    ],
+    "architecture": [
+      "PLACEHOLDER COMPONENT",
+      "PLACEHOLDER API"
+    ],
+    "screenshots": [
+      "PLACEHOLDER PROJECT IMAGE"
+    ]
+  },
+  {
+    "slug": "placeholder-project-15",
+    "title": "PLACEHOLDER PROJECT 15",
+    "category": "PLACEHOLDER CATEGORY",
+    "type": "PLACEHOLDER TYPE",
+    "status": "PLACEHOLDER STATUS",
+    "description": "PLACEHOLDER: Replace with a verified project description.",
+    "stack": [
+      "PLACEHOLDER TECHNOLOGY",
+      "PLACEHOLDER TECHNOLOGY"
+    ],
+    "metrics": [
+      {
+        "value": "TBD",
+        "label": "PLACEHOLDER METRIC"
+      }
+    ],
+    "overview": "PLACEHOLDER: Add a verified project overview.",
+    "features": [
+      "PLACEHOLDER: Add a verified project feature."
+    ],
+    "challenges": [
+      {
+        "title": "PLACEHOLDER CHALLENGE",
+        "challenge": "PLACEHOLDER: Add a verified challenge.",
+        "solution": "PLACEHOLDER: Add a verified solution."
+      }
+    ],
+    "architecture": [
+      "PLACEHOLDER COMPONENT",
+      "PLACEHOLDER API"
+    ],
+    "screenshots": [
+      "PLACEHOLDER PROJECT IMAGE"
+    ]
+  },
+  {
+    "slug": "placeholder-project-16",
+    "title": "PLACEHOLDER PROJECT 16",
+    "category": "PLACEHOLDER CATEGORY",
+    "type": "PLACEHOLDER TYPE",
+    "status": "PLACEHOLDER STATUS",
+    "description": "PLACEHOLDER: Replace with a verified project description.",
+    "stack": [
+      "PLACEHOLDER TECHNOLOGY",
+      "PLACEHOLDER TECHNOLOGY"
+    ],
+    "metrics": [
+      {
+        "value": "TBD",
+        "label": "PLACEHOLDER METRIC"
+      }
+    ],
+    "overview": "PLACEHOLDER: Add a verified project overview.",
+    "features": [
+      "PLACEHOLDER: Add a verified project feature."
+    ],
+    "challenges": [
+      {
+        "title": "PLACEHOLDER CHALLENGE",
+        "challenge": "PLACEHOLDER: Add a verified challenge.",
+        "solution": "PLACEHOLDER: Add a verified solution."
+      }
+    ],
+    "architecture": [
+      "PLACEHOLDER COMPONENT",
+      "PLACEHOLDER API"
+    ],
+    "screenshots": [
+      "PLACEHOLDER PROJECT IMAGE"
+    ]
+  }
+]

@@ -1,0 +1,207 @@
+{
+  "awards": {
+    "title": "Awards & Certifications",
+    "description": "Professional recognitions and industry certifications. Replace each placeholder with your confirmed details.",
+    "awardsHeading": "Featured Recognitions",
+    "certificationsHeading": "Cloud Certifications",
+    "summaryHeading": "Professional Summary",
+    "summaryStats": [
+      {
+        "value": "TBD",
+        "label": "Certifications"
+      },
+      {
+        "value": "TBD",
+        "label": "Professional Awards"
+      },
+      {
+        "value": "TBD",
+        "label": "Azure Certifications"
+      },
+      {
+        "value": "TBD",
+        "label": "Other Certifications"
+      }
+    ]
+  },
+  "skills": {
+    "title": "Technical Skills",
+    "description": "Skills, technologies, and tools to be confirmed and maintained in the skills data.",
+    "overviewStats": [
+      {
+        "label": "Expert Level",
+        "value": "TBD",
+        "tone": "blue"
+      },
+      {
+        "label": "Certifications",
+        "value": "TBD",
+        "tone": "purple"
+      },
+      {
+        "label": "Experience",
+        "value": "TBD",
+        "tone": "green"
+      }
+    ],
+    "tiers": [
+      "Expert Level",
+      "Advanced Level",
+      "Intermediate Level",
+      "Beginner Level"
+    ]
+  },
+  "articles": {
+    "eyebrow": "Technical Writing",
+    "title": "Latest Articles",
+    "description": "Articles to be added after publication details are confirmed."
+  },
+  "about": {
+    "title": "About Me",
+    "description": "PLACEHOLDER: Add a verified professional introduction.",
+    "quickStats": [
+      [
+        "TBD",
+        "Years Exp.",
+        "blue"
+      ],
+      [
+        "TBD",
+        "Certifications",
+        "purple"
+      ],
+      [
+        "TBD",
+        "Technologies",
+        "green"
+      ],
+      [
+        "TBD",
+        "Projects",
+        "orange"
+      ]
+    ],
+    "competencies": [
+      {
+        "title": "PLACEHOLDER COMPETENCY",
+        "items": [
+          "PLACEHOLDER SKILL",
+          "PLACEHOLDER SKILL"
+        ]
+      },
+      {
+        "title": "PLACEHOLDER COMPETENCY",
+        "items": [
+          "PLACEHOLDER SKILL",
+          "PLACEHOLDER SKILL"
+        ]
+      },
+      {
+        "title": "PLACEHOLDER COMPETENCY",
+        "items": [
+          "PLACEHOLDER SKILL",
+          "PLACEHOLDER SKILL"
+        ]
+      },
+      {
+        "title": "PLACEHOLDER COMPETENCY",
+        "items": [
+          "PLACEHOLDER SKILL",
+          "PLACEHOLDER SKILL"
+        ]
+      }
+    ],
+    "careerStats": [
+      [
+        "TBD",
+        "PLACEHOLDER METRIC 1"
+      ],
+      [
+        "TBD",
+        "PLACEHOLDER METRIC 2"
+      ],
+      [
+        "TBD",
+        "PLACEHOLDER METRIC 3"
+      ],
+      [
+        "TBD",
+        "PLACEHOLDER METRIC 4"
+      ],
+      [
+        "TBD",
+        "PLACEHOLDER METRIC 5"
+      ],
+      [
+        "TBD",
+        "PLACEHOLDER METRIC 6"
+      ],
+      [
+        "TBD",
+        "PLACEHOLDER METRIC 7"
+      ],
+      [
+        "TBD",
+        "PLACEHOLDER METRIC 8"
+      ]
+    ]
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "description": "Contact details and availability can be updated in the profile data.",
+    "faq": [
+      [
+        "Response Time",
+        "PLACEHOLDER: Add your expected response time."
+      ],
+      [
+        "Project Types",
+        "PLACEHOLDER: Add the projects you are open to."
+      ],
+      [
+        "Consultation",
+        "PLACEHOLDER: Add consultation availability."
+      ],
+      [
+        "Collaboration",
+        "PLACEHOLDER: Add collaboration preferences."
+      ]
+    ]
+  },
+  "home": {
+    "heroRole": "Software Engineer | Frontend & Data Platforms",
+    "heroBio": "PLACEHOLDER: Add a verified professional introduction.",
+    "heroAwards": [
+      "PLACEHOLDER AWARD",
+      "PLACEHOLDER CERTIFICATION"
+    ],
+    "heroTech": [
+      "PLACEHOLDER TECHNOLOGY",
+      "PLACEHOLDER TECHNOLOGY",
+      "PLACEHOLDER TECHNOLOGY"
+    ],
+    "heroStats": [
+      {
+        "value": "TBD",
+        "label": "Years Experience"
+      },
+      {
+        "value": "TBD",
+        "label": "Projects Delivered"
+      },
+      {
+        "value": "TBD",
+        "label": "Certifications"
+      }
+    ],
+    "featuredTitle": "Featured Projects",
+    "featuredDescription": "A selection of projects to be added after details are confirmed."
+  },
+  "projects": {
+    "title": "All Projects",
+    "description": "PLACEHOLDER: Add a verified portfolio overview for the projects listed below.",
+    "searchPlaceholder": "Search project titles and technologies...",
+    "emptyState": "No projects match your search.",
+    "clearFilters": "Clear search and filters"
+  }
+}

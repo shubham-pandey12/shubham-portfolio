@@ -41,9 +41,11 @@ export function ProjectDetailPage({
           </div>
           <h1>{project.title}</h1>
           <p>{project.description}</p>
-          <a className="github-button" href={`https://github.com/YOUR_GITHUB_URL/${project.slug}`}>
-            <Github size={15} /> View on GitHub
-          </a>
+          {project.githubUrl && (
+            <a className="github-button" href={project.githubUrl} target="_blank" rel="noreferrer">
+              <Github size={15} /> View on GitHub
+            </a>
+          )}
         </div>
         <div className="project-detail-grid">
           <div className="detail-main-column">
@@ -210,15 +212,29 @@ export function ProjectDetailPage({
               <ProjectMetrics metrics={project.metrics.slice(0, 4)} />
             </DetailPanel>
             <DetailPanel title="External Links">
-              <a
-                className="external-project-link"
-                href={`https://github.com/YOUR_GITHUB_URL/${project.slug}`}
-              >
-                <Github size={14} /> View on GitHub <ExternalLink size={13} />
-              </a>
-              <a className="external-project-link" href="https://YOUR_DEMO_URL">
-                <Globe size={14} /> Live Demo <ExternalLink size={13} />
-              </a>
+              {project.githubUrl && (
+                <a
+                  className="external-project-link"
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <Github size={14} /> View on GitHub <ExternalLink size={13} />
+                </a>
+              )}
+              {project.demoUrl && (
+                <a
+                  className="external-project-link"
+                  href={project.demoUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <Globe size={14} /> Live Demo <ExternalLink size={13} />
+                </a>
+              )}
+              {!project.githubUrl && !project.demoUrl && (
+                <p>Project links will be added when available.</p>
+              )}
             </DetailPanel>
           </aside>
         </div>

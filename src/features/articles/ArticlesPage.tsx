@@ -1,5 +1,6 @@
 import { ArrowUpRight, BookOpen } from "lucide-react";
 import { articles } from "../../data/recognition";
+import pageContent from "../../data/pageContent.json";
 
 export function ArticlesPage() {
   return (
@@ -7,12 +8,10 @@ export function ArticlesPage() {
       <div className="container">
         <div className="articles-intro">
           <span className="eyebrow-pill">
-            <BookOpen size={15} /> Technical Writing
+            <BookOpen size={15} /> {pageContent.articles.eyebrow}
           </span>
-          <h1>Latest Articles</h1>
-          <p>
-            Latest 15 articles about software engineering, frontend development, and technology.
-          </p>
+          <h1>{pageContent.articles.title}</h1>
+          <p>{pageContent.articles.description}</p>
         </div>
         <div className="articles-placeholder-grid">
           {articles.map((item, i) => (
@@ -26,9 +25,13 @@ export function ArticlesPage() {
                 <p>{item.description}</p>
                 <div className="article-card-footer">
                   <span>{item.date}</span>
-                  <a href={item.url}>
-                    Read Article <ArrowUpRight size={14} />
-                  </a>
+                  {item.url && !item.url.startsWith("YOUR_") ? (
+                    <a href={item.url} target="_blank" rel="noreferrer">
+                      Read Article <ArrowUpRight size={14} />
+                    </a>
+                  ) : (
+                    <span className="article-link-placeholder">Article link TBD</span>
+                  )}
                 </div>
               </div>
             </article>

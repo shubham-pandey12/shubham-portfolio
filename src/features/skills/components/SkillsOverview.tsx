@@ -1,4 +1,5 @@
 import { Award, CalendarDays, TrendingUp } from "lucide-react";
+import pageContent from "../../../data/pageContent.json";
 
 type SkillsStatCardProps = {
   label: string;
@@ -6,12 +7,12 @@ type SkillsStatCardProps = {
   tone: "blue" | "purple" | "green";
   icon: typeof TrendingUp;
 };
-
-const stats: SkillsStatCardProps[] = [
-  { label: "Expert Level", value: "6", tone: "blue", icon: TrendingUp },
-  { label: "Certifications", value: "8", tone: "purple", icon: Award },
-  { label: "Experience", value: "6+", tone: "green", icon: CalendarDays },
-];
+const statItems = pageContent.skills.overviewStats as {
+  label: string;
+  value: string;
+  tone: "blue" | "purple" | "green";
+}[];
+const icons = [TrendingUp, Award, CalendarDays];
 
 function SkillsStatCard({ label, value, tone, icon: Icon }: SkillsStatCardProps) {
   return (
@@ -30,8 +31,8 @@ function SkillsStatCard({ label, value, tone, icon: Icon }: SkillsStatCardProps)
 export function SkillsOverview() {
   return (
     <section className="skills-overview reveal" aria-label="Skills overview">
-      {stats.map((stat) => (
-        <SkillsStatCard key={stat.label} {...stat} />
+      {statItems.map((stat, index) => (
+        <SkillsStatCard key={stat.label} {...stat} icon={icons[index] ?? TrendingUp} />
       ))}
     </section>
   );

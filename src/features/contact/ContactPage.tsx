@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Github, Linkedin, Mail, MapPin, Send, ShieldCheck, Twitter } from "lucide-react";
 import { profile } from "../../data/profile";
 import { PageHeading } from "../../components/PortfolioUI";
+import pageContent from "../../data/pageContent.json";
 
 export function ContactPage() {
   const [sent, setSent] = useState(false);
@@ -9,19 +10,19 @@ export function ContactPage() {
     <div className="contact-page page-shell">
       <div className="container">
         <PageHeading
-          title="Get in Touch"
-          description="Have a project in mind or want to discuss opportunities? Use the contact links below after replacing the placeholders."
+          title={pageContent.contact.title}
+          description={pageContent.contact.description}
         />
         <div className="contact-layout">
           <aside className="contact-aside">
             <section className="contact-card">
               <h2>Contact Information</h2>
-              <a href={`mailto:${profile.email}`}>
+              <div>
                 <Mail size={19} />
                 <span>
                   Email<small>{profile.email}</small>
                 </span>
-              </a>
+              </div>
               <div>
                 <MapPin size={19} />
                 <span>
@@ -31,21 +32,37 @@ export function ContactPage() {
             </section>
             <section className="contact-card">
               <h2>Connect With Me</h2>
-              <a href={profile.github}>
-                <Github size={20} /> GitHub
-              </a>
-              <a href={profile.linkedin}>
-                <Linkedin size={20} /> LinkedIn
-              </a>
-              <a href={profile.x}>
-                <Twitter size={20} /> X
-              </a>
+              {profile.github.includes("YOUR_") ? (
+                <span>
+                  <Github size={20} /> GitHub · TBD
+                </span>
+              ) : (
+                <a href={profile.github}>
+                  <Github size={20} /> GitHub
+                </a>
+              )}
+              {profile.linkedin.includes("YOUR_") ? (
+                <span>
+                  <Linkedin size={20} /> LinkedIn · TBD
+                </span>
+              ) : (
+                <a href={profile.linkedin}>
+                  <Linkedin size={20} /> LinkedIn
+                </a>
+              )}
+              {profile.x.includes("YOUR_") ? (
+                <span>
+                  <Twitter size={20} /> X · TBD
+                </span>
+              ) : (
+                <a href={profile.x}>
+                  <Twitter size={20} /> X
+                </a>
+              )}
             </section>
             <section className="availability-card">
               <h3>Currently Available</h3>
-              <p>
-                PLACEHOLDER: Replace with your current availability and preferred opportunities.
-              </p>
+              <p>{profile.availability}</p>
             </section>
           </aside>
           <form
@@ -81,12 +98,7 @@ export function ContactPage() {
         <section className="faq-section">
           <h2>Frequently Asked Questions</h2>
           <div className="faq-grid">
-            {[
-              ["Response Time", "PLACEHOLDER: Add your expected response time."],
-              ["Project Types", "PLACEHOLDER: Add the projects you are open to."],
-              ["Consultation", "PLACEHOLDER: Add consultation availability."],
-              ["Collaboration", "PLACEHOLDER: Add collaboration preferences."],
-            ].map(([title, text]) => (
+            {pageContent.contact.faq.map(([title, text]) => (
               <article key={title}>
                 <h3>{title}</h3>
                 <p>{text}</p>

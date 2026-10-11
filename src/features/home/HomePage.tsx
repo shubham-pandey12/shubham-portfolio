@@ -7,16 +7,11 @@ import {
   type PortfolioProject,
 } from "../../data/home";
 import { InternalLink } from "../../components/InternalLink";
+import pageContent from "../../data/pageContent.json";
 import { ProjectMetrics, ProjectTechList, SectionIntro } from "../../components/PortfolioUI";
 
 export function HomePage({ navigate }: { navigate: (to: string) => void }) {
-  const featuredDescription = (project: PortfolioProject) => {
-    if (project.slug === "luxtripper-deals-enquiries")
-      return "Frontend work on travel deals and enquiry flows.";
-    if (project.slug === "multi-tenant-cms")
-      return "Multi-tenant content management with reusable website configurations and shared publishing workflows.";
-    return project.description;
-  };
+  const featuredDescription = (project: PortfolioProject) => project.description;
   return (
     <>
       <section className="home-hero">
@@ -38,37 +33,22 @@ export function HomePage({ navigate }: { navigate: (to: string) => void }) {
                 Hi, I'm <span className="gradient-text">{profile.name}</span>
               </h1>
               <p className="hero-role">
-                Software Engineer | Frontend &amp; Data Platforms
+                {pageContent.home.heroRole}
                 <span className="hero-subtitle">
                   {profile.education} · Power BI &amp; Microsoft Fabric
                 </span>
               </p>
             </div>
-            <p className="hero-bio">
-              I build <strong>thoughtful web experiences</strong> with React, Next.js, TypeScript,
-              and Node.js. My background spans frontend and full-stack work, and business data
-              solutions using Power BI, Microsoft Fabric, and Dataverse. I’ve worked with MAQ
-              Software, Techolution, DrinkPrime, GeeksforGeeks, and Luxtripper. Personal projects
-              include React applications and an AI Interview Thinking Partner.
-            </p>
+            <p className="hero-bio">{pageContent.home.heroBio}</p>
             <div className="hero-awards">
-              <span className="award-chip blue-chip">🏅 PLACEHOLDER AWARD</span>
-              <span className="award-chip orange-chip">⭐ PLACEHOLDER CERTIFICATION</span>
+              {pageContent.home.heroAwards.map((label, index) => (
+                <span className={`award-chip ${index ? "orange-chip" : "blue-chip"}`} key={label}>
+                  {label}
+                </span>
+              ))}
             </div>
             <div className="hero-tech">
-              {[
-                "React",
-                "Next.js",
-                "TypeScript",
-                "JavaScript",
-                "Node.js",
-                "REST APIs",
-                "Power BI",
-                "Microsoft Fabric",
-                "Dataverse",
-                "SQL",
-                "Full-Stack Development",
-              ].map((item) => (
+              {pageContent.home.heroTech.map((item) => (
                 <span key={item}>{item}</span>
               ))}
             </div>
@@ -108,9 +88,9 @@ export function HomePage({ navigate }: { navigate: (to: string) => void }) {
               <span className="award-chip orange-chip">⭐ Certification TBD</span>
             </div>
             <div className="hero-stat-stack">
-              <HeroStat value="TBD" label="Years Experience" />
-              <HeroStat value="TBD" label="Projects Delivered" />
-              <HeroStat value="TBD" label="Certifications" />
+              {pageContent.home.heroStats.map((stat) => (
+                <HeroStat key={stat.label} {...stat} />
+              ))}
             </div>
           </div>
         </div>
@@ -118,8 +98,8 @@ export function HomePage({ navigate }: { navigate: (to: string) => void }) {
       <section className="featured-section page-section reveal">
         <div className="container">
           <SectionIntro
-            title="Featured Projects"
-            description="A selection of professional contributions and personal projects across frontend development, data experiences, and AI tools."
+            title={pageContent.home.featuredTitle}
+            description={pageContent.home.featuredDescription}
           />
           <div className="featured-grid">
             {projects.slice(0, 3).map((project, index) => (
@@ -222,14 +202,17 @@ export function FeaturedProjectCard({
           >
             View Details <ArrowRight size={15} />
           </InternalLink>
-          <a
-            href={`https://github.com/YOUR_GITHUB_URL/${project.slug}`}
-            aria-label="View on GitHub"
-            title="YOUR_GITHUB_URL"
-            className="repo-link"
-          >
-            <Github size={17} />
-          </a>
+          {project.githubUrl && (
+            <a
+              href={project.githubUrl}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="View on GitHub"
+              className="repo-link"
+            >
+              <Github size={17} />
+            </a>
+          )}
         </div>
       </div>
     </article>

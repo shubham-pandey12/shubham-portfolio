@@ -11,6 +11,7 @@ import {
   Search,
 } from "lucide-react";
 import { projects, type PortfolioProject } from "../../data/projects";
+import pageContent from "../../data/pageContent.json";
 import { InternalLink } from "../../components/InternalLink";
 import "./projects.css";
 
@@ -83,12 +84,9 @@ export function ProjectsPage({ navigate }: ProjectsPageProps) {
       <div className="projects-container">
         <header className="projects-intro projects-enter">
           <h1 id="projects-title">
-            <span>All Projects</span>
+            <span>{pageContent.projects.title}</span>
           </h1>
-          <p>
-            Explore my portfolio of {projects.length} projects spanning frontend engineering, data
-            experiences, full-stack development, and AI tools.
-          </p>
+          <p>{pageContent.projects.description}</p>
         </header>
 
         <div
@@ -102,7 +100,7 @@ export function ProjectsPage({ navigate }: ProjectsPageProps) {
                 type="search"
                 value={query}
                 onChange={(event) => setQuery(event.target.value)}
-                placeholder="Search projects, technologies..."
+                placeholder={pageContent.projects.searchPlaceholder}
                 aria-label="Search projects and technologies"
               />
             </label>
@@ -179,7 +177,7 @@ export function ProjectsPage({ navigate }: ProjectsPageProps) {
             style={{ "--enter-order": 3 } as React.CSSProperties}
           >
             <Search size={22} aria-hidden="true" />
-            <p>No projects match your search.</p>
+            <p>{pageContent.projects.emptyState}</p>
             <button
               type="button"
               onClick={() => {
@@ -187,7 +185,7 @@ export function ProjectsPage({ navigate }: ProjectsPageProps) {
                 setCategory("All");
               }}
             >
-              Clear search and filters
+              {pageContent.projects.clearFilters}
             </button>
           </div>
         )}

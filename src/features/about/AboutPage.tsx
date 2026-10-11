@@ -1,4 +1,5 @@
 import { Award, BriefcaseBusiness, GraduationCap, Mail, MapPin } from "lucide-react";
+import pageContent from "../../data/pageContent.json";
 import { awards, certifications, companies, profile } from "../../data/about";
 import {
   AwardCard,
@@ -13,10 +14,7 @@ export function AboutPage({ navigate }: { navigate: (to: string) => void }) {
   return (
     <div className="about-page page-shell">
       <div className="container">
-        <PageHeading
-          title="About Me"
-          description="Software engineering and frontend development with a focus on useful, clear digital experiences."
-        />
+        <PageHeading title={pageContent.about.title} description={pageContent.about.description} />
         <div className="about-summary-grid">
           <aside className="about-profile-card">
             <Portrait small />
@@ -36,12 +34,7 @@ export function AboutPage({ navigate }: { navigate: (to: string) => void }) {
             </a>
             <h3>Quick Stats</h3>
             <div className="quick-stats-grid">
-              {[
-                ["TBD", "Years Exp.", "blue"],
-                ["TBD", "Certifications", "purple"],
-                ["TBD", "Technologies", "green"],
-                ["TBD", "Projects", "orange"],
-              ].map(([value, label, tone]) => (
+              {pageContent.about.quickStats.map(([value, label, tone]) => (
                 <div className={`quick-stat ${tone}`} key={label}>
                   <strong>{value}</strong>
                   <span>{label}</span>
@@ -57,10 +50,7 @@ export function AboutPage({ navigate }: { navigate: (to: string) => void }) {
               DrinkPrime, and GeeksforGeeks. More detailed responsibilities, outcomes, and project
               context can be added after you confirm the specifics.
             </p>
-            <p>
-              My education is a B.Tech in Information Technology from IIIT Vadodara. This profile
-              keeps dates, performance figures, and awards as explicit placeholders until verified.
-            </p>
+            <p>PLACEHOLDER: Add verified education details.</p>
             <hr />
             <h3>Professional Goals</h3>
             <p>
@@ -74,29 +64,7 @@ export function AboutPage({ navigate }: { navigate: (to: string) => void }) {
             <hr />
             <h3>Core Competencies</h3>
             <div className="competency-grid">
-              {[
-                [
-                  "Frontend Engineering",
-                  [
-                    "React and Next.js",
-                    "TypeScript and JavaScript",
-                    "Accessible responsive interfaces",
-                  ],
-                ],
-                [
-                  "Full Stack Development",
-                  ["Node.js", "SQL and data integration", "REST API workflows"],
-                ],
-                ["Data & Platforms", ["Power BI", "Microsoft Fabric", "Dataverse"]],
-                [
-                  "Quality & Collaboration",
-                  [
-                    "PLACEHOLDER: Add confirmed practices",
-                    "PLACEHOLDER: Add confirmed tools",
-                    "PLACEHOLDER: Add team contributions",
-                  ],
-                ],
-              ].map(([title, items]) => (
+              {pageContent.about.competencies.map(({ title, items }) => (
                 <div key={title as string}>
                   <h4>{title as string}</h4>
                   <ul>
@@ -151,16 +119,7 @@ export function AboutPage({ navigate }: { navigate: (to: string) => void }) {
         <section className="career-highlights">
           <h2>Career Highlights</h2>
           <div className="career-grid">
-            {[
-              ["TBD", "Years of Experience"],
-              ["TBD", "Projects Delivered"],
-              ["TBD", "Certifications"],
-              ["TBD", "Technologies"],
-              ["TBD", "Users Served"],
-              ["TBD", "Test Coverage"],
-              ["TBD", "Time Saved"],
-              ["TBD", "Response Time"],
-            ].map(([value, label]) => (
+            {pageContent.about.careerStats.map(([value, label]) => (
               <div key={label}>
                 <strong>{value}</strong>
                 <span>{label}</span>

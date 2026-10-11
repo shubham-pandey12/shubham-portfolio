@@ -1,0 +1,191 @@
+{
+  "awards": [
+    {
+      "title": "PLACEHOLDER AWARD TITLE",
+      "organization": "YOUR ORGANIZATION",
+      "date": "YOUR AWARD DATE",
+      "description": "PLACEHOLDER: Replace with a verified award description.",
+      "type": "Award"
+    },
+    {
+      "title": "PLACEHOLDER COMMUNITY RECOGNITION",
+      "organization": "YOUR ORGANIZATION",
+      "date": "YOUR AWARD DATE",
+      "description": "PLACEHOLDER: Replace with a verified community or professional recognition.",
+      "type": "Award"
+    }
+  ],
+  "certifications": [
+    {
+      "title": "PLACEHOLDER CERTIFICATION 01",
+      "organization": "YOUR CERTIFYING ORGANIZATION",
+      "date": "YOUR CERTIFICATION DATE",
+      "id": "YOUR_CREDENTIAL_ID",
+      "description": "PLACEHOLDER: Add a verified certification description.",
+      "type": "Certification"
+    },
+    {
+      "title": "PLACEHOLDER CERTIFICATION 02",
+      "organization": "YOUR CERTIFYING ORGANIZATION",
+      "date": "YOUR CERTIFICATION DATE",
+      "id": "YOUR_CREDENTIAL_ID",
+      "description": "PLACEHOLDER: Add a verified certification description.",
+      "type": "Certification"
+    },
+    {
+      "title": "PLACEHOLDER CERTIFICATION 03",
+      "organization": "YOUR CERTIFYING ORGANIZATION",
+      "date": "YOUR CERTIFICATION DATE",
+      "id": "YOUR_CREDENTIAL_ID",
+      "description": "PLACEHOLDER: Add a verified certification description.",
+      "type": "Certification"
+    },
+    {
+      "title": "PLACEHOLDER CERTIFICATION 04",
+      "organization": "YOUR CERTIFYING ORGANIZATION",
+      "date": "YOUR CERTIFICATION DATE",
+      "id": "YOUR_CREDENTIAL_ID",
+      "description": "PLACEHOLDER: Add a verified certification description.",
+      "type": "Certification"
+    },
+    {
+      "title": "PLACEHOLDER CERTIFICATION 05",
+      "organization": "YOUR CERTIFYING ORGANIZATION",
+      "date": "YOUR CERTIFICATION DATE",
+      "id": "YOUR_CREDENTIAL_ID",
+      "description": "PLACEHOLDER: Add a verified certification description.",
+      "type": "Certification"
+    },
+    {
+      "title": "PLACEHOLDER CERTIFICATION 06",
+      "organization": "YOUR CERTIFYING ORGANIZATION",
+      "date": "YOUR CERTIFICATION DATE",
+      "id": "YOUR_CREDENTIAL_ID",
+      "description": "PLACEHOLDER: Add a verified certification description.",
+      "type": "Certification"
+    },
+    {
+      "title": "PLACEHOLDER CERTIFICATION 07",
+      "organization": "YOUR CERTIFYING ORGANIZATION",
+      "date": "YOUR CERTIFICATION DATE",
+      "id": "YOUR_CREDENTIAL_ID",
+      "description": "PLACEHOLDER: Add a verified certification description.",
+      "type": "Certification"
+    },
+    {
+      "title": "PLACEHOLDER CERTIFICATION 08",
+      "organization": "YOUR CERTIFYING ORGANIZATION",
+      "date": "YOUR CERTIFICATION DATE",
+      "id": "YOUR_CREDENTIAL_ID",
+      "description": "PLACEHOLDER: Add a verified certification description.",
+      "type": "Certification"
+    }
+  ],
+  "articles": [
+    {
+      "title": "PLACEHOLDER ARTICLE 01",
+      "date": "YOUR ARTICLE DATE",
+      "category": "Technical Writing",
+      "description": "PLACEHOLDER: Add a published article title and summary.",
+      "url": "YOUR_ARTICLE_URL"
+    },
+    {
+      "title": "PLACEHOLDER ARTICLE 02",
+      "date": "YOUR ARTICLE DATE",
+      "category": "Technical Writing",
+      "description": "PLACEHOLDER: Add a published article title and summary.",
+      "url": "YOUR_ARTICLE_URL"
+    },
+    {
+      "title": "PLACEHOLDER ARTICLE 03",
+      "date": "YOUR ARTICLE DATE",
+      "category": "Technical Writing",
+      "description": "PLACEHOLDER: Add a published article title and summary.",
+      "url": "YOUR_ARTICLE_URL"
+    },
+    {
+      "title": "PLACEHOLDER ARTICLE 04",
+      "date": "YOUR ARTICLE DATE",
+      "category": "Technical Writing",
+      "description": "PLACEHOLDER: Add a published article title and summary.",
+      "url": "YOUR_ARTICLE_URL"
+    },
+    {
+      "title": "PLACEHOLDER ARTICLE 05",
+      "date": "YOUR ARTICLE DATE",
+      "category": "Technical Writing",
+      "description": "PLACEHOLDER: Add a published article title and summary.",
+      "url": "YOUR_ARTICLE_URL"
+    },
+    {
+      "title": "PLACEHOLDER ARTICLE 06",
+      "date": "YOUR ARTICLE DATE",
+      "category": "Technical Writing",
+      "description": "PLACEHOLDER: Add a published article title and summary.",
+      "url": "YOUR_ARTICLE_URL"
+    },
+    {
+      "title": "PLACEHOLDER ARTICLE 07",
+      "date": "YOUR ARTICLE DATE",
+      "category": "Technical Writing",
+      "description": "PLACEHOLDER: Add a published article title and summary.",
+      "url": "YOUR_ARTICLE_URL"
+    },
+    {
+      "title": "PLACEHOLDER ARTICLE 08",
+      "date": "YOUR ARTICLE DATE",
+      "category": "Technical Writing",
+      "description": "PLACEHOLDER: Add a published article title and summary.",
+      "url": "YOUR_ARTICLE_URL"
+    },
+    {
+      "title": "PLACEHOLDER ARTICLE 09",
+      "date": "YOUR ARTICLE DATE",
+      "category": "Technical Writing",
+      "description": "PLACEHOLDER: Add a published article title and summary.",
+      "url": "YOUR_ARTICLE_URL"
+    },
+    {
+      "title": "PLACEHOLDER ARTICLE 10",
+      "date": "YOUR ARTICLE DATE",
+      "category": "Technical Writing",
+      "description": "PLACEHOLDER: Add a published article title and summary.",
+      "url": "YOUR_ARTICLE_URL"
+    },
+    {
+      "title": "PLACEHOLDER ARTICLE 11",
+      "date": "YOUR ARTICLE DATE",
+      "category": "Technical Writing",
+      "description": "PLACEHOLDER: Add a published article title and summary.",
+      "url": "YOUR_ARTICLE_URL"
+    },
+    {
+      "title": "PLACEHOLDER ARTICLE 12",
+      "date": "YOUR ARTICLE DATE",
+      "category": "Technical Writing",
+      "description": "PLACEHOLDER: Add a published article title and summary.",
+      "url": "YOUR_ARTICLE_URL"
+    },
+    {
+      "title": "PLACEHOLDER ARTICLE 13",
+      "date": "YOUR ARTICLE DATE",
+      "category": "Technical Writing",
+      "description": "PLACEHOLDER: Add a published article title and summary.",
+      "url": "YOUR_ARTICLE_URL"
+    },
+    {
+      "title": "PLACEHOLDER ARTICLE 14",
+      "date": "YOUR ARTICLE DATE",
+      "category": "Technical Writing",
+      "description": "PLACEHOLDER: Add a published article title and summary.",
+      "url": "YOUR_ARTICLE_URL"
+    },
+    {
+      "title": "PLACEHOLDER ARTICLE 15",
+      "date": "YOUR ARTICLE DATE",
+      "category": "Technical Writing",
+      "description": "PLACEHOLDER: Add a published article title and summary.",
+      "url": "YOUR_ARTICLE_URL"
+    }
+  ]
+}

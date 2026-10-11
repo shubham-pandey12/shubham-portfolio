@@ -7,26 +7,10 @@ import { SkillsOverview } from "./components/SkillsOverview";
 import { SkillsPageHeader } from "./components/SkillsPageHeader";
 import "./skills.css";
 
-const skillCategories = [
-  "Frontend",
-  "Backend",
-  "Database",
-  "Cloud",
-  "DevOps",
-  "AI/ML",
-  "Mobile",
-  "Tools",
-  "Testing",
-  "Architecture",
-  "Security",
-];
+import pageContent from "../../data/pageContent.json";
 
-const skillTiers: SkillTier[] = [
-  "Expert Level",
-  "Advanced Level",
-  "Intermediate Level",
-  "Beginner Level",
-];
+const skillCategories = [...new Set(allSkills.map((skill) => skill.category))];
+const skillTiers = pageContent.skills.tiers as SkillTier[];
 
 export function SkillsPage() {
   const [query, setQuery] = useState("");

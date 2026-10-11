@@ -102,25 +102,31 @@ export function Footer({ navigate }: { navigate: (to: string) => void }) {
           <div className="footer-connect">
             <h3>Connect</h3>
             <div>
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href={profile.github}
-                aria-label="GitHub"
-              >
-                <Github size={20} />
-              </a>
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href={profile.linkedin}
-                aria-label="LinkedIn"
-              >
-                <Linkedin size={20} />
-              </a>
-              <a href={`mailto:${profile.email}`} aria-label="Email">
-                <Mail size={20} />
-              </a>
+              {!profile.github.includes("YOUR_") && (
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={profile.github}
+                  aria-label="GitHub"
+                >
+                  <Github size={20} />
+                </a>
+              )}
+              {!profile.linkedin.includes("YOUR_") && (
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={profile.linkedin}
+                  aria-label="LinkedIn"
+                >
+                  <Linkedin size={20} />
+                </a>
+              )}
+              {!profile.email.includes("YOUR_") && (
+                <a href={`mailto:${profile.email}`} aria-label="Email">
+                  <Mail size={20} />
+                </a>
+              )}
             </div>
           </div>
         </div>
