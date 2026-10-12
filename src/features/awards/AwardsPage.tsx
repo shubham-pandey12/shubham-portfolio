@@ -1,40 +1,70 @@
-import { Award, ShieldCheck } from "lucide-react";
+import { Award, ExternalLink, ShieldCheck, Trophy } from "lucide-react";
 import { awards, certifications } from "../../data/recognition";
-import { AwardCard, PageHeading, SectionHeader } from "../../components/PortfolioUI";
+import pageContent from "../../data/pageContent.json";
+import { PageHeading, SectionHeader } from "../../components/PortfolioUI";
+
+function RecognitionCard({
+  item,
+  featured = false,
+}: {
+  item: (typeof awards)[number];
+  featured?: boolean;
+}) {
+  return (
+    <article className={`recognition-card reveal${featured ? " recognition-card-featured" : ""}`}>
+      <div className="recognition-card-content">
+        <div className="recognition-icon" aria-hidden="true">
+          {featured ? <Trophy size={27} /> : <Award size={27} />}
+        </div>
+        <div className="recognition-details">
+          <span className="recognition-type">{item.type}</span>
+          <h3>{item.title}</h3>
+          <p className="recognition-meta">
+            {item.organization} <span>•</span> {item.date}
+          </p>
+          <p className="recognition-description">{item.description}</p>
+          {item.id && (
+            <p className="recognition-id">
+              Credential ID: <strong>{item.id}</strong>
+            </p>
+          )}
+          {item.verifyUrl && (
+            <a className="recognition-link" href={item.verifyUrl} target="_blank" rel="noreferrer">
+              {featured ? "Learn More" : "Verify"} <ExternalLink size={14} />
+            </a>
+          )}
+        </div>
+      </div>
+    </article>
+  );
+}
 
 export function AwardsPage() {
+  const content = pageContent.awards;
   return (
-    <div className="awards-page page-shell">
-      <div className="container">
-        <PageHeading
-          title="Awards & Certifications"
-          description="Professional recognitions and industry certifications. Replace each placeholder with your confirmed details."
-        />
-        <div className="content-section">
-          <SectionHeader icon={<Award />} title="Featured Recognitions" />
+    <main className="awards-page page-shell">
+      <div className="awards-container container">
+        <PageHeading title={content.title} description={content.description} />
+        <section className="awards-content-section">
+          <SectionHeader icon={<Trophy />} title={content.awardsHeading} />
           <div className="awards-grid">
-            {awards.map((item, i) => (
-              <AwardCard key={i} item={item} />
+            {awards.map((item) => (
+              <RecognitionCard key={item.title} item={item} featured />
             ))}
           </div>
-        </div>
-        <div className="content-section">
-          <SectionHeader icon={<ShieldCheck />} title="Cloud Certifications" />
+        </section>
+        <section className="awards-content-section">
+          <SectionHeader icon={<ShieldCheck />} title={content.certificationsHeading} />
           <div className="certification-grid">
-            {certifications.map((item, i) => (
-              <AwardCard key={i} item={item} />
+            {certifications.map((item) => (
+              <RecognitionCard key={item.title} item={item} />
             ))}
           </div>
-        </div>
-        <section className="professional-summary-box">
-          <h2>Professional Summary</h2>
+        </section>
+        <section className="professional-summary-box awards-summary reveal">
+          <h2>{content.summaryHeading}</h2>
           <div className="summary-stats">
-            {[
-              ["TBD", "Certifications"],
-              ["TBD", "Professional Awards"],
-              ["TBD", "Azure Certifications"],
-              ["TBD", "Other Certifications"],
-            ].map(([value, label]) => (
+            {content.summaryStats.map(({ value, label }) => (
               <div key={label}>
                 <strong>{value}</strong>
                 <span>{label}</span>
@@ -43,6 +73,6 @@ export function AwardsPage() {
           </div>
         </section>
       </div>
-    </div>
+    </main>
   );
 }

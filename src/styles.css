@@ -4940,3 +4940,219 @@ select:focus-visible {
     line-height: 20px;
   }
 }
+
+/* Awards reference page: gradient recognitions, responsive certification timeline cards. */
+.awards-page {
+  min-height: 100vh;
+  padding: 80px 0;
+  background: #fff;
+}
+.dark .awards-page {
+  background: #0f172a;
+}
+.awards-container {
+  max-width: 1152px;
+}
+.awards-page .page-heading {
+  margin: 0 auto 56px;
+  text-align: center;
+}
+.awards-page .page-heading h1 {
+  background: linear-gradient(100deg, #2563eb, #7c3aed);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: clamp(36px, 5vw, 60px);
+  letter-spacing: -0.035em;
+}
+.awards-page .page-heading p {
+  max-width: 720px;
+  margin: 14px auto 0;
+  font-size: 17px;
+  line-height: 1.65;
+}
+.awards-content-section {
+  margin-bottom: 64px;
+}
+.awards-content-section .content-section-header {
+  margin-bottom: 24px;
+}
+.awards-content-section .content-section-header h2 {
+  font-size: 24px;
+}
+.awards-content-section .content-section-header h2 span {
+  color: #7c3aed;
+}
+.awards-page .awards-grid {
+  gap: 24px;
+}
+.awards-page .certification-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+.recognition-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 100%;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgb(15 23 42 / 6%);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+.dark .recognition-card {
+  border-color: #334155;
+  background: #1e293b;
+}
+.recognition-card::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  content: "";
+  background: linear-gradient(
+    120deg,
+    rgb(59 130 246 / 8%),
+    rgb(139 92 246 / 8%),
+    rgb(236 72 153 / 8%)
+  );
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+.recognition-card:hover {
+  transform: translateY(-3px);
+  border-color: #bfdbfe;
+  box-shadow: 0 16px 32px rgb(37 99 235 / 12%);
+}
+.recognition-card:hover::before {
+  opacity: 1;
+}
+.recognition-card-featured {
+  background: linear-gradient(135deg, #eff6ff, #faf5ff);
+}
+.dark .recognition-card-featured {
+  background: linear-gradient(135deg, #172554, #2e1065);
+}
+.recognition-card-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 24px;
+}
+.recognition-icon {
+  display: grid;
+  flex: 0 0 56px;
+  width: 56px;
+  height: 56px;
+  place-items: center;
+  border-radius: 50%;
+  color: white;
+  background: linear-gradient(135deg, #3b82f6, #7c3aed);
+  box-shadow: 0 6px 15px rgb(79 70 229 / 24%);
+}
+.recognition-details {
+  min-width: 0;
+}
+.recognition-type {
+  display: inline-flex;
+  border-radius: 999px;
+  padding: 4px 10px;
+  color: #4338ca;
+  background: #e0e7ff;
+  font-size: 11px;
+  font-weight: 700;
+}
+.dark .recognition-type {
+  color: #c4b5fd;
+  background: #312e81;
+}
+.recognition-details h3 {
+  margin: 10px 0 5px;
+  font-size: 21px;
+  line-height: 1.35;
+}
+.recognition-meta {
+  margin: 0;
+  color: #64748b;
+  font-size: 13px;
+}
+.recognition-meta span {
+  padding: 0 4px;
+}
+.recognition-description {
+  margin: 13px 0;
+  color: #475569;
+  font-size: 14px;
+  line-height: 1.65;
+}
+.dark .recognition-description {
+  color: #cbd5e1;
+}
+.recognition-id {
+  margin: 10px 0;
+  color: #64748b;
+  font-size: 12px;
+}
+.recognition-id strong {
+  color: inherit;
+}
+.recognition-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #4f46e5;
+  font-size: 13px;
+  font-weight: 600;
+}
+.dark .recognition-link {
+  color: #a5b4fc;
+}
+.awards-page .professional-summary-box {
+  margin-top: 0;
+  padding: 32px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #eff6ff, #faf5ff);
+}
+.dark .awards-page .professional-summary-box {
+  background: linear-gradient(135deg, #172554, #2e1065);
+}
+.awards-page .professional-summary-box h2 {
+  font-size: 24px;
+}
+.awards-page .summary-stats strong {
+  font-size: 36px;
+}
+.awards-page .summary-stats span {
+  font-size: 13px;
+}
+@media (max-width: 760px) {
+  .awards-page {
+    padding: 56px 0;
+  }
+  .awards-page .certification-grid {
+    grid-template-columns: 1fr;
+  }
+  .awards-page .summary-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .recognition-card-content {
+    padding: 20px;
+    gap: 14px;
+  }
+  .recognition-icon {
+    flex-basis: 48px;
+    width: 48px;
+    height: 48px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .recognition-card {
+    transition: none;
+  }
+  .recognition-card:hover {
+    transform: none;
+  }
+}

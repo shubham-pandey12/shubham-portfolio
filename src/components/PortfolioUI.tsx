@@ -87,6 +87,7 @@ export function AwardCard({
     description: string;
     type: string;
     id?: string;
+    verifyUrl?: string;
   };
 }) {
   return (
@@ -101,9 +102,11 @@ export function AwardCard({
           Credential ID: <strong>{item.id}</strong>
         </div>
       )}
-      <a href="https://YOUR_CREDENTIAL_URL" className="verify-link">
-        Verify <ExternalLink size={13} />
-      </a>
+      {item.verifyUrl && (
+        <a href={item.verifyUrl} target="_blank" rel="noreferrer" className="verify-link">
+          Verify <ExternalLink size={13} />
+        </a>
+      )}
     </article>
   );
 }
