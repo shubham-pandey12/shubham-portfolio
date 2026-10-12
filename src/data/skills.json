@@ -1,242 +1,163 @@
 {
   "skillGroups": [
     {
-      "title": "Frontend",
-      "color": "blue",
-      "skills": [
-        {
-          "name": "React.js"
-        },
-        {
-          "name": "Next.js"
-        },
-        {
-          "name": "Redux"
-        },
-        {
-          "name": "TypeScript"
-        },
-        {
-          "name": "JavaScript"
-        },
-        {
-          "name": "Tailwind CSS"
-        },
-        {
-          "name": "Sass / SCSS"
-        },
-        {
-          "name": "Bootstrap"
-        },
-        {
-          "name": "CSS"
-        },
-        {
-          "name": "HTML"
-        },
-        {
-          "name": "jQuery"
-        },
-        {
-          "name": "Material UI"
-        },
-        {
-          "name": "Chart.js"
-        },
-        {
-          "name": "React Hooks"
-        }
-      ]
-    },
-    {
       "title": "Backend",
       "color": "purple",
+      "icon": "nodejs",
       "skills": [
         {
-          "name": "Node.js"
+          "name": "Node.js",
+          "icon": "nodejs",
+          "years": 3,
+          "progress": 75
         },
         {
-          "name": "NestJS"
+          "name": "Java",
+          "icon": "java",
+          "years": 3,
+          "progress": 75
         },
         {
-          "name": "Express.js"
+          "name": "Spring Boot",
+          "icon": "spring",
+          "years": 3,
+          "progress": 80
         },
         {
-          "name": "Java"
+          "name": "Express.js",
+          "icon": "express",
+          "years": 3,
+          "progress": 75
         },
         {
-          "name": "Python"
+          "name": "NestJS",
+          "icon": "nestjs",
+          "years": 3,
+          "progress": 75
         },
         {
-          "name": "REST APIs"
+          "name": "REST APIs",
+          "icon": "api",
+          "years": 3,
+          "progress": 75
         },
         {
-          "name": "GraphQL"
+          "name": "Microservices",
+          "icon": "network",
+          "years": 3,
+          "progress": 75
         },
         {
-          "name": "MERN Stack"
+          "name": "Redis Caching",
+          "icon": "redis",
+          "years": 3,
+          "progress": 75
         },
         {
-          "name": "Object-Oriented Programming"
-        },
-        {
-          "name": "Microservices"
-        },
-        {
-          "name": "System Design"
-        },
-        {
-          "name": "API Architecture"
-        },
-        {
-          "name": "Multi-tenant Architecture"
-        },
-        {
-          "name": "Redis Caching"
-        },
-        {
-          "name": "Azure AI Search Orchestration"
-        },
-        {
-          "name": "C++"
-        },
-        {
-          "name": "Power BI"
-        },
-        {
-          "name": "Angular.js"
+          "name": "System Design",
+          "icon": "architecture",
+          "years": 3,
+          "progress": 75
         }
       ]
     },
     {
-      "title": "Cloud & DevOps",
-      "color": "green",
-      "skills": [
-        {
-          "name": "AWS EC2"
-        },
-        {
-          "name": "AWS S3"
-        },
-        {
-          "name": "AWS ECS"
-        },
-        {
-          "name": "AWS CloudFront"
-        },
-        {
-          "name": "AWS Lambda"
-        },
-        {
-          "name": "AWS API Gateway"
-        },
-        {
-          "name": "Google Cloud Platform"
-        },
-        {
-          "name": "Docker"
-        },
-        {
-          "name": "Jenkins"
-        },
-        {
-          "name": "CI/CD"
-        },
-        {
-          "name": "Git"
-        },
-        {
-          "name": "Bitbucket"
-        },
-        {
-          "name": "npm"
-        },
-        {
-          "name": "Bash"
-        },
-        {
-          "name": "Azure AI Search"
-        }
-      ]
-    },
-    {
-      "title": "Databases",
-      "color": "orange",
-      "skills": [
-        {
-          "name": "SQL"
-        },
-        {
-          "name": "MySQL"
-        },
-        {
-          "name": "MongoDB"
-        },
-        {
-          "name": "SQLite"
-        },
-        {
-          "name": "Database Schema Design"
-        }
-      ]
-    },
-    {
-      "title": "Testing & CS",
+      "title": "Frontend",
       "color": "blue",
+      "icon": "react",
       "skills": [
         {
-          "name": "Jest"
+          "name": "React.js",
+          "icon": "react",
+          "years": 3,
+          "progress": 75
         },
         {
-          "name": "Unit Testing"
+          "name": "TypeScript",
+          "icon": "typescript",
+          "years": 2,
+          "progress": 50
         },
         {
-          "name": "Integration Testing"
-        },
-        {
-          "name": "Automated Acceptance Testing"
-        },
-        {
-          "name": "Data Structures & Algorithms"
-        },
-        {
-          "name": "Agile / Scrum"
-        },
-        {
-          "name": "Lean"
-        },
-        {
-          "name": "Leadership"
-        },
-        {
-          "name": "Communication"
-        },
-        {
-          "name": "Independent Work"
-        },
-        {
-          "name": "Fast-Paced Environments"
+          "name": "Next.js",
+          "icon": "nextjs",
+          "years": 2,
+          "progress": 50
         }
       ]
     },
     {
-      "title": "Mobile & Design",
-      "color": "purple",
+      "title": "Database",
+      "color": "green",
+      "icon": "database",
       "skills": [
         {
-          "name": "Flutter"
+          "name": "SQL",
+          "icon": "database",
+          "years": 2,
+          "progress": 50
         },
         {
-          "name": "Dart"
+          "name": "MongoDB",
+          "icon": "mongodb",
+          "years": 2,
+          "progress": 50
         },
         {
-          "name": "Figma"
+          "name": "Redis Caching",
+          "icon": "redis",
+          "years": 1,
+          "progress": 25
+        }
+      ]
+    },
+    {
+      "title": "DevOps",
+      "color": "orange",
+      "icon": "docker",
+      "skills": [
+        {
+          "name": "Docker",
+          "icon": "docker",
+          "years": 2,
+          "progress": 50
         },
         {
-          "name": "UI/UX"
+          "name": "Jenkins",
+          "icon": "jenkins",
+          "years": 1,
+          "progress": 25
         },
         {
-          "name": "Mapbox"
+          "name": "AWS EC2",
+          "icon": "amazonwebservices",
+          "years": 1,
+          "progress": 25
+        }
+      ]
+    },
+    {
+      "title": "AI/ML",
+      "color": "violet",
+      "icon": "python",
+      "skills": [
+        {
+          "name": "Azure AI Search",
+          "icon": "azure",
+          "years": 1,
+          "progress": 25
+        },
+        {
+          "name": "Python",
+          "icon": "python",
+          "years": 1,
+          "progress": 25
+        },
+        {
+          "name": "Power BI",
+          "icon": "chart",
+          "years": 1,
+          "progress": 25
         }
       ]
     }

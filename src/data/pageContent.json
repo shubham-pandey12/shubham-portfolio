@@ -30,28 +30,26 @@
     "description": "Technologies and practices listed across my current and previous resumes.",
     "overviewStats": [
       {
-        "label": "Skills listed",
+        "label": "Expert Level",
         "value": "",
         "tone": "blue"
       },
       {
-        "label": "Companies",
+        "label": "Certifications",
         "value": "",
         "tone": "purple"
       },
       {
-        "label": "Certifications listed",
+        "label": "Experience",
         "value": "",
         "tone": "green"
       }
     ],
     "tiers": [
-      "Frontend",
-      "Backend",
-      "Cloud & DevOps",
-      "Databases",
-      "Testing & CS",
-      "Mobile & Design"
+      "Expert Level",
+      "Advanced Level",
+      "Intermediate Level",
+      "Beginner Level"
     ]
   },
   "articles": {
@@ -65,7 +63,7 @@
     "description": "Software Engineer experienced in building scalable backend systems, REST APIs, microservices, and full-stack applications.",
     "competencies": [
       {
-        "title": "Frontend",
+        "title": "Frontend & Product Interface",
         "items": [
           "React.js",
           "Next.js",
@@ -80,17 +78,23 @@
           "jQuery",
           "Material UI",
           "Chart.js",
-          "React Hooks"
+          "React Hooks",
+          "Angular.js",
+          "Flutter",
+          "Dart",
+          "Figma",
+          "UI/UX"
         ]
       },
       {
-        "title": "Backend",
+        "title": "Backend & Architecture",
         "items": [
           "Node.js",
           "NestJS",
           "Express.js",
           "Java",
           "Python",
+          "C++",
           "REST APIs",
           "GraphQL",
           "MERN Stack",
@@ -101,13 +105,11 @@
           "Multi-tenant Architecture",
           "Redis Caching",
           "Azure AI Search Orchestration",
-          "C++",
-          "Power BI",
-          "Angular.js"
+          "Power BI"
         ]
       },
       {
-        "title": "Cloud & DevOps",
+        "title": "Cloud, DevOps & Data",
         "items": [
           "AWS EC2",
           "AWS S3",
@@ -123,21 +125,17 @@
           "Bitbucket",
           "npm",
           "Bash",
-          "Azure AI Search"
-        ]
-      },
-      {
-        "title": "Databases",
-        "items": [
+          "Azure AI Search",
           "SQL",
           "MySQL",
           "MongoDB",
           "SQLite",
-          "Database Schema Design"
+          "Database Schema Design",
+          "Mapbox"
         ]
       },
       {
-        "title": "Testing & CS",
+        "title": "Quality & Collaboration",
         "items": [
           "Jest",
           "Unit Testing",
@@ -146,20 +144,6 @@
           "Data Structures & Algorithms",
           "Agile / Scrum",
           "Lean",
-          "Leadership",
-          "Communication",
-          "Independent Work",
-          "Fast-Paced Environments"
-        ]
-      },
-      {
-        "title": "Mobile & Design",
-        "items": [
-          "Flutter",
-          "Dart",
-          "Figma",
-          "UI/UX",
-          "Mapbox",
           "Leadership",
           "Communication",
           "Independent Work",
@@ -204,15 +188,28 @@
         "28%",
         "Prompt Accuracy Improvement (MAQ Software)"
       ]
-    ]
+    ],
+    "seeking": "Backend engineering and full-stack product roles focused on scalable platforms and AI-enabled applications."
   },
   "contact": {
     "title": "Get in Touch",
     "description": "Have a project in mind or want to discuss opportunities? I’d love to hear from you!",
     "faq": [
       [
+        "Response Time",
+        "I typically reply within one business day."
+      ],
+      [
         "Project Types",
-        "Full-stack web applications, backend systems, and frontend engineering projects."
+        "Scalable backend services, full-stack web products, and AI-assisted applications."
+      ],
+      [
+        "Consultation",
+        "Share your project context and goals so we can discuss fit and next steps."
+      ],
+      [
+        "Collaboration",
+        "I value clear requirements, regular updates, and close collaboration with product and engineering teams."
       ]
     ],
     "formTitle": "Send Me a Message",
@@ -244,7 +241,9 @@
     },
     "submitLabel": "Send Message",
     "submitSuccess": "Demo form received",
-    "privacyNote": "This demo form does not send or store messages."
+    "privacyNote": "This demo form does not send or store messages.",
+    "availabilityTitle": "Currently Available",
+    "availabilityDescription": "Open to engineering opportunities and project conversations."
   },
   "home": {
     "heroRole": "Software Development Engineer 2",

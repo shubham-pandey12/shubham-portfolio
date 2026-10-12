@@ -41,6 +41,7 @@
     "title": "Crypto Hunter",
     "category": "Frontend",
     "type": "Resume Project",
+    "featured": true,
     "description": "A React web application that displays real-time market data for the top 50 cryptocurrencies using API integration.",
     "stack": [
       "SCSS",
@@ -71,6 +72,7 @@
     "title": "Mobivax",
     "category": "Full Stack",
     "type": "Resume Project",
+    "featured": true,
     "description": "A vaccination appointment web application with OTP verification and Mapbox geolocation for healthcare professionals.",
     "stack": [
       "HTML5",

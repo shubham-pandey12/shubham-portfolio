@@ -8,7 +8,7 @@ export type PortfolioProject = {
   title: string;
   category: string;
   type: string;
-  status?: string;
+  status: string;
   featured?: boolean;
   openSource?: boolean;
   projectKind?: string;
@@ -29,4 +29,9 @@ export type PortfolioProject = {
   demoUrl?: string;
 };
 
-export const projects = projectsData as PortfolioProject[];
+type ProjectData = Omit<PortfolioProject, "status"> & { status?: string };
+
+export const projects = (projectsData as ProjectData[]).map((project) => ({
+  ...project,
+  status: project.status || "Completed",
+}));

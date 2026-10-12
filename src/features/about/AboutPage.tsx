@@ -84,9 +84,14 @@ export function AboutPage({ navigate }: { navigate: (to: string) => void }) {
               ))}
             </div>
             <div className="about-profile-rule" />
-            <h3>Focus Areas</h3>
+            <h3>Professional Goals</h3>
             <div className="about-summary-copy about-goals-copy">
-              <p>{content.focusAreas}</p>
+              <p>
+                <strong>Seeking:</strong> {content.seeking}
+              </p>
+              <p>
+                <strong>Focus Areas:</strong> {content.focusAreas}
+              </p>
             </div>
             <div className="about-profile-rule" />
             <h3>Core Competencies</h3>

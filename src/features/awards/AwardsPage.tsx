@@ -41,6 +41,22 @@ function RecognitionCard({
 
 export function AwardsPage() {
   const content = pageContent.awards;
+  const azureCertifications = certifications.filter(({ title, organization }) =>
+    `${title} ${organization}`.toLowerCase().includes("azure"),
+  ).length;
+  const summaryStats = content.summaryStats.map((stat) => ({
+    ...stat,
+    value:
+      stat.label === "Certifications Listed"
+        ? String(certifications.length)
+        : stat.label === "Professional Award"
+          ? String(awards.length)
+          : stat.label === "Azure Certifications"
+            ? String(azureCertifications)
+            : stat.label === "Other Certifications"
+              ? String(certifications.length - azureCertifications)
+              : stat.value,
+  }));
   return (
     <main className="awards-page page-shell">
       <div className="awards-container container">
@@ -66,7 +82,7 @@ export function AwardsPage() {
         <section className="professional-summary-box awards-summary reveal">
           <h2>{content.summaryHeading}</h2>
           <div className="summary-stats">
-            {content.summaryStats.map(({ value, label }) => (
+            {summaryStats.map(({ value, label }) => (
               <div key={label}>
                 <strong>{value}</strong>
                 <span>{label}</span>

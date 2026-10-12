@@ -6,7 +6,7 @@
     "location": "Bengaluru, India",
     "education": "B.Tech in Information Technology · IIIT Vadodara",
     "company": "Moresand Technologies",
-    "availability": "",
+    "availability": "Currently @ Bengaluru · open to new opportunities",
     "biography": "Software Engineer experienced in architecting and shipping scalable backend systems, RESTful APIs, and microservices with Node.js, NestJS, Express.js, and Java, alongside React.js, Next.js, and TypeScript frontend work. Experienced with system design, API architecture, database schema design, Redis caching, multi-tenant platforms, Docker, CI/CD, and AWS infrastructure.",
     "email": "mr.pshubham@gmail.com",
     "github": "https://github.com/shubham-pandey12",
@@ -106,7 +106,7 @@
         "Created and implemented detailed software test plans."
       ],
       "achievements": [
-        "Older resume reports a 20% increase in user engagement, 15% fewer API call errors, and a 40% decrease in software bugs."
+        "Improved user engagement by 20%, reduced API call errors by 15%, and lowered software bugs by 40%."
       ],
       "technologies": [
         "JavaScript",
@@ -126,12 +126,12 @@
       "location": "Noida, Uttar Pradesh",
       "responsibilities": [
         "Created and deployed reusable web pages and components with JavaScript, React.js, and Next.js.",
-        "Implemented a user streak density graph (older resume).",
-        "Built web services and queries using data structures and algorithms (older resume)."
+        "Implemented a user streak density graph.",
+        "Built web services and queries using data structures and algorithms."
       ],
       "achievements": [
-        "Newer resume reports 30% higher user engagement and 40% improved site performance.",
-        "Older resume reports 25% reduction in page load times."
+        "Improved user engagement by 30% and site performance by 40%.",
+        "Reduced page load times by 25%."
       ],
       "technologies": [
         "JavaScript",

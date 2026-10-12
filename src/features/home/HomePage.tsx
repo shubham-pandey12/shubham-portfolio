@@ -8,14 +8,15 @@ import {
 } from "../../data/home";
 import { yearsOfExperience } from "../../data/profile";
 import { InternalLink } from "../../components/InternalLink";
+import { SkillIcon } from "../../components/SkillIcon";
 import pageContent from "../../data/pageContent.json";
 import { ProjectMetrics, ProjectTechList, SectionIntro } from "../../components/PortfolioUI";
-import { allSkills } from "../../data/skillCatalog";
 import { companies } from "../../data/profile";
 import { certifications } from "../../data/recognition";
 
 export function HomePage({ navigate }: { navigate: (to: string) => void }) {
   const featuredDescription = (project: PortfolioProject) => project.description;
+  const featuredProjects = projects.filter((project) => project.featured).slice(0, 3);
   const heroStats = [
     { value: `${yearsOfExperience()}+`, label: "Years Experience" },
     { value: String(projects.length), label: "Resume Projects" },
@@ -110,7 +111,7 @@ export function HomePage({ navigate }: { navigate: (to: string) => void }) {
             description={pageContent.home.featuredDescription}
           />
           <div className="featured-grid">
-            {projects.slice(0, 3).map((project, index) => (
+            {featuredProjects.map((project, index) => (
               <FeaturedProjectCard
                 key={project.slug}
                 project={project}
@@ -243,37 +244,38 @@ export function HomeSkillsSection({ navigate }: { navigate: (to: string) => void
       <div className="container">
         <SectionIntro
           title="Skills & Technologies"
-          description="Core technologies and tools across frontend development, application engineering, and business data platforms."
+          description="Core technologies I work with across full-stack development, cloud platforms, and tooling."
         />
         <div className="home-skill-groups">
           {skillGroups.map((group, i) => (
             <SkillSummaryCard key={group.title} group={group} order={i} />
           ))}
         </div>
-        {complementarySkills.length > 0 && (
-          <>
-            <h3 className="complement-title">Complementary Technologies</h3>
-            <div className="complement-chip-list">
-              {complementarySkills.map((item, i) => (
-                <span style={{ "--chip-order": i } as React.CSSProperties} key={`${item}-${i}`}>
-                  {item}
-                </span>
-              ))}
-            </div>
-          </>
-        )}
+        <h3 className="complement-title">Complementary Technologies</h3>
+        <div className="complement-chip-list">
+          {complementarySkills.map((skill, i) => (
+            <span style={{ "--chip-order": i } as React.CSSProperties} key={skill.name}>
+              <SkillIcon name={skill.icon} />
+              {skill.name}
+            </span>
+          ))}
+        </div>
         <div className="home-skill-stats">
           <div>
-            <strong>{allSkills.length}</strong>
-            <span>Resume-listed Skills</span>
+            <strong>{skillGroups.reduce((sum, group) => sum + group.skills.length, 0)}</strong>
+            <span>Core Technologies</span>
           </div>
           <div>
-            <strong>{companies.length}</strong>
-            <span>Companies</span>
+            <strong>{complementarySkills.length}</strong>
+            <span>Complementary Skills</span>
+          </div>
+          <div>
+            <strong>{yearsOfExperience()}+</strong>
+            <span>Years Experience</span>
           </div>
           <div>
             <strong>{certifications.length}</strong>
-            <span>Certifications Listed</span>
+            <span>Cloud Certifications</span>
           </div>
         </div>
         <div className="center-action">
@@ -299,29 +301,25 @@ export function SkillSummaryCard({
       className={`skill-summary-card skill-${group.color}`}
     >
       <h3>
-        <span className="skill-glyph">
-          {group.title === "Frontend"
-            ? "🎨"
-            : group.title === "Backend"
-              ? "⚙️"
-              : group.title === "Database"
-                ? "💾"
-                : group.title === "DevOps"
-                  ? "🚀"
-                  : "🤖"}
-        </span>
+        <SkillIcon name={group.icon} className="skill-glyph" />
         {group.title}
       </h3>
-      {group.skills.slice(0, 5).map((skill) => (
+      {group.skills.map((skill, index) => (
         <div className="summary-skill" key={skill.name}>
           <div>
-            <span>◆ &nbsp;{skill.name}</span>
+            <span>
+              <SkillIcon name={skill.icon} className="summary-skill-icon" />
+              {skill.name}
+            </span>
+            <small>{skill.years}y</small>
+          </div>
+          <div className="skill-track">
+            <i
+              style={{ width: `${skill.progress}%`, "--bar-order": index } as React.CSSProperties}
+            />
           </div>
         </div>
       ))}
-      {group.skills.length > 5 && (
-        <p className="home-skills-more">+ {group.skills.length - 5} more listed</p>
-      )}
     </article>
   );
 }

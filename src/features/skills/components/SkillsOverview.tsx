@@ -1,6 +1,7 @@
-import { Award, BriefcaseBusiness, Code2 } from "lucide-react";
+import { Award, CalendarDays, TrendingUp } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 import pageContent from "../../../data/pageContent.json";
-import { companies } from "../../../data/profile";
+import { yearsOfExperience } from "../../../data/profile";
 import { certifications } from "../../../data/recognition";
 import { allSkills } from "../../../data/skillCatalog";
 
@@ -8,14 +9,18 @@ type SkillsStatCardProps = {
   label: string;
   value: string;
   tone: "blue" | "purple" | "green";
-  icon: typeof Code2;
+  icon: LucideIcon;
 };
 const labels = pageContent.skills.overviewStats as {
   label: string;
   tone: "blue" | "purple" | "green";
 }[];
-const values = [allSkills.length, companies.length, certifications.length];
-const icons = [Code2, BriefcaseBusiness, Award];
+const values = [
+  allSkills.filter((skill) => skill.tier === "Expert Level").length,
+  certifications.length,
+  `${yearsOfExperience()}+`,
+];
+const icons = [TrendingUp, Award, CalendarDays];
 
 function SkillsStatCard({ label, value, tone, icon: Icon }: SkillsStatCardProps) {
   return (
@@ -39,7 +44,7 @@ export function SkillsOverview() {
           key={stat.label}
           {...stat}
           value={String(values[index] ?? 0)}
-          icon={icons[index] ?? Code2}
+          icon={icons[index] ?? TrendingUp}
         />
       ))}
     </section>

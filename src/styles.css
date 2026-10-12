@@ -4504,9 +4504,13 @@ select:focus-visible {
 .skills-home-section .skill-orange h3 {
   background-image: linear-gradient(90deg, #f97316, #ef4444);
 }
+.skills-home-section .skill-violet h3 {
+  background-image: linear-gradient(90deg, #8b5cf6, #d946ef);
+}
 .skills-home-section .skill-glyph {
-  font-size: 24px;
-  color: inherit;
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
 }
 .skills-home-section .summary-skill {
   margin: 0;
@@ -4521,7 +4525,20 @@ select:focus-visible {
   font-weight: 500;
 }
 .skills-home-section .summary-skill > div:first-child > span:first-child {
-  font-size: 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+.skills-home-section .summary-skill-icon {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+}
+.skill-icon {
+  display: inline-block;
+  flex: 0 0 auto;
+  vertical-align: middle;
 }
 .skills-home-section .summary-skill small {
   font-size: 12px;
@@ -4553,6 +4570,9 @@ select:focus-visible {
 .skills-home-section .skill-orange .skill-track i {
   background: linear-gradient(90deg, #f97316, #ef4444);
 }
+.skills-home-section .skill-violet .skill-track i {
+  background: linear-gradient(90deg, #8b5cf6, #d946ef);
+}
 .skills-home-section .skill-track i {
   transform: scaleX(0);
   transform-origin: left center;
@@ -4575,6 +4595,9 @@ select:focus-visible {
   justify-content: center;
 }
 .skills-home-section .complement-chip-list span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   border: 1px solid transparent;
   border-radius: 6px;
   padding: 4px 12px;
@@ -4586,6 +4609,11 @@ select:focus-visible {
   transition:
     background-color 0.2s,
     color 0.2s;
+}
+.skills-home-section .complement-chip-list .skill-icon {
+  width: 14px;
+  height: 14px;
+  flex: 0 0 14px;
 }
 .dark .skills-home-section .complement-chip-list span {
   background: #334155;

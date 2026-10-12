@@ -1,342 +1,554 @@
 [
   {
-    "name": "React.js",
-    "category": "Frontend",
-    "icon": ""
-  },
-  {
-    "name": "Next.js",
-    "category": "Frontend",
-    "icon": ""
-  },
-  {
-    "name": "Redux",
-    "category": "Frontend",
-    "icon": ""
-  },
-  {
-    "name": "TypeScript",
-    "category": "Frontend",
-    "icon": ""
-  },
-  {
-    "name": "JavaScript",
-    "category": "Frontend",
-    "icon": ""
-  },
-  {
-    "name": "Tailwind CSS",
-    "category": "Frontend",
-    "icon": ""
-  },
-  {
-    "name": "Sass / SCSS",
-    "category": "Frontend",
-    "icon": ""
-  },
-  {
-    "name": "Bootstrap",
-    "category": "Frontend",
-    "icon": ""
-  },
-  {
-    "name": "CSS",
-    "category": "Frontend",
-    "icon": ""
-  },
-  {
-    "name": "HTML",
-    "category": "Frontend",
-    "icon": ""
-  },
-  {
-    "name": "jQuery",
-    "category": "Frontend",
-    "icon": ""
-  },
-  {
-    "name": "Material UI",
-    "category": "Frontend",
-    "icon": ""
-  },
-  {
-    "name": "Chart.js",
-    "category": "Frontend",
-    "icon": ""
-  },
-  {
-    "name": "React Hooks",
-    "category": "Frontend",
-    "icon": ""
-  },
-  {
     "name": "Node.js",
     "category": "Backend",
-    "icon": ""
-  },
-  {
-    "name": "NestJS",
-    "category": "Backend",
-    "icon": ""
-  },
-  {
-    "name": "Express.js",
-    "category": "Backend",
-    "icon": ""
+    "icon": "nodejs",
+    "tier": "Expert Level",
+    "years": 3,
+    "progress": 95
   },
   {
     "name": "Java",
     "category": "Backend",
-    "icon": ""
-  },
-  {
-    "name": "Python",
-    "category": "Backend",
-    "icon": ""
+    "icon": "java",
+    "tier": "Expert Level",
+    "years": 3,
+    "progress": 95
   },
   {
     "name": "REST APIs",
     "category": "Backend",
-    "icon": ""
-  },
-  {
-    "name": "GraphQL",
-    "category": "Backend",
-    "icon": ""
-  },
-  {
-    "name": "MERN Stack",
-    "category": "Backend",
-    "icon": ""
-  },
-  {
-    "name": "Object-Oriented Programming",
-    "category": "Backend",
-    "icon": ""
-  },
-  {
-    "name": "Microservices",
-    "category": "Backend",
-    "icon": ""
-  },
-  {
-    "name": "System Design",
-    "category": "Backend",
-    "icon": ""
-  },
-  {
-    "name": "API Architecture",
-    "category": "Backend",
-    "icon": ""
-  },
-  {
-    "name": "Multi-tenant Architecture",
-    "category": "Backend",
-    "icon": ""
-  },
-  {
-    "name": "Redis Caching",
-    "category": "Backend",
-    "icon": ""
-  },
-  {
-    "name": "Azure AI Search Orchestration",
-    "category": "Backend",
-    "icon": ""
-  },
-  {
-    "name": "C++",
-    "category": "Backend",
-    "icon": ""
-  },
-  {
-    "name": "Power BI",
-    "category": "Backend",
-    "icon": ""
-  },
-  {
-    "name": "Angular.js",
-    "category": "Backend",
-    "icon": ""
-  },
-  {
-    "name": "AWS EC2",
-    "category": "Cloud & DevOps",
-    "icon": ""
-  },
-  {
-    "name": "AWS S3",
-    "category": "Cloud & DevOps",
-    "icon": ""
-  },
-  {
-    "name": "AWS ECS",
-    "category": "Cloud & DevOps",
-    "icon": ""
-  },
-  {
-    "name": "AWS CloudFront",
-    "category": "Cloud & DevOps",
-    "icon": ""
-  },
-  {
-    "name": "AWS Lambda",
-    "category": "Cloud & DevOps",
-    "icon": ""
-  },
-  {
-    "name": "AWS API Gateway",
-    "category": "Cloud & DevOps",
-    "icon": ""
-  },
-  {
-    "name": "Google Cloud Platform",
-    "category": "Cloud & DevOps",
-    "icon": ""
-  },
-  {
-    "name": "Docker",
-    "category": "Cloud & DevOps",
-    "icon": ""
-  },
-  {
-    "name": "Jenkins",
-    "category": "Cloud & DevOps",
-    "icon": ""
-  },
-  {
-    "name": "CI/CD",
-    "category": "Cloud & DevOps",
-    "icon": ""
+    "icon": "api",
+    "tier": "Expert Level",
+    "years": 3,
+    "progress": 95
   },
   {
     "name": "Git",
     "category": "Cloud & DevOps",
-    "icon": ""
+    "icon": "git",
+    "tier": "Expert Level",
+    "years": 3,
+    "progress": 95
   },
   {
-    "name": "Bitbucket",
-    "category": "Cloud & DevOps",
-    "icon": ""
+    "name": "React.js",
+    "category": "Frontend",
+    "icon": "react",
+    "tier": "Expert Level",
+    "years": 3,
+    "progress": 95
   },
   {
-    "name": "npm",
-    "category": "Cloud & DevOps",
-    "icon": ""
+    "name": "JavaScript",
+    "category": "Frontend",
+    "icon": "javascript",
+    "tier": "Expert Level",
+    "years": 3,
+    "progress": 95
   },
   {
-    "name": "Bash",
-    "category": "Cloud & DevOps",
-    "icon": ""
+    "name": "CSS",
+    "category": "Frontend",
+    "icon": "css3",
+    "tier": "Expert Level",
+    "years": 3,
+    "progress": 95
   },
   {
-    "name": "Azure AI Search",
-    "category": "Cloud & DevOps",
-    "icon": ""
-  },
-  {
-    "name": "SQL",
-    "category": "Databases",
-    "icon": ""
-  },
-  {
-    "name": "MySQL",
-    "category": "Databases",
-    "icon": ""
-  },
-  {
-    "name": "MongoDB",
-    "category": "Databases",
-    "icon": ""
-  },
-  {
-    "name": "SQLite",
-    "category": "Databases",
-    "icon": ""
-  },
-  {
-    "name": "Database Schema Design",
-    "category": "Databases",
-    "icon": ""
-  },
-  {
-    "name": "Jest",
-    "category": "Testing & CS",
-    "icon": ""
-  },
-  {
-    "name": "Unit Testing",
-    "category": "Testing & CS",
-    "icon": ""
-  },
-  {
-    "name": "Integration Testing",
-    "category": "Testing & CS",
-    "icon": ""
-  },
-  {
-    "name": "Automated Acceptance Testing",
-    "category": "Testing & CS",
-    "icon": ""
+    "name": "HTML",
+    "category": "Frontend",
+    "icon": "html5",
+    "tier": "Expert Level",
+    "years": 3,
+    "progress": 95
   },
   {
     "name": "Data Structures & Algorithms",
     "category": "Testing & CS",
-    "icon": ""
+    "icon": "algorithm",
+    "tier": "Expert Level",
+    "years": 3,
+    "progress": 95
+  },
+  {
+    "name": "Express.js",
+    "category": "Backend",
+    "icon": "express",
+    "tier": "Advanced Level",
+    "years": 3,
+    "progress": 80
+  },
+  {
+    "name": "Spring Boot",
+    "category": "Backend",
+    "icon": "spring",
+    "tier": "Advanced Level",
+    "years": 3,
+    "progress": 80
+  },
+  {
+    "name": "SQL",
+    "category": "Databases",
+    "icon": "database",
+    "tier": "Advanced Level",
+    "years": 2,
+    "progress": 80
+  },
+  {
+    "name": "MySQL",
+    "category": "Databases",
+    "icon": "technology",
+    "tier": "Advanced Level",
+    "years": 2,
+    "progress": 80
+  },
+  {
+    "name": "MongoDB",
+    "category": "Databases",
+    "icon": "mongodb",
+    "tier": "Advanced Level",
+    "years": 2,
+    "progress": 80
+  },
+  {
+    "name": "AWS EC2",
+    "category": "Cloud & DevOps",
+    "icon": "amazonwebservices",
+    "tier": "Advanced Level",
+    "years": 2,
+    "progress": 80
+  },
+  {
+    "name": "AWS S3",
+    "category": "Cloud & DevOps",
+    "icon": "amazonwebservices",
+    "tier": "Advanced Level",
+    "years": 2,
+    "progress": 80
+  },
+  {
+    "name": "Docker",
+    "category": "Cloud & DevOps",
+    "icon": "docker",
+    "tier": "Advanced Level",
+    "years": 2,
+    "progress": 80
+  },
+  {
+    "name": "Jenkins",
+    "category": "Cloud & DevOps",
+    "icon": "jenkins",
+    "tier": "Advanced Level",
+    "years": 2,
+    "progress": 80
+  },
+  {
+    "name": "CI/CD",
+    "category": "Cloud & DevOps",
+    "icon": "githubactions",
+    "tier": "Advanced Level",
+    "years": 2,
+    "progress": 80
+  },
+  {
+    "name": "Next.js",
+    "category": "Frontend",
+    "icon": "nextjs",
+    "tier": "Advanced Level",
+    "years": 2,
+    "progress": 80
+  },
+  {
+    "name": "Redux",
+    "category": "Frontend",
+    "icon": "redux",
+    "tier": "Advanced Level",
+    "years": 2,
+    "progress": 80
+  },
+  {
+    "name": "TypeScript",
+    "category": "Frontend",
+    "icon": "typescript",
+    "tier": "Advanced Level",
+    "years": 2,
+    "progress": 80
+  },
+  {
+    "name": "Sass / SCSS",
+    "category": "Frontend",
+    "icon": "sass",
+    "tier": "Advanced Level",
+    "years": 2,
+    "progress": 80
+  },
+  {
+    "name": "Jest",
+    "category": "Testing & CS",
+    "icon": "jest",
+    "tier": "Advanced Level",
+    "years": 2,
+    "progress": 80
+  },
+  {
+    "name": "Unit Testing",
+    "category": "Testing & CS",
+    "icon": "test",
+    "tier": "Advanced Level",
+    "years": 2,
+    "progress": 80
+  },
+  {
+    "name": "Integration Testing",
+    "category": "Testing & CS",
+    "icon": "integration",
+    "tier": "Advanced Level",
+    "years": 2,
+    "progress": 80
+  },
+  {
+    "name": "NestJS",
+    "category": "Backend",
+    "icon": "nestjs",
+    "tier": "Intermediate Level",
+    "years": 3,
+    "progress": 60
+  },
+  {
+    "name": "MERN Stack",
+    "category": "Backend",
+    "icon": "mongodb",
+    "tier": "Intermediate Level",
+    "years": 3,
+    "progress": 60
+  },
+  {
+    "name": "Object-Oriented Programming",
+    "category": "Backend",
+    "icon": "objects",
+    "tier": "Intermediate Level",
+    "years": 3,
+    "progress": 60
+  },
+  {
+    "name": "Microservices",
+    "category": "Backend",
+    "icon": "network",
+    "tier": "Intermediate Level",
+    "years": 3,
+    "progress": 60
+  },
+  {
+    "name": "System Design",
+    "category": "Backend",
+    "icon": "architecture",
+    "tier": "Intermediate Level",
+    "years": 3,
+    "progress": 60
+  },
+  {
+    "name": "API Architecture",
+    "category": "Backend",
+    "icon": "api",
+    "tier": "Intermediate Level",
+    "years": 3,
+    "progress": 60
+  },
+  {
+    "name": "Multi-tenant Architecture",
+    "category": "Backend",
+    "icon": "tenant",
+    "tier": "Intermediate Level",
+    "years": 3,
+    "progress": 60
+  },
+  {
+    "name": "Redis Caching",
+    "category": "Backend",
+    "icon": "redis",
+    "tier": "Intermediate Level",
+    "years": 3,
+    "progress": 60
+  },
+  {
+    "name": "Azure AI Search Orchestration",
+    "category": "Backend",
+    "icon": "azure",
+    "tier": "Intermediate Level",
+    "years": 3,
+    "progress": 60
+  },
+  {
+    "name": "C++",
+    "category": "Backend",
+    "icon": "cplusplus",
+    "tier": "Intermediate Level",
+    "years": 3,
+    "progress": 60
+  },
+  {
+    "name": "Angular.js",
+    "category": "Backend",
+    "icon": "angular",
+    "tier": "Intermediate Level",
+    "years": 3,
+    "progress": 60
+  },
+  {
+    "name": "SQLite",
+    "category": "Databases",
+    "icon": "sqlite",
+    "tier": "Intermediate Level",
+    "years": 1,
+    "progress": 60
+  },
+  {
+    "name": "Database Schema Design",
+    "category": "Databases",
+    "icon": "schema",
+    "tier": "Intermediate Level",
+    "years": 1,
+    "progress": 60
+  },
+  {
+    "name": "AWS ECS",
+    "category": "Cloud & DevOps",
+    "icon": "amazonwebservices",
+    "tier": "Intermediate Level",
+    "years": 1,
+    "progress": 60
+  },
+  {
+    "name": "AWS CloudFront",
+    "category": "Cloud & DevOps",
+    "icon": "amazonwebservices",
+    "tier": "Intermediate Level",
+    "years": 1,
+    "progress": 60
+  },
+  {
+    "name": "AWS Lambda",
+    "category": "Cloud & DevOps",
+    "icon": "amazonwebservices",
+    "tier": "Intermediate Level",
+    "years": 1,
+    "progress": 60
+  },
+  {
+    "name": "AWS API Gateway",
+    "category": "Cloud & DevOps",
+    "icon": "amazonwebservices",
+    "tier": "Intermediate Level",
+    "years": 1,
+    "progress": 60
+  },
+  {
+    "name": "Google Cloud Platform",
+    "category": "Cloud & DevOps",
+    "icon": "googlecloud",
+    "tier": "Intermediate Level",
+    "years": 1,
+    "progress": 60
+  },
+  {
+    "name": "Bitbucket",
+    "category": "Cloud & DevOps",
+    "icon": "bitbucket",
+    "tier": "Intermediate Level",
+    "years": 1,
+    "progress": 60
+  },
+  {
+    "name": "npm",
+    "category": "Cloud & DevOps",
+    "icon": "npm",
+    "tier": "Intermediate Level",
+    "years": 1,
+    "progress": 60
+  },
+  {
+    "name": "Bash",
+    "category": "Cloud & DevOps",
+    "icon": "bash",
+    "tier": "Intermediate Level",
+    "years": 1,
+    "progress": 60
+  },
+  {
+    "name": "Azure AI Search",
+    "category": "Cloud & DevOps",
+    "icon": "azure",
+    "tier": "Intermediate Level",
+    "years": 1,
+    "progress": 60
+  },
+  {
+    "name": "Tailwind CSS",
+    "category": "Frontend",
+    "icon": "tailwindcss",
+    "tier": "Intermediate Level",
+    "years": 1,
+    "progress": 60
+  },
+  {
+    "name": "Bootstrap",
+    "category": "Frontend",
+    "icon": "bootstrap",
+    "tier": "Intermediate Level",
+    "years": 1,
+    "progress": 60
+  },
+  {
+    "name": "React Hooks",
+    "category": "Frontend",
+    "icon": "react",
+    "tier": "Intermediate Level",
+    "years": 1,
+    "progress": 60
+  },
+  {
+    "name": "Automated Acceptance Testing",
+    "category": "Testing & CS",
+    "icon": "acceptance",
+    "tier": "Intermediate Level",
+    "years": 1,
+    "progress": 60
   },
   {
     "name": "Agile / Scrum",
     "category": "Testing & CS",
-    "icon": ""
+    "icon": "agile",
+    "tier": "Intermediate Level",
+    "years": 1,
+    "progress": 60
   },
   {
     "name": "Lean",
     "category": "Testing & CS",
-    "icon": ""
+    "icon": "lean",
+    "tier": "Intermediate Level",
+    "years": 1,
+    "progress": 60
   },
   {
     "name": "Leadership",
     "category": "Testing & CS",
-    "icon": ""
+    "icon": "leadership",
+    "tier": "Intermediate Level",
+    "years": 1,
+    "progress": 60
   },
   {
     "name": "Communication",
     "category": "Testing & CS",
-    "icon": ""
+    "icon": "communication",
+    "tier": "Intermediate Level",
+    "years": 1,
+    "progress": 60
   },
   {
     "name": "Independent Work",
     "category": "Testing & CS",
-    "icon": ""
+    "icon": "independent",
+    "tier": "Intermediate Level",
+    "years": 1,
+    "progress": 60
   },
   {
     "name": "Fast-Paced Environments",
     "category": "Testing & CS",
-    "icon": ""
-  },
-  {
-    "name": "Flutter",
-    "category": "Mobile & Design",
-    "icon": ""
-  },
-  {
-    "name": "Dart",
-    "category": "Mobile & Design",
-    "icon": ""
-  },
-  {
-    "name": "Figma",
-    "category": "Mobile & Design",
-    "icon": ""
+    "icon": "fast",
+    "tier": "Intermediate Level",
+    "years": 1,
+    "progress": 60
   },
   {
     "name": "UI/UX",
     "category": "Mobile & Design",
-    "icon": ""
+    "icon": "figma",
+    "tier": "Intermediate Level",
+    "years": 1,
+    "progress": 60
+  },
+  {
+    "name": "Python",
+    "category": "Backend",
+    "icon": "python",
+    "tier": "Beginner Level",
+    "years": 3,
+    "progress": 40
+  },
+  {
+    "name": "GraphQL",
+    "category": "Backend",
+    "icon": "graphql",
+    "tier": "Beginner Level",
+    "years": 3,
+    "progress": 40
+  },
+  {
+    "name": "Power BI",
+    "category": "Backend",
+    "icon": "chart",
+    "tier": "Beginner Level",
+    "years": 3,
+    "progress": 40
+  },
+  {
+    "name": "jQuery",
+    "category": "Frontend",
+    "icon": "jquery",
+    "tier": "Beginner Level",
+    "years": 1,
+    "progress": 40
+  },
+  {
+    "name": "Material UI",
+    "category": "Frontend",
+    "icon": "materialui",
+    "tier": "Beginner Level",
+    "years": 1,
+    "progress": 40
+  },
+  {
+    "name": "Chart.js",
+    "category": "Frontend",
+    "icon": "chartjs",
+    "tier": "Beginner Level",
+    "years": 1,
+    "progress": 40
+  },
+  {
+    "name": "Flutter",
+    "category": "Mobile & Design",
+    "icon": "flutter",
+    "tier": "Beginner Level",
+    "years": 1,
+    "progress": 40
+  },
+  {
+    "name": "Dart",
+    "category": "Mobile & Design",
+    "icon": "dart",
+    "tier": "Beginner Level",
+    "years": 1,
+    "progress": 40
+  },
+  {
+    "name": "Figma",
+    "category": "Mobile & Design",
+    "icon": "figma",
+    "tier": "Beginner Level",
+    "years": 1,
+    "progress": 40
   },
   {
     "name": "Mapbox",
     "category": "Mobile & Design",
-    "icon": ""
+    "icon": "mapbox",
+    "tier": "Beginner Level",
+    "years": 1,
+    "progress": 40
   }
 ]
