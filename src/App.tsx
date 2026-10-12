@@ -1,28 +1,26 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import {
   ArrowLeft, ArrowRight, ArrowUpRight, Award, BookOpen, BriefcaseBusiness,
-  Check, ChevronDown, Cloud, Code2, Database, ExternalLink, Github,
-  GraduationCap, Linkedin, Mail, MapPin, Menu, Moon, Search, Send,
-  ShieldCheck, Sun, UserRound, X, Zap, Filter, CircleHelp, BarChart3,
-  CalendarDays, Star, Sparkles, Copy, Twitter, Globe, Clock3
+  ChevronDown, ExternalLink, Github, GraduationCap, Linkedin, Mail, MapPin,
+  Menu, Moon, Search, Send, ShieldCheck, Sun, UserRound, X, Zap,
+  CalendarDays, Twitter, Globe
 } from "lucide-react";
 import {
   allSkills, articles, awards, companies, complementarySkills, certifications,
   profile, projects, skillGroups, type PortfolioProject
 } from "./content";
+import { InternalLink } from "./components/InternalLink";
+import { ProjectsPage } from "./features/projects/ProjectsPage";
 
 const paths = ["/", "/projects", "/skills", "/awards", "/articles", "/about", "/contact"];
 const navItems = [
   ["Home", "/"], ["Projects", "/projects"], ["Skills", "/skills"],
   ["Awards", "/awards"], ["Articles", "/articles"], ["About", "/about"], ["Contact", "/contact"],
 ] as const;
-const categories = ["All", ...Array.from(new Set(projects.map((project) => project.category)))];
+const skillCategories = ["All", ...Array.from(new Set(allSkills.map((skill) => skill.category)))];
 
 function routePath() { return window.location.pathname.replace(/\/$/, "") || "/"; }
 function isProjectDetail(path: string) { return path.startsWith("/projects/") && path !== "/projects"; }
-function InternalLink({ to, navigate, className, children, ...props }: { to: string; navigate: (to: string) => void; className?: string; children: React.ReactNode; [key: string]: unknown }) {
-  return <a href={to} className={className} onClick={(event) => { if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return; event.preventDefault(); navigate(to); }} {...props}>{children}</a>;
-}
 
 function App() {
   const [path, setPath] = useState(routePath);
@@ -57,7 +55,7 @@ function App() {
       {path === "/" && <HomePage navigate={navigate}/>}
       {path === "/projects" && <ProjectsPage navigate={navigate}/>}
       {path === "/skills" && <SkillsPage/>}
-      {path === "/awards" && <AwardsPage navigate={navigate}/>}
+      {path === "/awards" && <AwardsPage/>}
       {path === "/articles" && <ArticlesPage/>}
       {path === "/about" && <AboutPage navigate={navigate}/>}
       {path === "/contact" && <ContactPage/>}
@@ -173,35 +171,6 @@ function SkillSummaryCard({ group, order }: { group: (typeof skillGroups)[number
   </article>;
 }
 
-function ProjectsPage({ navigate }: { navigate: (to: string) => void }) {
-  const [query, setQuery] = useState(""); const [sort, setSort] = useState("Newest First"); const [category, setCategory] = useState("All"); const [filtersOpen, setFiltersOpen] = useState(false);
-  const filtered = useMemo(() => {
-    let rows = projects.filter((project) => `${project.title} ${project.description} ${project.stack.join(" ")} ${project.category}`.toLowerCase().includes(query.toLowerCase()) && (category === "All" || project.category === category));
-    if (sort === "Category") rows = [...rows].sort((a, b) => a.category.localeCompare(b.category) || a.title.localeCompare(b.title));
-    if (sort === "Title (A-Z)") rows = [...rows].sort((a, b) => a.title.localeCompare(b.title));
-    if (sort === "Title (Z-A)") rows = [...rows].sort((a, b) => b.title.localeCompare(a.title));
-    if (sort === "Oldest First") rows = [...rows].reverse(); return rows;
-  }, [query, sort, category]);
-  return <div className="projects-page page-shell">
-    <div className="container">
-      <PageHeading title="All Projects" description="Explore my portfolio of projects spanning frontend engineering, data experiences, full-stack development, and AI tools."/>
-      <div className="project-toolbar"><label className="search-field"><Search size={17}/><input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Search projects, technologies..." aria-label="Search projects"/></label><label className="sort-field"><select value={sort} onChange={(e) => setSort(e.target.value)} aria-label="Sort projects">{["Newest First", "Oldest First", "Title (A-Z)", "Title (Z-A)", "Category"].map((item) => <option key={item}>{item}</option>)}</select><ChevronDown size={14}/></label><div className="filter-wrap"><button className="outline-button" onClick={() => setFiltersOpen(!filtersOpen)}><Filter size={14}/> Filters</button>{filtersOpen && <div className="filter-popover">{categories.slice(1).map((item) => <button key={item} className={category === item ? "chosen" : ""} onClick={() => setCategory(category === item ? "All" : item)}>{item}{category === item && <Check size={14}/>}</button>)}</div>}</div></div>
-      <div className="result-count">Showing <strong>{filtered.length}</strong> of {projects.length} projects</div>
-      <div className="all-projects-grid">{filtered.map((project, index) => <ProjectListCard key={project.slug} project={project} index={index} navigate={navigate}/>)}</div>
-      {filtered.length === 0 && <div className="empty-results">No projects match that search.</div>}
-    </div>
-  </div>;
-}
-function ProjectListCard({ project, index, navigate }: { project: PortfolioProject; index: number; navigate: (to: string) => void }) {
-  return <article className="project-list-card">
-    <div className="list-card-title-row"><InternalLink to={`/projects/${project.slug}`} navigate={navigate}><h3>{project.title}</h3></InternalLink>{project.featured && <span className="featured-flag">Featured</span>}</div>
-    <p>{project.description}</p>
-    <div className="project-state-tags"><span className={project.type === "Professional" ? "tag-cyan" : project.type === "PLACEHOLDER" ? "tag-gray" : "tag-purple"}>{project.type === "PLACEHOLDER" ? "PLACEHOLDER PROJECT" : project.type}</span><span className="category-label">{project.category}</span><span className={project.status === "Completed" ? "status-label complete" : "status-label ongoing"}>{project.status}</span></div>
-    <ProjectTechList stack={project.stack} max={4}/><ProjectMetrics metrics={project.metrics.slice(0, index % 3 === 0 ? 4 : 2)}/>
-    <InternalLink to={`/projects/${project.slug}`} navigate={navigate} className="view-details-link">View Details <ArrowRight size={14}/></InternalLink>
-  </article>;
-}
-
 function SkillsPage() {
   const [query, setQuery] = useState(""); const [category, setCategory] = useState("All");
   const filtered = allSkills.filter((skill) => (category === "All" || skill.category === category) && skill.name.toLowerCase().includes(query.toLowerCase()));
@@ -210,7 +179,7 @@ function SkillsPage() {
     <PageHeading title="Technical Skills" description="Technologies and tools across software development. Items marked PLACEHOLDER need confirmation before publication."/>
     <div className="skill-overview-stats"><StatTile icon={<Zap/>} label="Expert Level" value="TBD" tone="blue"/><StatTile icon={<Award/>} label="Certifications" value="TBD" tone="purple"/><StatTile icon={<BriefcaseBusiness/>} label="Experience" value="TBD" tone="green"/></div>
     <label className="search-field skills-search"><Search size={17}/><input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Search skills (e.g., TypeScript, Azure, Docker)..." aria-label="Search skills"/></label>
-    <div className="skill-filter-row">{categories.map((item) => <button key={item} className={category === item ? "selected" : ""} onClick={() => setCategory(item)}>{item}{item !== "All" && <span>{allSkills.filter((skill) => skill.category === item).length}</span>}</button>)}</div>
+    <div className="skill-filter-row">{skillCategories.map((item) => <button key={item} className={category === item ? "selected" : ""} onClick={() => setCategory(item)}>{item}{item !== "All" && <span>{allSkills.filter((skill) => skill.category === item).length}</span>}</button>)}</div>
     <div className="result-count">Showing <strong>{filtered.length}</strong> of {allSkills.length} skills</div>
     <div className="skill-tiers">{tiers.map((tier) => {const rows = filtered.filter((skill) => skill.tier === tier); if (!rows.length) return null; return <section className="skill-tier" key={tier}><div className="tier-heading"><h2>{tier}</h2><span>{rows.length} skills</span></div><div className="detailed-skills-grid">{rows.map((skill, i) => <SkillDetailCard key={`${skill.name}-${i}`} skill={skill}/>)}</div></section>;})}</div>
     <div className="proficiency-panel"><h2>Proficiency Distribution</h2><div className="distribution-grid">{[["TBD","Expert","green"],["TBD","Advanced","blue"],["TBD","Intermediate","orange"],["TBD","Beginner","gray"]].map(([value,label,tone]) => <div key={label}><strong className={`distribution-${tone}`}>{value}</strong><span>{label}</span><small>Placeholder</small></div>)}</div></div>
@@ -222,7 +191,7 @@ function SkillDetailCard({ skill }: { skill: (typeof allSkills)[number] }) {
 }
 function StatTile({ icon, label, value, tone }: { icon: React.ReactNode; label: string; value: string; tone: string }) { return <div className={`stat-tile tone-${tone}`}><span>{icon}</span><div><strong>{value}</strong><small>{label}</small></div></div>; }
 
-function AwardsPage({ navigate }: { navigate: (to: string) => void }) {
+function AwardsPage() {
   return <div className="awards-page page-shell"><div className="container"><PageHeading title="Awards & Certifications" description="Professional recognitions and industry certifications. Replace each placeholder with your confirmed details."/>
     <div className="content-section"><SectionHeader icon={<Award/>} title="Featured Recognitions"/><div className="awards-grid">{awards.map((item, i) => <AwardCard key={i} item={item}/>)}</div></div>
     <div className="content-section"><SectionHeader icon={<ShieldCheck/>} title="Cloud Certifications"/><div className="certification-grid">{certifications.map((item, i) => <AwardCard key={i} item={item}/>)}</div></div>

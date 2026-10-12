@@ -14,12 +14,36 @@ A responsive developer portfolio inspired by the visual language and information
 
 ## Run locally
 
-Requirements: Node.js 18+
+Requirements: Node.js 20.19+ (ESLint 10 development tooling)
 
 ```bash
 npm install
 npm run dev
 ```
+
+## Project structure
+
+```text
+src/
+├── components/          # Shared UI such as internal navigation links
+├── features/projects/   # Projects listing page and its page-scoped styles
+├── App.tsx              # Application shell and page routing
+├── content.ts           # Typed portfolio content, including project data
+├── main.tsx             # React entry point
+└── styles.css           # Global styles and shared page styles
+```
+
+Project descriptions, categories, technologies, and metrics are maintained in `src/content.ts`.
+
+## Code quality
+
+```bash
+npm run lint
+npm run format
+npm run format:check
+```
+
+ESLint checks the TypeScript app and React hook rules. Prettier formats the shared component and Projects feature; its formatting scope avoids rewriting unrelated legacy pages and global styles during this page update.
 
 ## Production build
 
@@ -39,11 +63,9 @@ npm run preview
 
 ## Personalize before publishing
 
-Search `src/App.tsx` and replace:
-- placeholder GitHub and LinkedIn profile URLs
-- contact email if you want a different public email
-- project details and status labels where needed
-- any project repository/demo links once confirmed
+Update personal details, social links, project descriptions, statuses, technologies, and metrics in `src/content.ts`.
+
+Search `src/App.tsx` for placeholder repository and demo URLs, and add only links you can verify and share.
 
 The project cards intentionally avoid inventing public repository links. Add only links you can verify and share.
 
