@@ -75,7 +75,7 @@ export function HomePage({ navigate }: { navigate: (to: string) => void }) {
           <div className="hero-portrait-column">
             <Portrait>
               <div className="portrait-seal seal-left">
-                <span>💻</span>
+                <span>⭐️</span>
                 {/* <small>{profile.company}</small> */}
               </div>
               <div className="portrait-seal seal-right">
