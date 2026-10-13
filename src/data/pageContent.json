@@ -265,7 +265,9 @@
       "MongoDB"
     ],
     "featuredTitle": "Featured Projects",
-    "featuredDescription": "Resume projects across full-stack web development, data visualization, and mapping."
+    "featuredDescription": "Resume projects across full-stack web development, data visualization, and mapping.",
+    "articlesTitle": "Technical Articles",
+    "articlesDescription": "Technical articles and practical notes on building reliable software."
   },
   "projects": {
     "title": "All Projects",

@@ -107,7 +107,9 @@ function App() {
         navigate={navigate}
       />
       <main key={path}>
-        {path === "/" && <HomePage navigate={navigate} projects={allProjects} />}
+        {path === "/" && (
+          <HomePage navigate={navigate} projects={allProjects} articles={allArticles} />
+        )}
         {path === "/projects" && <ProjectsPage navigate={navigate} projects={allProjects} />}
         {path === "/skills" && <SkillsPage />}
         {path === "/awards" && <AwardsPage />}

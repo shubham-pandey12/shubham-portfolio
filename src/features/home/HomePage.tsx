@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { ArrowRight, Github, Linkedin, Mail, Twitter, Globe } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Github, Linkedin, Mail, Twitter, Globe } from "lucide-react";
 import { profile, skillGroups, complementarySkills, type PortfolioProject } from "../../data/home";
 import { yearsOfExperience } from "../../data/profile";
 import { InternalLink } from "../../components/InternalLink";
@@ -12,15 +12,17 @@ import {
   SectionIntro,
 } from "../../components/PortfolioUI";
 import { companies } from "../../data/profile";
-import { certifications } from "../../data/recognition";
+import { certifications, type PortfolioArticle } from "../../data/recognition";
 import { orderProjectsBySlug, readSavedProjectOrder } from "../projects/projectOrder";
 
 export function HomePage({
   navigate,
   projects,
+  articles,
 }: {
   navigate: (to: string) => void;
   projects: PortfolioProject[];
+  articles: PortfolioArticle[];
 }) {
   const [savedProjectOrder, setSavedProjectOrder] = useState(readSavedProjectOrder);
   const featuredDescription = (project: PortfolioProject) => project.description;
@@ -138,8 +140,77 @@ export function HomePage({
           </div>
         </div>
       </section>
+      <section className="featured-section page-section reveal home-articles-section">
+        <div className="container">
+          <SectionIntro
+            title={pageContent.home.articlesTitle}
+            description={pageContent.home.articlesDescription}
+          />
+          <div className="featured-grid">
+            {articles.slice(0, 3).map((article, index) => (
+              <TechnicalArticleCard key={article.url || article.title} article={article} index={index} />
+            ))}
+          </div>
+          <div className="center-action">
+            <InternalLink to="/articles" navigate={navigate} className="primary-button">
+              View All Articles <ArrowRight size={15} />
+            </InternalLink>
+          </div>
+        </div>
+      </section>
       <HomeSkillsSection navigate={navigate} />
     </>
+  );
+}
+
+function TechnicalArticleCard({
+  article,
+  index,
+}: {
+  article: PortfolioArticle;
+  index: number;
+}) {
+  return (
+    <article
+      className="featured-project-card home-article-card"
+      style={{ "--card-order": index } as React.CSSProperties}
+    >
+      <div className="featured-card-wash" aria-hidden="true" />
+      <div className="featured-card-glow" aria-hidden="true" />
+      <div className="featured-card-surface">
+        <div className="project-label-row">
+          <span className="category-label">{article.category}</span>
+          <span className="home-article-date">{article.date}</span>
+        </div>
+        <div className="featured-project-copy">
+          {article.url ? (
+            <a
+              href={article.url}
+              className="project-title-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <h3>{article.title}</h3>
+            </a>
+          ) : (
+            <h3 className="home-article-title">{article.title}</h3>
+          )}
+          <p className="project-description">{article.description}</p>
+        </div>
+        {article.url && (
+          <div className="card-actions">
+            <a
+              href={article.url}
+              className="card-primary-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Read Article <ArrowUpRight size={15} />
+            </a>
+          </div>
+        )}
+      </div>
+    </article>
   );
 }
 

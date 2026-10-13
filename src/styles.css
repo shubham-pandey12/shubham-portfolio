@@ -4234,6 +4234,15 @@ select:focus-visible {
   background: #dbeafe;
   color: #1d4ed8;
 }
+.home-article-date {
+  color: #64748b;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: right;
+}
+.dark .home-article-date {
+  color: #94a3b8;
+}
 .dark .featured-section .category-label {
   border-color: #1e40af;
   background: rgba(30, 58, 138, 0.35);
@@ -4265,7 +4274,8 @@ select:focus-visible {
   flex-direction: column;
   gap: 8px;
 }
-.featured-section .project-title-link h3 {
+.featured-section .project-title-link h3,
+.featured-section .home-article-title {
   margin: 0;
   color: #0f172a;
   font-size: 24px;
@@ -4273,7 +4283,8 @@ select:focus-visible {
   letter-spacing: 0;
   transition: color 0.2s;
 }
-.dark .featured-section .project-title-link h3 {
+.dark .featured-section .project-title-link h3,
+.dark .featured-section .home-article-title {
   color: #f1f5f9;
 }
 .featured-section .project-title-link:hover h3,
