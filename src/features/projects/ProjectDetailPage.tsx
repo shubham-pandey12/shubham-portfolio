@@ -62,7 +62,9 @@ export function ProjectDetailPage({
                 <Rocket size={14} aria-hidden="true" /> {project.projectKind}
               </span>
             )}
-            <span className="tag-green">{project.type}</span>
+            {project.type !== "Resume Project" && (
+              <span className="tag-green">{project.type}</span>
+            )}
             <span className="project-detail-tag">{project.category}</span>
             {project.status && (
               <span
@@ -265,13 +267,15 @@ export function ProjectDetailPage({
                     <small>{project.category}</small>
                   </span>
                 </div>
-                <div className="info-line">
-                  <Rocket size={18} aria-hidden="true" />
-                  <span>
-                    <b>Project Type</b>
-                    <small>{project.type}</small>
-                  </span>
-                </div>
+                {project.type !== "Resume Project" && (
+                  <div className="info-line">
+                    <Rocket size={18} aria-hidden="true" />
+                    <span>
+                      <b>Project Type</b>
+                      <small>{project.type}</small>
+                    </span>
+                  </div>
+                )}
                 {(project.startedAt || project.updatedAt) && (
                   <div className="info-line">
                     <CalendarDays size={18} aria-hidden="true" />

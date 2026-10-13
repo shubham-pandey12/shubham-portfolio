@@ -1,22 +1,30 @@
 import { ArrowRight, Github, Linkedin, Mail, Twitter, Globe } from "lucide-react";
-import {
-  profile,
-  projects,
-  skillGroups,
-  complementarySkills,
-  type PortfolioProject,
-} from "../../data/home";
+import { profile, skillGroups, complementarySkills, type PortfolioProject } from "../../data/home";
 import { yearsOfExperience } from "../../data/profile";
 import { InternalLink } from "../../components/InternalLink";
 import { SkillIcon } from "../../components/SkillIcon";
 import pageContent from "../../data/pageContent.json";
-import { Portrait, ProjectMetrics, ProjectTechList, SectionIntro } from "../../components/PortfolioUI";
+import {
+  Portrait,
+  ProjectMetrics,
+  ProjectTechList,
+  SectionIntro,
+} from "../../components/PortfolioUI";
 import { companies } from "../../data/profile";
 import { certifications } from "../../data/recognition";
 
-export function HomePage({ navigate }: { navigate: (to: string) => void }) {
+export function HomePage({
+  navigate,
+  projects,
+}: {
+  navigate: (to: string) => void;
+  projects: PortfolioProject[];
+}) {
   const featuredDescription = (project: PortfolioProject) => project.description;
-  const featuredProjects = projects.filter((project) => project.featured).slice(0, 3);
+  const featuredProjects = [
+    ...projects.filter((project) => project.featured && project.type === "GitHub Project"),
+    ...projects.filter((project) => project.featured && project.type !== "GitHub Project"),
+  ].slice(0, 3);
   const heroStats = [
     { value: `${yearsOfExperience()}+`, label: "Years Experience" },
     { value: String(projects.length), label: "Resume Projects" },

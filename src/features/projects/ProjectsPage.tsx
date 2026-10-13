@@ -6,11 +6,12 @@ import {
   ChevronDown,
   Code2,
   Filter,
+  Github,
   GraduationCap,
   Rocket,
   Search,
 } from "lucide-react";
-import { projects, type PortfolioProject } from "../../data/projects";
+import type { PortfolioProject } from "../../data/projects";
 import pageContent from "../../data/pageContent.json";
 import { InternalLink } from "../../components/InternalLink";
 import "./projects.css";
@@ -24,14 +25,16 @@ const sortOptions = [
   "Title (Z-A)",
   "Category",
 ] as const;
-const categories = ["All", ...Array.from(new Set(projects.map((project) => project.category)))];
-
-export function ProjectsPage({ navigate }: ProjectsPageProps) {
+export function ProjectsPage({
+  navigate,
+  projects,
+}: ProjectsPageProps & { projects: PortfolioProject[] }) {
   const [query, setQuery] = useState("");
   const [sort, setSort] = useState<(typeof sortOptions)[number]>("Newest First");
   const [category, setCategory] = useState("All");
   const [filtersOpen, setFiltersOpen] = useState(false);
   const filterWrapRef = useRef<HTMLDivElement>(null);
+  const categories = ["All", ...Array.from(new Set(projects.map((project) => project.category)))];
 
   useEffect(() => {
     if (!filtersOpen) return;
@@ -77,7 +80,7 @@ export function ProjectsPage({ navigate }: ProjectsPageProps) {
     if (sort === "Title (Z-A)") rows = [...rows].sort((a, b) => b.title.localeCompare(a.title));
     if (sort === "Oldest First") rows = [...rows].reverse();
     return rows;
-  }, [query, sort, category]);
+  }, [query, sort, category, projects]);
 
   return (
     <section className="projects-page" aria-labelledby="projects-title">
@@ -204,12 +207,7 @@ function ProjectCard({
   navigate: (to: string) => void;
 }) {
   return (
-    <InternalLink
-      to={`/projects/${project.slug}`}
-      navigate={navigate}
-      className="projects-card-link"
-      style={{ "--card-order": index } as React.CSSProperties}
-    >
+    <div className="projects-card-link" style={{ "--card-order": index } as React.CSSProperties}>
       <article className="projects-card">
         <span className="projects-card-wash" aria-hidden="true" />
         <span className="projects-card-glow" aria-hidden="true" />
@@ -220,7 +218,9 @@ function ProjectCard({
           </div>
           <p className="projects-card-description">{project.description}</p>
           <div className="projects-badges" aria-label="Project type, category, and status">
-            <ProjectBadge kind="type" value={project.type} />
+            {project.type !== "Resume Project" && (
+              <ProjectBadge kind="type" value={project.type} />
+            )}
             <ProjectBadge kind="category" value={project.category} />
             {project.status && <ProjectBadge kind="status" value={project.status} />}
           </div>
@@ -242,12 +242,30 @@ function ProjectCard({
               ))}
             </div>
           )}
-          <div className="projects-card-action">
-            View Details <ArrowRight size={16} aria-hidden="true" />
+          <div className="projects-card-actions">
+            <InternalLink
+              to={`/projects/${project.slug}`}
+              navigate={navigate}
+              className="projects-card-action"
+            >
+              View Details <ArrowRight size={16} aria-hidden="true" />
+            </InternalLink>
+            {project.githubUrl && (
+              <a
+                className="projects-github-action"
+                href={project.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`View ${project.title} on GitHub`}
+                title="View on GitHub"
+              >
+                <Github size={16} aria-hidden="true" />
+              </a>
+            )}
           </div>
         </div>
       </article>
-    </InternalLink>
+    </div>
   );
 }
 

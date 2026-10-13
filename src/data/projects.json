@@ -2,6 +2,7 @@
   {
     "slug": "webhealth",
     "title": "WebHealth",
+    "githubUrl": "https://github.com/shubham-pandey12/webAudit",
     "category": "Full Stack",
     "type": "Resume Project",
     "featured": true,
@@ -39,6 +40,7 @@
   {
     "slug": "crypto-hunter",
     "title": "Crypto Hunter",
+    "githubUrl": "https://github.com/shubham-pandey12/Crypto_Hunter",
     "category": "Frontend",
     "type": "Resume Project",
     "featured": true,
@@ -70,6 +72,8 @@
   {
     "slug": "mobivax",
     "title": "Mobivax",
+    "githubUrl": "https://github.com/shubham-pandey12/Mobivax",
+    "demoUrl": "https://mobivax.netlify.app/",
     "category": "Full Stack",
     "type": "Resume Project",
     "featured": true,

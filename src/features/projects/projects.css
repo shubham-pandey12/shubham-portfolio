@@ -614,16 +614,23 @@
   background-image: linear-gradient(90deg, #60a5fa, #c084fc);
 }
 
+.projects-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+
 .projects-card-action {
   display: flex;
   align-items: center;
   gap: 5px;
   width: max-content;
-  margin-top: 16px;
   color: #2563eb;
   font-size: 14px;
   line-height: 20px;
   font-weight: 500;
+  text-decoration: none;
   transition:
     transform 0.2s,
     color 0.2s;
@@ -632,11 +639,41 @@
 .dark .projects-card-action {
   color: #60a5fa;
 }
+.projects-card-action:focus-visible,
+.projects-github-action:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 4px;
+}
 .projects-card-action svg {
   transition: transform 0.2s;
 }
-.projects-card-link:hover .projects-card-action svg {
+.projects-card-action:hover svg {
   transform: translateX(4px);
+}
+.projects-github-action {
+  display: inline-flex;
+  width: 36px;
+  height: 36px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--card);
+  color: var(--foreground);
+  transition:
+    color 0.2s,
+    border-color 0.2s,
+    background-color 0.2s;
+}
+.projects-github-action:hover {
+  border-color: #0f172a;
+  background: #0f172a;
+  color: #fff;
+}
+.dark .projects-github-action:hover {
+  border-color: #f1f5f9;
+  background: #f1f5f9;
+  color: #0f172a;
 }
 
 .projects-empty {

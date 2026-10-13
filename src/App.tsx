@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { projects } from "./data/projects";
+import { fetchPortfolioProjects } from "./data/githubProjects";
+import { profile } from "./data/profile";
 import { Header, Footer, NotFound } from "./components/SiteLayout";
 import { HomePage } from "./features/home/HomePage";
 import { ProjectsPage } from "./features/projects/ProjectsPage";
@@ -12,6 +14,7 @@ import { AboutPage } from "./features/about/AboutPage";
 import { ContactPage } from "./features/contact/ContactPage";
 
 const paths = ["/", "/projects", "/skills", "/awards", "/articles", "/about", "/contact"];
+const githubUsername = profile.github.replace(/\/+$/, "").split("/").pop() || "";
 function routePath() {
   return window.location.pathname.replace(/\/$/, "") || "/";
 }
@@ -22,7 +25,8 @@ function isProjectDetail(path: string) {
 
 function App() {
   const [path, setPath] = useState(routePath);
-  const [dark, setDark] = useState(() => localStorage.getItem("portfolio-theme") === "dark");
+  const [allProjects, setAllProjects] = useState(projects);
+  const [dark, setDark] = useState(() => localStorage.getItem("portfolio-theme") !== "light");
   const [menuOpen, setMenuOpen] = useState(false);
   const [showTop, setShowTop] = useState(false);
 
@@ -43,6 +47,16 @@ function App() {
   useEffect(() => {
     localStorage.setItem("portfolio-theme", dark ? "dark" : "light");
   }, [dark]);
+  useEffect(() => {
+    let cancelled = false;
+    if (!githubUsername) return;
+    void fetchPortfolioProjects(githubUsername, projects).then((items) => {
+      if (!cancelled) setAllProjects(items);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
   useEffect(() => {
     const nodes = [...document.querySelectorAll<HTMLElement>(".reveal")];
     const observer = new IntersectionObserver(
@@ -66,7 +80,7 @@ function App() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
   const detail = isProjectDetail(path)
-    ? projects.find((project) => path.endsWith(`/${project.slug}`))
+    ? allProjects.find((project) => path.endsWith(`/${project.slug}`))
     : undefined;
   const currentPage = isProjectDetail(path) ? "/projects" : path;
 
@@ -81,8 +95,8 @@ function App() {
         navigate={navigate}
       />
       <main key={path}>
-        {path === "/" && <HomePage navigate={navigate} />}
-        {path === "/projects" && <ProjectsPage navigate={navigate} />}
+        {path === "/" && <HomePage navigate={navigate} projects={allProjects} />}
+        {path === "/projects" && <ProjectsPage navigate={navigate} projects={allProjects} />}
         {path === "/skills" && <SkillsPage />}
         {path === "/awards" && <AwardsPage />}
         {path === "/articles" && <ArticlesPage />}
