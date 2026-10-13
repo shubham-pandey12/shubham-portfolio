@@ -2,7 +2,6 @@ import { Award, CalendarDays, TrendingUp } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import pageContent from "../../../data/pageContent.json";
 import { yearsOfExperience } from "../../../data/profile";
-import { certifications } from "../../../data/recognition";
 import { allSkills } from "../../../data/skillCatalog";
 
 type SkillsStatCardProps = {
@@ -17,7 +16,6 @@ const labels = pageContent.skills.overviewStats as {
 }[];
 const values = [
   allSkills.filter((skill) => skill.tier === "Expert Level").length,
-  certifications.length,
   `${yearsOfExperience()}+`,
 ];
 const icons = [TrendingUp, Award, CalendarDays];
@@ -36,14 +34,15 @@ function SkillsStatCard({ label, value, tone, icon: Icon }: SkillsStatCardProps)
   );
 }
 
-export function SkillsOverview() {
+export function SkillsOverview({ certificateCount }: { certificateCount: number }) {
+  const statValues = [values[0], certificateCount, values[1]];
   return (
     <section className="skills-overview reveal" aria-label="Resume skill overview">
       {labels.map((stat, index) => (
         <SkillsStatCard
           key={stat.label}
           {...stat}
-          value={String(values[index] ?? 0)}
+          value={String(statValues[index] ?? 0)}
           icon={icons[index] ?? TrendingUp}
         />
       ))}

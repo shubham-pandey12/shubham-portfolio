@@ -93,7 +93,7 @@ function App() {
   }, [path]);
   useEffect(() => {
     let cancelled = false;
-    if (path !== "/" && path !== "/awards" && path !== "/about") return;
+    if (path !== "/" && path !== "/skills" && path !== "/awards" && path !== "/about") return;
     void fetchPortfolioCertifications(certifications).then((items) => {
       if (!cancelled) setAllCertifications(items);
     });
@@ -167,7 +167,7 @@ function App() {
             />
           )}
           {path === "/projects" && <ProjectsPage navigate={navigate} projects={allProjects} />}
-          {path === "/skills" && <SkillsPage />}
+          {path === "/skills" && <SkillsPage certificateCount={allCertifications.length} />}
           {path === "/awards" && <AwardsPage certifications={allCertifications} />}
           {path === "/articles" && <ArticlesPage articles={allArticles} />}
           {path === "/about" && (

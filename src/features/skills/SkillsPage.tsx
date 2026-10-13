@@ -12,7 +12,7 @@ import "./skills.css";
 const skillCategories = [...new Set(allSkills.map((skill) => skill.category))];
 const skillTiers = pageContent.skills.tiers as SkillTier[];
 
-export function SkillsPage() {
+export function SkillsPage({ certificateCount }: { certificateCount: number }) {
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState("All");
   const filteredSkills = useMemo(
@@ -29,7 +29,7 @@ export function SkillsPage() {
     <div className="skills-reference-page">
       <div className="skills-reference-container">
         <SkillsPageHeader />
-        <SkillsOverview />
+        <SkillsOverview certificateCount={certificateCount} />
         <SkillsControls
           categories={skillCategories}
           skills={allSkills}
