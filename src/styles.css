@@ -7,16 +7,16 @@
     "Segoe UI",
     sans-serif;
   color: #0f172a;
-  background: #fff;
+  background: #f5f7fb;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  --background: #fff;
+  --background: #f5f7fb;
   --foreground: #0f172a;
   --muted: #475569;
   --muted-2: #64748b;
   --border: #e2e8f0;
-  --soft: #f8fafc;
+  --soft: #eef3f9;
   --card: #fff;
   --blue: #2563eb;
   --purple: #9333ea;
@@ -5072,7 +5072,7 @@ select:focus-visible {
 .awards-page {
   min-height: 100vh;
   padding: 80px 0;
-  background: #fff;
+  background: var(--background);
 }
 .dark .awards-page {
   background: #0f172a;
