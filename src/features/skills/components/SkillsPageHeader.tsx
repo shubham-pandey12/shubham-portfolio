@@ -1,4 +1,7 @@
 import pageContent from "../../../data/pageContent.json";
+import { allSkills } from "../../../data/skillCatalog";
+
+const categories = new Set(allSkills.map((skill) => skill.category));
 
 export function SkillsPageHeader() {
   return (
@@ -6,7 +9,10 @@ export function SkillsPageHeader() {
       <h1>
         <span>{pageContent.skills.title}</span>
       </h1>
-      <p>{pageContent.skills.description}</p>
+      <p>
+        {allSkills.length} technologies and practices across {categories.size} categories, listed in
+        your resumes.
+      </p>
     </header>
   );
 }

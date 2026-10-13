@@ -222,7 +222,7 @@ function ProjectCard({
           <div className="projects-badges" aria-label="Project type, category, and status">
             <ProjectBadge kind="type" value={project.type} />
             <ProjectBadge kind="category" value={project.category} />
-            <ProjectBadge kind="status" value={project.status} />
+            {project.status && <ProjectBadge kind="status" value={project.status} />}
           </div>
           <div className="projects-technologies" aria-label="Technologies used">
             {project.stack.slice(0, 4).map((technology) => (
@@ -288,7 +288,7 @@ function ProjectBadge({ kind, value }: { kind: "type" | "category" | "status"; v
   return (
     <span className={`projects-badge projects-badge-${kind} ${badgeClass}`}>
       {TypeIcon && <TypeIcon size={13} aria-hidden="true" />}
-      {value === "PLACEHOLDER" ? "Project placeholder" : value}
+      {value}
     </span>
   );
 }

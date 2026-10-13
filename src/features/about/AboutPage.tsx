@@ -1,7 +1,9 @@
 import { Award, BriefcaseBusiness, GraduationCap, Mail, MapPin } from "lucide-react";
-import { awards, certifications, companies, profile } from "../../data/about";
+import { awards, certifications, companies, profile, yearsOfExperience } from "../../data/about";
 import pageContent from "../../data/pageContent.json";
 import { PageHeading, Portrait } from "../../components/PortfolioUI";
+import { allSkills } from "../../data/skillCatalog";
+import { projects } from "../../data/projects";
 import {
   AboutEducationCard,
   AboutExperienceCard,
@@ -13,6 +15,18 @@ import {
 export function AboutPage({ navigate }: { navigate: (to: string) => void }) {
   const content = pageContent.about;
   const recognitions = [...awards.slice(0, 2), ...certifications.slice(0, 4)];
+  const stats = [
+    [`${yearsOfExperience()}+`, "Years Exp.", "blue"],
+    [String(certifications.length), "Certifications Listed", "purple"],
+    [String(allSkills.length), "Skills Listed", "green"],
+    [String(projects.length), "Resume Projects", "orange"],
+  ];
+  const careerStats = [
+    [`${yearsOfExperience()}+`, "Years of Experience"],
+    [String(projects.length), "Resume Projects"],
+    [String(awards.length), "Professional Award"],
+    [String(allSkills.length), "Skills Listed"],
+  ];
 
   return (
     <main className="about-page about-reference page-shell">
@@ -40,7 +54,13 @@ export function AboutPage({ navigate }: { navigate: (to: string) => void }) {
               </div>
               <div>
                 <Mail />
-                <a href={profile.email.includes("YOUR_") ? undefined : `mailto:${profile.email}`}>
+                <a
+                  href={
+                    !profile.email || profile.email.includes("YOUR_")
+                      ? undefined
+                      : `mailto:${profile.email}`
+                  }
+                >
                   {profile.email}
                 </a>
               </div>
@@ -48,7 +68,7 @@ export function AboutPage({ navigate }: { navigate: (to: string) => void }) {
             <div className="about-profile-rule" />
             <h3>Quick Stats</h3>
             <div className="about-reference-quick-stats">
-              {content.quickStats.map(([value, label, tone]) => (
+              {stats.map(([value, label, tone]) => (
                 <div className={`about-reference-stat ${tone}`} key={label}>
                   <strong>{value}</strong>
                   <span>{label}</span>
@@ -64,14 +84,9 @@ export function AboutPage({ navigate }: { navigate: (to: string) => void }) {
               ))}
             </div>
             <div className="about-profile-rule" />
-            <h3>Professional Goals</h3>
+            <h3>Focus Areas</h3>
             <div className="about-summary-copy about-goals-copy">
-              <p>
-                <strong>Seeking:</strong> {content.seeking}
-              </p>
-              <p>
-                <strong>Focus Areas:</strong> {content.focusAreas}
-              </p>
+              <p>{content.focusAreas}</p>
             </div>
             <div className="about-profile-rule" />
             <h3>Core Competencies</h3>
@@ -126,7 +141,7 @@ export function AboutPage({ navigate }: { navigate: (to: string) => void }) {
         </section>
 
         <CareerHighlights
-          stats={content.careerStats}
+          stats={careerStats}
           metrics={content.careerMetrics}
           title={content.sectionTitles.career}
         />

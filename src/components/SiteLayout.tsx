@@ -102,7 +102,7 @@ export function Footer({ navigate }: { navigate: (to: string) => void }) {
           <div className="footer-connect">
             <h3>Connect</h3>
             <div>
-              {!profile.github.includes("YOUR_") && (
+              {profile.github && !profile.github.includes("YOUR_") && (
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
@@ -112,7 +112,7 @@ export function Footer({ navigate }: { navigate: (to: string) => void }) {
                   <Github size={20} />
                 </a>
               )}
-              {!profile.linkedin.includes("YOUR_") && (
+              {profile.linkedin && !profile.linkedin.includes("YOUR_") && (
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
@@ -122,7 +122,7 @@ export function Footer({ navigate }: { navigate: (to: string) => void }) {
                   <Linkedin size={20} />
                 </a>
               )}
-              {!profile.email.includes("YOUR_") && (
+              {profile.email && !profile.email.includes("YOUR_") && (
                 <a href={`mailto:${profile.email}`} aria-label="Email">
                   <Mail size={20} />
                 </a>
@@ -136,8 +136,7 @@ export function Footer({ navigate }: { navigate: (to: string) => void }) {
             © {new Date().getFullYear()} {profile.name}. All rights reserved.
           </p>
           <p>
-            Open to opportunities · Last updated{" "}
-            {new Date().toLocaleString("en-US", { month: "long", year: "numeric" })}
+            Last updated {new Date().toLocaleString("en-US", { month: "long", year: "numeric" })}
           </p>
         </div>
       </div>

@@ -11,4 +11,12 @@ export type Recognition = {
 };
 export const awards = recognitionData.awards as Recognition[];
 export const certifications = recognitionData.certifications as Recognition[];
-export const articles = recognitionData.articles;
+export type PortfolioArticle = {
+  title: string;
+  date: string;
+  category: string;
+  description: string;
+  url: string;
+  image?: string;
+};
+export const articles = recognitionData.articles as PortfolioArticle[];

@@ -220,7 +220,7 @@ export function StatTile({
 
 export function DetailPanel({ title, children }: { title: string; children: React.ReactNode }) {
   return (
-    <section className="detail-panel">
+    <section className="detail-panel reveal">
       <h2>{title}</h2>
       {children}
     </section>

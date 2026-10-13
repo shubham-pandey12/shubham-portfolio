@@ -22,7 +22,7 @@ function SkillSearch({
         type="search"
         value={query}
         onChange={(event) => onQueryChange(event.target.value)}
-        placeholder="Search skills (e.g., TypeScript, Azure, Docker)..."
+        placeholder="Search skills (e.g., React.js, Node.js, AWS)..."
       />
     </label>
   );

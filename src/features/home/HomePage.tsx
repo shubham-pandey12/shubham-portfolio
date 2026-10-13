@@ -1,4 +1,4 @@
-import { ArrowRight, BookOpen, Github, Linkedin, Mail, Twitter, UserRound } from "lucide-react";
+import { ArrowRight, Github, Linkedin, Mail, Twitter, UserRound, Globe } from "lucide-react";
 import {
   profile,
   projects,
@@ -6,12 +6,21 @@ import {
   complementarySkills,
   type PortfolioProject,
 } from "../../data/home";
+import { yearsOfExperience } from "../../data/profile";
 import { InternalLink } from "../../components/InternalLink";
 import pageContent from "../../data/pageContent.json";
 import { ProjectMetrics, ProjectTechList, SectionIntro } from "../../components/PortfolioUI";
+import { allSkills } from "../../data/skillCatalog";
+import { companies } from "../../data/profile";
+import { certifications } from "../../data/recognition";
 
 export function HomePage({ navigate }: { navigate: (to: string) => void }) {
   const featuredDescription = (project: PortfolioProject) => project.description;
+  const heroStats = [
+    { value: `${yearsOfExperience()}+`, label: "Years Experience" },
+    { value: String(projects.length), label: "Resume Projects" },
+    { value: String(companies.length), label: "Companies" },
+  ];
   return (
     <>
       <section className="home-hero">
@@ -22,27 +31,27 @@ export function HomePage({ navigate }: { navigate: (to: string) => void }) {
         </div>
         <div className="container hero-grid">
           <div className="hero-copy">
-            <div className="availability-pill">
-              <span className="green-dot">
-                <i />
-              </span>
-              <span>{profile.availability}</span>
-            </div>
+            {profile.availability && (
+              <div className="availability-pill">
+                <span className="green-dot">
+                  <i />
+                </span>
+                <span>{profile.availability}</span>
+              </div>
+            )}
             <div className="hero-intro">
               <h1>
                 Hi, I'm <span className="gradient-text">{profile.name}</span>
               </h1>
               <p className="hero-role">
                 {pageContent.home.heroRole}
-                <span className="hero-subtitle">
-                  {profile.education} · Power BI &amp; Microsoft Fabric
-                </span>
+                <span className="hero-subtitle">{profile.subTitle}</span>
               </p>
             </div>
             <p className="hero-bio">{pageContent.home.heroBio}</p>
             <div className="hero-awards">
-              {pageContent.home.heroAwards.map((label, index) => (
-                <span className={`award-chip ${index ? "orange-chip" : "blue-chip"}`} key={label}>
+              {pageContent.home.heroAwards.map((label) => (
+                <span className="award-chip blue-chip" key={label}>
                   {label}
                 </span>
               ))}
@@ -67,16 +76,12 @@ export function HomePage({ navigate }: { navigate: (to: string) => void }) {
               <div className="portrait-ring">
                 <div className="portrait-placeholder">
                   <UserRound size={70} />
-                  <span>
-                    PLACEHOLDER
-                    <br />
-                    PROFILE IMAGE
-                  </span>
+                  <span>Profile photo</span>
                 </div>
               </div>
               <div className="portrait-seal seal-left">
                 <span>💻</span>
-                <small>MAQ</small>
+                <small>{profile.company}</small>
               </div>
               <div className="portrait-seal seal-right">
                 <span>🎓</span>
@@ -84,11 +89,14 @@ export function HomePage({ navigate }: { navigate: (to: string) => void }) {
               </div>
             </div>
             <div className="hero-mobile-awards">
-              <span className="award-chip blue-chip">🏅 Award TBD</span>
-              <span className="award-chip orange-chip">⭐ Certification TBD</span>
+              {pageContent.home.heroAwards.map((label) => (
+                <span className="award-chip blue-chip" key={label}>
+                  {label}
+                </span>
+              ))}
             </div>
             <div className="hero-stat-stack">
-              {pageContent.home.heroStats.map((stat) => (
+              {heroStats.map((stat) => (
                 <HeroStat key={stat.label} {...stat} />
               ))}
             </div>
@@ -136,21 +144,31 @@ export function HeroStat({ value, label }: { value: string; label: string }) {
 export function SocialLinks() {
   return (
     <div className="social-row">
-      <a href={profile.github} aria-label="GitHub" title="YOUR_GITHUB_URL">
-        <Github size={20} />
-      </a>
-      <a href={profile.linkedin} aria-label="LinkedIn" title="YOUR_LINKEDIN_URL">
-        <Linkedin size={20} />
-      </a>
-      <a href={profile.x} aria-label="X">
-        <Twitter size={20} />
-      </a>
-      <a href={profile.blog} aria-label="Blog">
-        <BookOpen size={20} />
-      </a>
-      <a href={`mailto:${profile.email}`} aria-label="Email">
-        <Mail size={20} />
-      </a>
+      {profile.github && !profile.github.includes("YOUR_") && (
+        <a href={profile.github} aria-label="GitHub" target="_blank" rel="noreferrer">
+          <Github size={20} />
+        </a>
+      )}
+      {profile.linkedin && !profile.linkedin.includes("YOUR_") && (
+        <a href={profile.linkedin} aria-label="LinkedIn" target="_blank" rel="noreferrer">
+          <Linkedin size={20} />
+        </a>
+      )}
+      {profile.x && !profile.x.includes("YOUR_") && (
+        <a href={profile.x} aria-label="X">
+          <Twitter size={20} />
+        </a>
+      )}
+      {profile.portfolio && (
+        <a href={profile.portfolio} aria-label="Portfolio" target="_blank" rel="noreferrer">
+          <Globe size={20} />
+        </a>
+      )}
+      {profile.email && !profile.email.includes("YOUR_") && (
+        <a href={`mailto:${profile.email}`} aria-label="Email">
+          <Mail size={20} />
+        </a>
+      )}
     </div>
   );
 }
@@ -232,34 +250,30 @@ export function HomeSkillsSection({ navigate }: { navigate: (to: string) => void
             <SkillSummaryCard key={group.title} group={group} order={i} />
           ))}
         </div>
-        <h3 className="complement-title">Complementary Technologies</h3>
-        <div className="complement-chip-list">
-          {complementarySkills.map((item, i) => (
-            <span
-              style={{ "--chip-order": i } as React.CSSProperties}
-              className={item.startsWith("PLACEHOLDER") ? "placeholder-chip" : undefined}
-              key={`${item}-${i}`}
-            >
-              {item}
-            </span>
-          ))}
-        </div>
+        {complementarySkills.length > 0 && (
+          <>
+            <h3 className="complement-title">Complementary Technologies</h3>
+            <div className="complement-chip-list">
+              {complementarySkills.map((item, i) => (
+                <span style={{ "--chip-order": i } as React.CSSProperties} key={`${item}-${i}`}>
+                  {item}
+                </span>
+              ))}
+            </div>
+          </>
+        )}
         <div className="home-skill-stats">
           <div>
-            <strong>16</strong>
-            <span>Core Technologies</span>
+            <strong>{allSkills.length}</strong>
+            <span>Resume-listed Skills</span>
           </div>
           <div>
-            <strong>52+</strong>
-            <span>Complementary Skills</span>
+            <strong>{companies.length}</strong>
+            <span>Companies</span>
           </div>
           <div>
-            <strong>TBD</strong>
-            <span>Years Experience</span>
-          </div>
-          <div>
-            <strong>TBD</strong>
-            <span>Certifications</span>
+            <strong>{certifications.length}</strong>
+            <span>Certifications Listed</span>
           </div>
         </div>
         <div className="center-action">
@@ -298,22 +312,16 @@ export function SkillSummaryCard({
         </span>
         {group.title}
       </h3>
-      {group.skills.map((skill, i) => (
+      {group.skills.slice(0, 5).map((skill) => (
         <div className="summary-skill" key={skill.name}>
           <div>
-            <span>
-              {i === 0 ? "⚡" : i === 1 ? "📘" : "◆"} &nbsp;{skill.name}
-            </span>
-            <small>
-              {skill.years}
-              {skill.years === "TBD" ? "" : "y"}
-            </small>
-          </div>
-          <div className="skill-track">
-            <i style={{ width: `${[92, 66, 77][i % 3]}%` }} />
+            <span>◆ &nbsp;{skill.name}</span>
           </div>
         </div>
       ))}
+      {group.skills.length > 5 && (
+        <p className="home-skills-more">+ {group.skills.length - 5} more listed</p>
+      )}
     </article>
   );
 }

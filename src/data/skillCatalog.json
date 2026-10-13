@@ -1,762 +1,342 @@
 [
   {
-    "name": "PLACEHOLDER SKILL 01",
+    "name": "React.js",
     "category": "Frontend",
-    "tier": "Expert Level",
-    "years": 0,
-    "icon": "",
-    "progress": 100
+    "icon": ""
   },
   {
-    "name": "PLACEHOLDER SKILL 02",
-    "category": "Backend",
-    "tier": "Advanced Level",
-    "years": 0,
-    "icon": "",
-    "progress": 80
-  },
-  {
-    "name": "PLACEHOLDER SKILL 03",
+    "name": "Next.js",
     "category": "Frontend",
-    "tier": "Intermediate Level",
-    "years": 0,
-    "icon": "",
-    "progress": 60
+    "icon": ""
   },
   {
-    "name": "PLACEHOLDER SKILL 04",
-    "category": "Backend",
-    "tier": "Beginner Level",
-    "years": 0,
-    "icon": "",
-    "progress": 40
-  },
-  {
-    "name": "PLACEHOLDER SKILL 05",
-    "category": "Backend",
-    "tier": "Expert Level",
-    "years": 0,
-    "icon": "",
-    "progress": 100
-  },
-  {
-    "name": "PLACEHOLDER SKILL 06",
-    "category": "Backend",
-    "tier": "Advanced Level",
-    "years": 0,
-    "icon": "",
-    "progress": 80
-  },
-  {
-    "name": "PLACEHOLDER SKILL 07",
-    "category": "Cloud",
-    "tier": "Intermediate Level",
-    "years": 0,
-    "icon": "",
-    "progress": 60
-  },
-  {
-    "name": "PLACEHOLDER SKILL 08",
-    "category": "Cloud",
-    "tier": "Beginner Level",
-    "years": 0,
-    "icon": "",
-    "progress": 40
-  },
-  {
-    "name": "PLACEHOLDER SKILL 09",
+    "name": "Redux",
     "category": "Frontend",
-    "tier": "Expert Level",
-    "years": 0,
-    "icon": "",
-    "progress": 100
+    "icon": ""
   },
   {
-    "name": "PLACEHOLDER SKILL 10",
+    "name": "TypeScript",
     "category": "Frontend",
-    "tier": "Advanced Level",
-    "years": 0,
-    "icon": "",
-    "progress": 80
+    "icon": ""
   },
   {
-    "name": "PLACEHOLDER SKILL 11",
+    "name": "JavaScript",
     "category": "Frontend",
-    "tier": "Intermediate Level",
-    "years": 0,
-    "icon": "",
-    "progress": 60
+    "icon": ""
   },
   {
-    "name": "PLACEHOLDER SKILL 12",
+    "name": "Tailwind CSS",
     "category": "Frontend",
-    "tier": "Beginner Level",
-    "years": 0,
-    "icon": "",
-    "progress": 40
+    "icon": ""
   },
   {
-    "name": "PLACEHOLDER SKILL 13",
+    "name": "Sass / SCSS",
     "category": "Frontend",
-    "tier": "Expert Level",
-    "years": 0,
-    "icon": "",
-    "progress": 100
+    "icon": ""
   },
   {
-    "name": "PLACEHOLDER SKILL 14",
+    "name": "Bootstrap",
     "category": "Frontend",
-    "tier": "Advanced Level",
-    "years": 0,
-    "icon": "",
-    "progress": 80
+    "icon": ""
   },
   {
-    "name": "PLACEHOLDER SKILL 15",
+    "name": "CSS",
     "category": "Frontend",
-    "tier": "Intermediate Level",
-    "years": 0,
-    "icon": "",
-    "progress": 60
+    "icon": ""
   },
   {
-    "name": "PLACEHOLDER SKILL 16",
-    "category": "Backend",
-    "tier": "Beginner Level",
-    "years": 0,
-    "icon": "",
-    "progress": 40
-  },
-  {
-    "name": "PLACEHOLDER SKILL 17",
-    "category": "Backend",
-    "tier": "Expert Level",
-    "years": 0,
-    "icon": "",
-    "progress": 100
-  },
-  {
-    "name": "PLACEHOLDER SKILL 18",
-    "category": "Backend",
-    "tier": "Advanced Level",
-    "years": 0,
-    "icon": "",
-    "progress": 80
-  },
-  {
-    "name": "PLACEHOLDER SKILL 19",
-    "category": "Backend",
-    "tier": "Intermediate Level",
-    "years": 0,
-    "icon": "",
-    "progress": 60
-  },
-  {
-    "name": "PLACEHOLDER SKILL 20",
-    "category": "Cloud",
-    "tier": "Beginner Level",
-    "years": 0,
-    "icon": "",
-    "progress": 40
-  },
-  {
-    "name": "PLACEHOLDER SKILL 21",
-    "category": "Cloud",
-    "tier": "Expert Level",
-    "years": 0,
-    "icon": "",
-    "progress": 100
-  },
-  {
-    "name": "PLACEHOLDER SKILL 22",
-    "category": "Cloud",
-    "tier": "Advanced Level",
-    "years": 0,
-    "icon": "",
-    "progress": 80
-  },
-  {
-    "name": "PLACEHOLDER SKILL 23",
-    "category": "Cloud",
-    "tier": "Intermediate Level",
-    "years": 0,
-    "icon": "",
-    "progress": 60
-  },
-  {
-    "name": "PLACEHOLDER SKILL 24",
-    "category": "Cloud",
-    "tier": "Beginner Level",
-    "years": 0,
-    "icon": "",
-    "progress": 40
-  },
-  {
-    "name": "PLACEHOLDER SKILL 25",
-    "category": "Cloud",
-    "tier": "Expert Level",
-    "years": 0,
-    "icon": "",
-    "progress": 100
-  },
-  {
-    "name": "PLACEHOLDER SKILL 26",
-    "category": "Cloud",
-    "tier": "Advanced Level",
-    "years": 0,
-    "icon": "",
-    "progress": 80
-  },
-  {
-    "name": "PLACEHOLDER SKILL 27",
-    "category": "DevOps",
-    "tier": "Intermediate Level",
-    "years": 0,
-    "icon": "",
-    "progress": 60
-  },
-  {
-    "name": "PLACEHOLDER SKILL 28",
-    "category": "DevOps",
-    "tier": "Beginner Level",
-    "years": 0,
-    "icon": "",
-    "progress": 40
-  },
-  {
-    "name": "PLACEHOLDER SKILL 29",
-    "category": "AI/ML",
-    "tier": "Expert Level",
-    "years": 0,
-    "icon": "",
-    "progress": 100
-  },
-  {
-    "name": "PLACEHOLDER SKILL 30",
-    "category": "AI/ML",
-    "tier": "Advanced Level",
-    "years": 0,
-    "icon": "",
-    "progress": 80
-  },
-  {
-    "name": "PLACEHOLDER SKILL 31",
-    "category": "AI/ML",
-    "tier": "Intermediate Level",
-    "years": 0,
-    "icon": "",
-    "progress": 60
-  },
-  {
-    "name": "PLACEHOLDER SKILL 32",
-    "category": "Testing",
-    "tier": "Beginner Level",
-    "years": 0,
-    "icon": "",
-    "progress": 40
-  },
-  {
-    "name": "PLACEHOLDER SKILL 33",
-    "category": "Testing",
-    "tier": "Expert Level",
-    "years": 0,
-    "icon": "",
-    "progress": 100
-  },
-  {
-    "name": "PLACEHOLDER SKILL 34",
-    "category": "Testing",
-    "tier": "Advanced Level",
-    "years": 0,
-    "icon": "",
-    "progress": 80
-  },
-  {
-    "name": "PLACEHOLDER SKILL 35",
-    "category": "Testing",
-    "tier": "Intermediate Level",
-    "years": 0,
-    "icon": "",
-    "progress": 60
-  },
-  {
-    "name": "PLACEHOLDER SKILL 36",
-    "category": "Security",
-    "tier": "Beginner Level",
-    "years": 0,
-    "icon": "",
-    "progress": 40
-  },
-  {
-    "name": "PLACEHOLDER SKILL 37",
-    "category": "Security",
-    "tier": "Expert Level",
-    "years": 0,
-    "icon": "",
-    "progress": 100
-  },
-  {
-    "name": "PLACEHOLDER SKILL 38",
-    "category": "Security",
-    "tier": "Advanced Level",
-    "years": 0,
-    "icon": "",
-    "progress": 80
-  },
-  {
-    "name": "PLACEHOLDER SKILL 39",
-    "category": "Backend",
-    "tier": "Intermediate Level",
-    "years": 0,
-    "icon": "",
-    "progress": 60
-  },
-  {
-    "name": "PLACEHOLDER SKILL 40",
-    "category": "Database",
-    "tier": "Beginner Level",
-    "years": 0,
-    "icon": "",
-    "progress": 40
-  },
-  {
-    "name": "PLACEHOLDER SKILL 41",
-    "category": "Database",
-    "tier": "Expert Level",
-    "years": 0,
-    "icon": "",
-    "progress": 100
-  },
-  {
-    "name": "PLACEHOLDER SKILL 42",
-    "category": "DevOps",
-    "tier": "Advanced Level",
-    "years": 0,
-    "icon": "",
-    "progress": 80
-  },
-  {
-    "name": "PLACEHOLDER SKILL 43",
-    "category": "DevOps",
-    "tier": "Intermediate Level",
-    "years": 0,
-    "icon": "",
-    "progress": 60
-  },
-  {
-    "name": "PLACEHOLDER SKILL 44",
+    "name": "HTML",
     "category": "Frontend",
-    "tier": "Beginner Level",
-    "years": 0,
-    "icon": "",
-    "progress": 40
+    "icon": ""
   },
   {
-    "name": "PLACEHOLDER SKILL 45",
-    "category": "AI/ML",
-    "tier": "Expert Level",
-    "years": 0,
-    "icon": "",
-    "progress": 100
-  },
-  {
-    "name": "PLACEHOLDER SKILL 46",
-    "category": "AI/ML",
-    "tier": "Advanced Level",
-    "years": 0,
-    "icon": "",
-    "progress": 80
-  },
-  {
-    "name": "PLACEHOLDER SKILL 47",
-    "category": "AI/ML",
-    "tier": "Intermediate Level",
-    "years": 0,
-    "icon": "",
-    "progress": 60
-  },
-  {
-    "name": "PLACEHOLDER SKILL 48",
-    "category": "AI/ML",
-    "tier": "Beginner Level",
-    "years": 0,
-    "icon": "",
-    "progress": 40
-  },
-  {
-    "name": "PLACEHOLDER SKILL 49",
-    "category": "Mobile",
-    "tier": "Expert Level",
-    "years": 0,
-    "icon": "",
-    "progress": 100
-  },
-  {
-    "name": "PLACEHOLDER SKILL 50",
-    "category": "Backend",
-    "tier": "Advanced Level",
-    "years": 0,
-    "icon": "",
-    "progress": 80
-  },
-  {
-    "name": "PLACEHOLDER SKILL 51",
-    "category": "Backend",
-    "tier": "Intermediate Level",
-    "years": 0,
-    "icon": "",
-    "progress": 60
-  },
-  {
-    "name": "PLACEHOLDER SKILL 52",
-    "category": "Backend",
-    "tier": "Beginner Level",
-    "years": 0,
-    "icon": "",
-    "progress": 40
-  },
-  {
-    "name": "PLACEHOLDER SKILL 53",
-    "category": "Backend",
-    "tier": "Expert Level",
-    "years": 0,
-    "icon": "",
-    "progress": 100
-  },
-  {
-    "name": "PLACEHOLDER SKILL 54",
-    "category": "Backend",
-    "tier": "Advanced Level",
-    "years": 0,
-    "icon": "",
-    "progress": 80
-  },
-  {
-    "name": "PLACEHOLDER SKILL 55",
-    "category": "Backend",
-    "tier": "Intermediate Level",
-    "years": 0,
-    "icon": "",
-    "progress": 60
-  },
-  {
-    "name": "PLACEHOLDER SKILL 56",
-    "category": "Backend",
-    "tier": "Beginner Level",
-    "years": 0,
-    "icon": "",
-    "progress": 40
-  },
-  {
-    "name": "PLACEHOLDER SKILL 57",
-    "category": "Database",
-    "tier": "Expert Level",
-    "years": 0,
-    "icon": "",
-    "progress": 100
-  },
-  {
-    "name": "PLACEHOLDER SKILL 58",
-    "category": "Database",
-    "tier": "Advanced Level",
-    "years": 0,
-    "icon": "",
-    "progress": 80
-  },
-  {
-    "name": "PLACEHOLDER SKILL 59",
-    "category": "Database",
-    "tier": "Intermediate Level",
-    "years": 0,
-    "icon": "",
-    "progress": 60
-  },
-  {
-    "name": "PLACEHOLDER SKILL 60",
-    "category": "Cloud",
-    "tier": "Beginner Level",
-    "years": 0,
-    "icon": "",
-    "progress": 40
-  },
-  {
-    "name": "PLACEHOLDER SKILL 61",
-    "category": "Cloud",
-    "tier": "Expert Level",
-    "years": 0,
-    "icon": "",
-    "progress": 100
-  },
-  {
-    "name": "PLACEHOLDER SKILL 62",
-    "category": "Cloud",
-    "tier": "Advanced Level",
-    "years": 0,
-    "icon": "",
-    "progress": 80
-  },
-  {
-    "name": "PLACEHOLDER SKILL 63",
-    "category": "Cloud",
-    "tier": "Intermediate Level",
-    "years": 0,
-    "icon": "",
-    "progress": 60
-  },
-  {
-    "name": "PLACEHOLDER SKILL 64",
-    "category": "Cloud",
-    "tier": "Beginner Level",
-    "years": 0,
-    "icon": "",
-    "progress": 40
-  },
-  {
-    "name": "PLACEHOLDER SKILL 65",
-    "category": "Cloud",
-    "tier": "Expert Level",
-    "years": 0,
-    "icon": "",
-    "progress": 100
-  },
-  {
-    "name": "PLACEHOLDER SKILL 66",
-    "category": "Cloud",
-    "tier": "Advanced Level",
-    "years": 0,
-    "icon": "",
-    "progress": 80
-  },
-  {
-    "name": "PLACEHOLDER SKILL 67",
-    "category": "DevOps",
-    "tier": "Intermediate Level",
-    "years": 0,
-    "icon": "",
-    "progress": 60
-  },
-  {
-    "name": "PLACEHOLDER SKILL 68",
-    "category": "DevOps",
-    "tier": "Beginner Level",
-    "years": 0,
-    "icon": "",
-    "progress": 40
-  },
-  {
-    "name": "PLACEHOLDER SKILL 69",
-    "category": "Tools",
-    "tier": "Expert Level",
-    "years": 0,
-    "icon": "",
-    "progress": 100
-  },
-  {
-    "name": "PLACEHOLDER SKILL 70",
-    "category": "Tools",
-    "tier": "Advanced Level",
-    "years": 0,
-    "icon": "",
-    "progress": 80
-  },
-  {
-    "name": "PLACEHOLDER SKILL 71",
-    "category": "Tools",
-    "tier": "Intermediate Level",
-    "years": 0,
-    "icon": "",
-    "progress": 60
-  },
-  {
-    "name": "PLACEHOLDER SKILL 72",
-    "category": "AI/ML",
-    "tier": "Beginner Level",
-    "years": 0,
-    "icon": "",
-    "progress": 40
-  },
-  {
-    "name": "PLACEHOLDER SKILL 73",
-    "category": "AI/ML",
-    "tier": "Expert Level",
-    "years": 0,
-    "icon": "",
-    "progress": 100
-  },
-  {
-    "name": "PLACEHOLDER SKILL 74",
-    "category": "AI/ML",
-    "tier": "Advanced Level",
-    "years": 0,
-    "icon": "",
-    "progress": 80
-  },
-  {
-    "name": "PLACEHOLDER SKILL 75",
-    "category": "AI/ML",
-    "tier": "Intermediate Level",
-    "years": 0,
-    "icon": "",
-    "progress": 60
-  },
-  {
-    "name": "PLACEHOLDER SKILL 76",
-    "category": "AI/ML",
-    "tier": "Beginner Level",
-    "years": 0,
-    "icon": "",
-    "progress": 40
-  },
-  {
-    "name": "PLACEHOLDER SKILL 77",
-    "category": "AI/ML",
-    "tier": "Expert Level",
-    "years": 0,
-    "icon": "",
-    "progress": 100
-  },
-  {
-    "name": "PLACEHOLDER SKILL 78",
-    "category": "Testing",
-    "tier": "Advanced Level",
-    "years": 0,
-    "icon": "",
-    "progress": 80
-  },
-  {
-    "name": "PLACEHOLDER SKILL 79",
-    "category": "Testing",
-    "tier": "Intermediate Level",
-    "years": 0,
-    "icon": "",
-    "progress": 60
-  },
-  {
-    "name": "PLACEHOLDER SKILL 80",
-    "category": "Testing",
-    "tier": "Beginner Level",
-    "years": 0,
-    "icon": "",
-    "progress": 40
-  },
-  {
-    "name": "PLACEHOLDER SKILL 81",
-    "category": "Architecture",
-    "tier": "Expert Level",
-    "years": 0,
-    "icon": "",
-    "progress": 100
-  },
-  {
-    "name": "PLACEHOLDER SKILL 82",
-    "category": "Architecture",
-    "tier": "Advanced Level",
-    "years": 0,
-    "icon": "",
-    "progress": 80
-  },
-  {
-    "name": "PLACEHOLDER SKILL 83",
-    "category": "Architecture",
-    "tier": "Intermediate Level",
-    "years": 0,
-    "icon": "",
-    "progress": 60
-  },
-  {
-    "name": "PLACEHOLDER SKILL 84",
-    "category": "Architecture",
-    "tier": "Beginner Level",
-    "years": 0,
-    "icon": "",
-    "progress": 40
-  },
-  {
-    "name": "PLACEHOLDER SKILL 85",
-    "category": "Security",
-    "tier": "Expert Level",
-    "years": 0,
-    "icon": "",
-    "progress": 100
-  },
-  {
-    "name": "PLACEHOLDER SKILL 86",
-    "category": "Security",
-    "tier": "Advanced Level",
-    "years": 0,
-    "icon": "",
-    "progress": 80
-  },
-  {
-    "name": "PLACEHOLDER SKILL 87",
+    "name": "jQuery",
     "category": "Frontend",
-    "tier": "Intermediate Level",
-    "years": 0,
-    "icon": "",
-    "progress": 60
+    "icon": ""
   },
   {
-    "name": "PLACEHOLDER SKILL 88",
+    "name": "Material UI",
+    "category": "Frontend",
+    "icon": ""
+  },
+  {
+    "name": "Chart.js",
+    "category": "Frontend",
+    "icon": ""
+  },
+  {
+    "name": "React Hooks",
+    "category": "Frontend",
+    "icon": ""
+  },
+  {
+    "name": "Node.js",
     "category": "Backend",
-    "tier": "Beginner Level",
-    "years": 0,
-    "icon": "",
-    "progress": 40
+    "icon": ""
   },
   {
-    "name": "PLACEHOLDER SKILL 89",
+    "name": "NestJS",
     "category": "Backend",
-    "tier": "Expert Level",
-    "years": 0,
-    "icon": "",
-    "progress": 100
+    "icon": ""
   },
   {
-    "name": "PLACEHOLDER SKILL 90",
-    "category": "Database",
-    "tier": "Advanced Level",
-    "years": 0,
-    "icon": "",
-    "progress": 80
+    "name": "Express.js",
+    "category": "Backend",
+    "icon": ""
   },
   {
-    "name": "PLACEHOLDER SKILL 91",
-    "category": "Database",
-    "tier": "Intermediate Level",
-    "years": 0,
-    "icon": "",
-    "progress": 60
+    "name": "Java",
+    "category": "Backend",
+    "icon": ""
   },
   {
-    "name": "PLACEHOLDER SKILL 92",
-    "category": "Database",
-    "tier": "Beginner Level",
-    "years": 0,
-    "icon": "",
-    "progress": 40
+    "name": "Python",
+    "category": "Backend",
+    "icon": ""
   },
   {
-    "name": "PLACEHOLDER SKILL 93",
-    "category": "DevOps",
-    "tier": "Expert Level",
-    "years": 0,
-    "icon": "",
-    "progress": 100
+    "name": "REST APIs",
+    "category": "Backend",
+    "icon": ""
   },
   {
-    "name": "PLACEHOLDER SKILL 94",
-    "category": "DevOps",
-    "tier": "Advanced Level",
-    "years": 0,
-    "icon": "",
-    "progress": 80
+    "name": "GraphQL",
+    "category": "Backend",
+    "icon": ""
   },
   {
-    "name": "PLACEHOLDER SKILL 95",
-    "category": "Testing",
-    "tier": "Intermediate Level",
-    "years": 0,
-    "icon": "",
-    "progress": 60
+    "name": "MERN Stack",
+    "category": "Backend",
+    "icon": ""
+  },
+  {
+    "name": "Object-Oriented Programming",
+    "category": "Backend",
+    "icon": ""
+  },
+  {
+    "name": "Microservices",
+    "category": "Backend",
+    "icon": ""
+  },
+  {
+    "name": "System Design",
+    "category": "Backend",
+    "icon": ""
+  },
+  {
+    "name": "API Architecture",
+    "category": "Backend",
+    "icon": ""
+  },
+  {
+    "name": "Multi-tenant Architecture",
+    "category": "Backend",
+    "icon": ""
+  },
+  {
+    "name": "Redis Caching",
+    "category": "Backend",
+    "icon": ""
+  },
+  {
+    "name": "Azure AI Search Orchestration",
+    "category": "Backend",
+    "icon": ""
+  },
+  {
+    "name": "C++",
+    "category": "Backend",
+    "icon": ""
+  },
+  {
+    "name": "Power BI",
+    "category": "Backend",
+    "icon": ""
+  },
+  {
+    "name": "Angular.js",
+    "category": "Backend",
+    "icon": ""
+  },
+  {
+    "name": "AWS EC2",
+    "category": "Cloud & DevOps",
+    "icon": ""
+  },
+  {
+    "name": "AWS S3",
+    "category": "Cloud & DevOps",
+    "icon": ""
+  },
+  {
+    "name": "AWS ECS",
+    "category": "Cloud & DevOps",
+    "icon": ""
+  },
+  {
+    "name": "AWS CloudFront",
+    "category": "Cloud & DevOps",
+    "icon": ""
+  },
+  {
+    "name": "AWS Lambda",
+    "category": "Cloud & DevOps",
+    "icon": ""
+  },
+  {
+    "name": "AWS API Gateway",
+    "category": "Cloud & DevOps",
+    "icon": ""
+  },
+  {
+    "name": "Google Cloud Platform",
+    "category": "Cloud & DevOps",
+    "icon": ""
+  },
+  {
+    "name": "Docker",
+    "category": "Cloud & DevOps",
+    "icon": ""
+  },
+  {
+    "name": "Jenkins",
+    "category": "Cloud & DevOps",
+    "icon": ""
+  },
+  {
+    "name": "CI/CD",
+    "category": "Cloud & DevOps",
+    "icon": ""
+  },
+  {
+    "name": "Git",
+    "category": "Cloud & DevOps",
+    "icon": ""
+  },
+  {
+    "name": "Bitbucket",
+    "category": "Cloud & DevOps",
+    "icon": ""
+  },
+  {
+    "name": "npm",
+    "category": "Cloud & DevOps",
+    "icon": ""
+  },
+  {
+    "name": "Bash",
+    "category": "Cloud & DevOps",
+    "icon": ""
+  },
+  {
+    "name": "Azure AI Search",
+    "category": "Cloud & DevOps",
+    "icon": ""
+  },
+  {
+    "name": "SQL",
+    "category": "Databases",
+    "icon": ""
+  },
+  {
+    "name": "MySQL",
+    "category": "Databases",
+    "icon": ""
+  },
+  {
+    "name": "MongoDB",
+    "category": "Databases",
+    "icon": ""
+  },
+  {
+    "name": "SQLite",
+    "category": "Databases",
+    "icon": ""
+  },
+  {
+    "name": "Database Schema Design",
+    "category": "Databases",
+    "icon": ""
+  },
+  {
+    "name": "Jest",
+    "category": "Testing & CS",
+    "icon": ""
+  },
+  {
+    "name": "Unit Testing",
+    "category": "Testing & CS",
+    "icon": ""
+  },
+  {
+    "name": "Integration Testing",
+    "category": "Testing & CS",
+    "icon": ""
+  },
+  {
+    "name": "Automated Acceptance Testing",
+    "category": "Testing & CS",
+    "icon": ""
+  },
+  {
+    "name": "Data Structures & Algorithms",
+    "category": "Testing & CS",
+    "icon": ""
+  },
+  {
+    "name": "Agile / Scrum",
+    "category": "Testing & CS",
+    "icon": ""
+  },
+  {
+    "name": "Lean",
+    "category": "Testing & CS",
+    "icon": ""
+  },
+  {
+    "name": "Leadership",
+    "category": "Testing & CS",
+    "icon": ""
+  },
+  {
+    "name": "Communication",
+    "category": "Testing & CS",
+    "icon": ""
+  },
+  {
+    "name": "Independent Work",
+    "category": "Testing & CS",
+    "icon": ""
+  },
+  {
+    "name": "Fast-Paced Environments",
+    "category": "Testing & CS",
+    "icon": ""
+  },
+  {
+    "name": "Flutter",
+    "category": "Mobile & Design",
+    "icon": ""
+  },
+  {
+    "name": "Dart",
+    "category": "Mobile & Design",
+    "icon": ""
+  },
+  {
+    "name": "Figma",
+    "category": "Mobile & Design",
+    "icon": ""
+  },
+  {
+    "name": "UI/UX",
+    "category": "Mobile & Design",
+    "icon": ""
+  },
+  {
+    "name": "Mapbox",
+    "category": "Mobile & Design",
+    "icon": ""
   }
 ]

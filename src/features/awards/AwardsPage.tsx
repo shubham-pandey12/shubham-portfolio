@@ -56,9 +56,11 @@ export function AwardsPage() {
         <section className="awards-content-section">
           <SectionHeader icon={<ShieldCheck />} title={content.certificationsHeading} />
           <div className="certification-grid">
-            {certifications.map((item) => (
-              <RecognitionCard key={item.title} item={item} />
-            ))}
+            {certifications.length > 0 ? (
+              certifications.map((item) => <RecognitionCard key={item.title} item={item} />)
+            ) : (
+              <p className="awards-empty-state">{content.emptyCertifications}</p>
+            )}
           </div>
         </section>
         <section className="professional-summary-box awards-summary reveal">

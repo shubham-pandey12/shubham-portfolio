@@ -586,3 +586,43 @@
     transition: none;
   }
 }
+
+.skills-category-section .skills-level-heading > span {
+  background: linear-gradient(90deg, #2563eb, #7c3aed);
+}
+.skills-source-badge {
+  flex: 0 0 auto;
+  padding: 3px 9px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 16px;
+}
+.skills-card-topline {
+  margin-bottom: 0;
+}
+
+@media (min-width: 640px) {
+  .skills-reference-page .skills-overview {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .skills-reference-page .skills-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (min-width: 1024px) {
+  .skills-reference-page .skills-card-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+.skills-reference-page .skills-source-badge {
+  color: var(--muted);
+}
+.dark .skills-reference-page .skills-source-badge {
+  border-color: #475569;
+  color: #cbd5e1;
+}
+.skills-source-badge {
+  background: var(--soft);
+}

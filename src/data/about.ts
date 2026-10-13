@@ -1,2 +1,2 @@
-export { profile, companies } from "./profile";
+export { profile, companies, yearsOfExperience } from "./profile";
 export { awards, certifications } from "./recognition";

@@ -1,105 +1,147 @@
 import { useState } from "react";
-import { Github, Linkedin, Mail, MapPin, Send, ShieldCheck, Twitter } from "lucide-react";
+import { Github, Linkedin, Mail, MapPin, Send, ShieldCheck, Twitter, Globe } from "lucide-react";
 import { profile } from "../../data/profile";
 import { PageHeading } from "../../components/PortfolioUI";
 import pageContent from "../../data/pageContent.json";
 
+function ContactInformationCard() {
+  return (
+    <section className="contact-reference-card reveal">
+      <h2>Contact Information</h2>
+      <div className="contact-reference-items">
+        <div className="contact-reference-item">
+          <Mail aria-hidden="true" />
+          <div>
+            <h3>Email</h3>
+            {profile.email.includes("YOUR_") ? (
+              <span>{profile.email}</span>
+            ) : (
+              <a href={`mailto:${profile.email}`}>{profile.email}</a>
+            )}
+          </div>
+        </div>
+        <div className="contact-reference-item">
+          <MapPin aria-hidden="true" />
+          <div>
+            <h3>Location</h3>
+            <p>{profile.location}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function SocialLinksCard() {
+  const links = [
+    { label: "GitHub", url: profile.github, icon: Github },
+    { label: "LinkedIn", url: profile.linkedin, icon: Linkedin },
+    { label: "X", url: profile.x, icon: Twitter },
+    { label: "Portfolio", url: profile.portfolio, icon: Globe },
+  ].filter(({ url }) => Boolean(url) && !url.includes("YOUR_"));
+  return (
+    <section className="contact-reference-card reveal">
+      <h2>Connect With Me</h2>
+      <div className="contact-reference-socials">
+        {links.length ? (
+          links.map(({ label, url, icon: Icon }) => (
+            <a key={label} href={url} target="_blank" rel="noreferrer">
+              <Icon aria-hidden="true" />
+              <span>{label}</span>
+            </a>
+          ))
+        ) : (
+          <p className="contact-reference-empty">
+            Social links can be added in <code>src/data/profile.json</code>.
+          </p>
+        )}
+      </div>
+    </section>
+  );
+}
+
+function ContactForm({ onSent }: { onSent: () => void }) {
+  const content = pageContent.contact;
+  return (
+    <section className="contact-reference-card contact-message-card reveal">
+      <h2>{content.formTitle}</h2>
+      <form
+        className="contact-reference-form"
+        onSubmit={(event) => {
+          event.preventDefault();
+          onSent();
+        }}
+      >
+        {content.formFields.map((field) => (
+          <div className="contact-reference-field" key={field.id}>
+            <label htmlFor={field.id}>{field.label}</label>
+            <input
+              id={field.id}
+              name={field.id}
+              type={field.type}
+              required
+              placeholder={field.placeholder}
+            />
+          </div>
+        ))}
+        <div className="contact-reference-field">
+          <label htmlFor={content.messageField.id}>{content.messageField.label}</label>
+          <textarea
+            id={content.messageField.id}
+            name={content.messageField.id}
+            rows={content.messageField.rows}
+            required
+            placeholder={content.messageField.placeholder}
+          />
+        </div>
+        <button className="contact-reference-submit" type="submit">
+          <Send aria-hidden="true" />
+          {content.submitLabel}
+        </button>
+      </form>
+      <div className="contact-reference-privacy">
+        <ShieldCheck aria-hidden="true" />
+        <p>{content.privacyNote}</p>
+      </div>
+    </section>
+  );
+}
+
 export function ContactPage() {
   const [sent, setSent] = useState(false);
+  const content = pageContent.contact;
   return (
-    <div className="contact-page page-shell">
+    <main className="contact-page contact-reference page-shell">
       <div className="container">
-        <PageHeading
-          title={pageContent.contact.title}
-          description={pageContent.contact.description}
-        />
-        <div className="contact-layout">
-          <aside className="contact-aside">
-            <section className="contact-card">
-              <h2>Contact Information</h2>
-              <div>
-                <Mail size={19} />
-                <span>
-                  Email<small>{profile.email}</small>
-                </span>
-              </div>
-              <div>
-                <MapPin size={19} />
-                <span>
-                  Location<small>{profile.location}</small>
-                </span>
-              </div>
-            </section>
-            <section className="contact-card">
-              <h2>Connect With Me</h2>
-              {profile.github.includes("YOUR_") ? (
-                <span>
-                  <Github size={20} /> GitHub · TBD
-                </span>
-              ) : (
-                <a href={profile.github}>
-                  <Github size={20} /> GitHub
-                </a>
-              )}
-              {profile.linkedin.includes("YOUR_") ? (
-                <span>
-                  <Linkedin size={20} /> LinkedIn · TBD
-                </span>
-              ) : (
-                <a href={profile.linkedin}>
-                  <Linkedin size={20} /> LinkedIn
-                </a>
-              )}
-              {profile.x.includes("YOUR_") ? (
-                <span>
-                  <Twitter size={20} /> X · TBD
-                </span>
-              ) : (
-                <a href={profile.x}>
-                  <Twitter size={20} /> X
-                </a>
-              )}
-            </section>
-            <section className="availability-card">
-              <h3>Currently Available</h3>
-              <p>{profile.availability}</p>
-            </section>
-          </aside>
-          <form
-            className="contact-form"
-            onSubmit={(e) => {
-              e.preventDefault();
-              setSent(true);
-            }}
-          >
-            <h2>Send Me a Message</h2>
-            <label>
-              Name *<input required placeholder="YOUR_NAME" />
-            </label>
-            <label>
-              Email *<input type="email" required placeholder="YOUR_EMAIL@example.com" />
-            </label>
-            <label>
-              Subject *<input required placeholder="YOUR_SUBJECT" />
-            </label>
-            <label>
-              Message *<textarea required rows={5} placeholder="YOUR_MESSAGE" />
-            </label>
-            <button className="send-button" type="submit">
-              <Send size={16} />
-              {sent ? "Demo form received" : "Send Message"}
-            </button>
-            <p className="privacy-note">
-              <ShieldCheck size={13} /> PLACEHOLDER: Connect a form provider before collecting
-              messages.
-            </p>
-          </form>
+        <div className="reveal">
+          <PageHeading title={content.title} description={content.description} />
         </div>
-        <section className="faq-section">
+        <div className="contact-reference-layout">
+          <aside className="contact-reference-aside">
+            <ContactInformationCard />
+            <SocialLinksCard />
+            {profile.availability && (
+              <section className="contact-reference-availability reveal">
+                <h2>Availability</h2>
+                <p>{profile.availability}</p>
+              </section>
+            )}
+          </aside>
+          <div className="contact-reference-main">
+            {sent ? (
+              <div className="contact-reference-success" role="status">
+                {content.submitSuccess}
+              </div>
+            ) : (
+              <ContactForm onSent={() => setSent(true)} />
+            )}
+          </div>
+        </div>
+        <section className="contact-reference-faq reveal">
           <h2>Frequently Asked Questions</h2>
-          <div className="faq-grid">
-            {pageContent.contact.faq.map(([title, text]) => (
-              <article key={title}>
+          <div className="contact-reference-faq-grid">
+            {content.faq.map(([title, text]) => (
+              <article className="contact-reference-card reveal" key={title}>
                 <h3>{title}</h3>
                 <p>{text}</p>
               </article>
@@ -107,6 +149,6 @@ export function ContactPage() {
           </div>
         </section>
       </div>
-    </div>
+    </main>
   );
 }

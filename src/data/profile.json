@@ -1,211 +1,146 @@
 {
   "profile": {
     "name": "Shubham Pandey",
-    "title": "Software Engineer | Frontend Engineer",
-    "subTitle": "React \u00b7 Next.js \u00b7 TypeScript",
-    "location": "India",
-    "education": "B.Tech in Information Technology \u00b7 IIIT Vadodara",
-    "company": "MAQ Software",
-    "availability": "Currently open to new opportunities \u00b7 availability TBD",
-    "biography": "I build thoughtful web experiences and practical software with React, Next.js, TypeScript, and JavaScript. My work spans frontend engineering, full-stack applications, business data platforms, and AI-enabled tools.",
-    "email": "YOUR_EMAIL@example.com",
-    "github": "https://github.com/YOUR_GITHUB_URL",
-    "linkedin": "https://linkedin.com/in/YOUR_LINKEDIN_URL",
-    "x": "https://x.com/YOUR_X_URL",
-    "blog": "https://YOUR_BLOG_URL"
+    "title": "Software Development Engineer 2",
+    "subTitle": "Backend & Full-Stack Software Engineer",
+    "location": "Bengaluru, India",
+    "education": "B.Tech in Information Technology · IIIT Vadodara",
+    "company": "Moresand Technologies",
+    "availability": "",
+    "biography": "Software Engineer experienced in architecting and shipping scalable backend systems, RESTful APIs, and microservices with Node.js, NestJS, Express.js, and Java, alongside React.js, Next.js, and TypeScript frontend work. Experienced with system design, API architecture, database schema design, Redis caching, multi-tenant platforms, Docker, CI/CD, and AWS infrastructure.",
+    "email": "mr.pshubham@gmail.com",
+    "github": "https://github.com/shubham-pandey12",
+    "linkedin": "https://www.linkedin.com/in/shubhampandey",
+    "x": "",
+    "blog": "",
+    "portfolio": "https://shubham.com"
   },
   "companies": [
     {
-      "company": "MAQ Software",
-      "role": "Software Engineer 1",
-      "date": "YOUR_START_DATE \u2013 Present",
-      "text": "Building business-facing experiences across Power BI, Microsoft Fabric, Dataverse, React, and TypeScript.",
-      "location": "PLACEHOLDER LOCATION",
-      "employmentType": "PLACEHOLDER EMPLOYMENT TYPE",
-      "methodology": "PLACEHOLDER METHODOLOGY",
-      "collaboration": "PLACEHOLDER TEAM",
+      "company": "Moresand Technologies",
+      "role": "Software Development Engineer 2",
+      "date": "March 2025 – Present",
+      "text": "Architected a multi-tenant CMS for 5+ luxury travel brands and led reusable widgets, templates, API integrations, and Redis-backed caching.",
+      "location": "Bengaluru, Karnataka",
       "responsibilities": [
-        "PLACEHOLDER: Add a confirmed responsibility.",
-        "PLACEHOLDER: Add a confirmed responsibility.",
-        "PLACEHOLDER: Add a confirmed responsibility."
+        "Architected a multi-tenant CMS for luxury travel brands with Node.js, Express.js, React.js, and TypeScript, including database schema and API architecture.",
+        "Designed database schemas and REST APIs to integrate brand-specific data across internal systems.",
+        "Built reusable widgets and templates with configurable API integrations and data mapping.",
+        "Implemented a Redis-backed caching layer for high-traffic endpoints.",
+        "Owned unit and integration testing strategy and CI/CD improvements across frontend and backend services."
       ],
       "achievements": [
-        "PLACEHOLDER: Add a verified achievement.",
-        "PLACEHOLDER: Add a verified achievement."
+        "Supported 5+ luxury travel brands on a shared codebase and reduced new-brand onboarding time by 50%.",
+        "Reusable widgets and templates reduced development effort by 50%."
       ],
       "technologies": [
-        "PLACEHOLDER TECHNOLOGY",
-        "PLACEHOLDER TECHNOLOGY",
-        "PLACEHOLDER TECHNOLOGY",
-        "PLACEHOLDER TECHNOLOGY",
-        "PLACEHOLDER TECHNOLOGY",
-        "PLACEHOLDER TECHNOLOGY",
-        "PLACEHOLDER TECHNOLOGY",
-        "PLACEHOLDER TECHNOLOGY",
-        "PLACEHOLDER TECHNOLOGY",
-        "PLACEHOLDER TECHNOLOGY",
-        "PLACEHOLDER TECHNOLOGY"
+        "Node.js",
+        "Express.js",
+        "React.js",
+        "TypeScript",
+        "Redis",
+        "REST APIs",
+        "SQL",
+        "Docker",
+        "CI/CD"
+      ]
+    },
+    {
+      "company": "MAQ Software",
+      "role": "Software Engineer 1",
+      "date": "April 2024 – February 2025",
+      "text": "Built an AI assistant service and reusable chatbot component library, and developed custom visuals for Power BI reporting.",
+      "location": "Noida, Uttar Pradesh",
+      "responsibilities": [
+        "Built an AI assistant service in Node.js with a custom Azure AI Search orchestrator.",
+        "Designed a reusable React and TypeScript chatbot component library for deployment across multiple applications.",
+        "Built custom React.js visuals for Power BI reports used by leadership for cross-team business reporting.",
+        "Drove code review standards across the team."
+      ],
+      "achievements": [
+        "Improved prompt accuracy by 28%."
+      ],
+      "technologies": [
+        "Node.js",
+        "Azure AI Search",
+        "React.js",
+        "TypeScript",
+        "Power BI"
       ]
     },
     {
       "company": "Techolution",
       "role": "Full Stack Developer",
-      "date": "YOUR_START_DATE \u2013 YOUR_END_DATE",
-      "text": "Worked across frontend interfaces and backend integrations using modern web technologies.",
-      "location": "PLACEHOLDER LOCATION",
-      "employmentType": "PLACEHOLDER EMPLOYMENT TYPE",
-      "methodology": "PLACEHOLDER METHODOLOGY",
-      "collaboration": "PLACEHOLDER TEAM",
+      "date": "July 2023 – March 2024",
+      "text": "Built scalable user interfaces and established testing standards; designed CI/CD pipelines to automate microservice deployments.",
+      "location": "Remote",
       "responsibilities": [
-        "PLACEHOLDER: Add a confirmed responsibility.",
-        "PLACEHOLDER: Add a confirmed responsibility.",
-        "PLACEHOLDER: Add a confirmed responsibility."
+        "Built performant interfaces with React.js and Angular.js.",
+        "Established unit, integration, and automated acceptance testing standards.",
+        "Designed CI/CD pipelines with Jenkins and Docker to automate microservice deployments."
       ],
       "achievements": [
-        "PLACEHOLDER: Add a verified achievement.",
-        "PLACEHOLDER: Add a verified achievement."
+        "Achieved 90% test coverage.",
+        "Cut deployment time by 60%."
       ],
       "technologies": [
-        "PLACEHOLDER TECHNOLOGY",
-        "PLACEHOLDER TECHNOLOGY",
-        "PLACEHOLDER TECHNOLOGY",
-        "PLACEHOLDER TECHNOLOGY",
-        "PLACEHOLDER TECHNOLOGY",
-        "PLACEHOLDER TECHNOLOGY",
-        "PLACEHOLDER TECHNOLOGY",
-        "PLACEHOLDER TECHNOLOGY",
-        "PLACEHOLDER TECHNOLOGY",
-        "PLACEHOLDER TECHNOLOGY",
-        "PLACEHOLDER TECHNOLOGY"
+        "React.js",
+        "Angular.js",
+        "Jest",
+        "Unit Testing",
+        "Integration Testing",
+        "Jenkins",
+        "Docker",
+        "CI/CD"
       ]
     },
     {
       "company": "DrinkPrime",
-      "role": "Intern",
-      "date": "YOUR_START_DATE \u2013 YOUR_END_DATE",
-      "text": "Contributed to product development tasks in a production engineering environment.",
-      "location": "PLACEHOLDER LOCATION",
-      "employmentType": "PLACEHOLDER EMPLOYMENT TYPE",
-      "methodology": "PLACEHOLDER METHODOLOGY",
-      "collaboration": "PLACEHOLDER TEAM",
+      "role": "Software Engineer Intern",
+      "date": "July 2023 – November 2023",
+      "text": "Contributed to a UI design system, responsive web and internal dashboard frontend, API integration, and software testing.",
+      "location": "Remote",
       "responsibilities": [
-        "PLACEHOLDER: Add a confirmed responsibility.",
-        "PLACEHOLDER: Add a confirmed responsibility.",
-        "PLACEHOLDER: Add a confirmed responsibility."
+        "Created a UI design system and responsive frontend for web and an internal dashboard.",
+        "Collaborated with the backend team to test and integrate APIs.",
+        "Created and implemented detailed software test plans."
       ],
       "achievements": [
-        "PLACEHOLDER: Add a verified achievement.",
-        "PLACEHOLDER: Add a verified achievement."
+        "Older resume reports a 20% increase in user engagement, 15% fewer API call errors, and a 40% decrease in software bugs."
       ],
       "technologies": [
-        "PLACEHOLDER TECHNOLOGY",
-        "PLACEHOLDER TECHNOLOGY",
-        "PLACEHOLDER TECHNOLOGY",
-        "PLACEHOLDER TECHNOLOGY",
-        "PLACEHOLDER TECHNOLOGY",
-        "PLACEHOLDER TECHNOLOGY",
-        "PLACEHOLDER TECHNOLOGY",
-        "PLACEHOLDER TECHNOLOGY",
-        "PLACEHOLDER TECHNOLOGY",
-        "PLACEHOLDER TECHNOLOGY",
-        "PLACEHOLDER TECHNOLOGY"
-      ]
+        "JavaScript",
+        "React.js",
+        "SCSS",
+        "REST APIs",
+        "Unit Testing",
+        "Integration Testing"
+      ],
+      "employmentType": "Internship"
     },
     {
       "company": "GeeksforGeeks",
-      "role": "SDE Intern",
-      "date": "YOUR_START_DATE \u2013 YOUR_END_DATE",
-      "text": "Built and improved web experiences while strengthening frontend development skills.",
-      "location": "PLACEHOLDER LOCATION",
-      "employmentType": "PLACEHOLDER EMPLOYMENT TYPE",
-      "methodology": "PLACEHOLDER METHODOLOGY",
-      "collaboration": "PLACEHOLDER TEAM",
+      "role": "Software Development Engineer Intern",
+      "date": "January 2023 – June 2023",
+      "text": "Built reusable web components and pages with React.js, Next.js, and JavaScript, and improved application performance.",
+      "location": "Noida, Uttar Pradesh",
       "responsibilities": [
-        "PLACEHOLDER: Add a confirmed responsibility.",
-        "PLACEHOLDER: Add a confirmed responsibility.",
-        "PLACEHOLDER: Add a confirmed responsibility."
+        "Created and deployed reusable web pages and components with JavaScript, React.js, and Next.js.",
+        "Implemented a user streak density graph (older resume).",
+        "Built web services and queries using data structures and algorithms (older resume)."
       ],
       "achievements": [
-        "PLACEHOLDER: Add a verified achievement.",
-        "PLACEHOLDER: Add a verified achievement."
+        "Newer resume reports 30% higher user engagement and 40% improved site performance.",
+        "Older resume reports 25% reduction in page load times."
       ],
       "technologies": [
-        "PLACEHOLDER TECHNOLOGY",
-        "PLACEHOLDER TECHNOLOGY",
-        "PLACEHOLDER TECHNOLOGY",
-        "PLACEHOLDER TECHNOLOGY",
-        "PLACEHOLDER TECHNOLOGY",
-        "PLACEHOLDER TECHNOLOGY",
-        "PLACEHOLDER TECHNOLOGY",
-        "PLACEHOLDER TECHNOLOGY",
-        "PLACEHOLDER TECHNOLOGY",
-        "PLACEHOLDER TECHNOLOGY",
-        "PLACEHOLDER TECHNOLOGY"
-      ]
-    },
-    {
-      "company": "PLACEHOLDER COMPANY",
-      "role": "PLACEHOLDER ROLE",
-      "date": "YOUR_START_DATE \u2013 YOUR_END_DATE",
-      "text": "PLACEHOLDER: Add another confirmed experience if needed.",
-      "location": "PLACEHOLDER LOCATION",
-      "employmentType": "PLACEHOLDER EMPLOYMENT TYPE",
-      "methodology": "PLACEHOLDER METHODOLOGY",
-      "collaboration": "PLACEHOLDER TEAM",
-      "responsibilities": [
-        "PLACEHOLDER: Add a confirmed responsibility.",
-        "PLACEHOLDER: Add a confirmed responsibility.",
-        "PLACEHOLDER: Add a confirmed responsibility."
+        "JavaScript",
+        "React.js",
+        "Next.js",
+        "Data Structures & Algorithms",
+        "Continuous Integration"
       ],
-      "achievements": [
-        "PLACEHOLDER: Add a verified achievement.",
-        "PLACEHOLDER: Add a verified achievement."
-      ],
-      "technologies": [
-        "PLACEHOLDER TECHNOLOGY",
-        "PLACEHOLDER TECHNOLOGY",
-        "PLACEHOLDER TECHNOLOGY",
-        "PLACEHOLDER TECHNOLOGY",
-        "PLACEHOLDER TECHNOLOGY",
-        "PLACEHOLDER TECHNOLOGY",
-        "PLACEHOLDER TECHNOLOGY",
-        "PLACEHOLDER TECHNOLOGY",
-        "PLACEHOLDER TECHNOLOGY",
-        "PLACEHOLDER TECHNOLOGY",
-        "PLACEHOLDER TECHNOLOGY"
-      ]
-    },
-    {
-      "company": "PLACEHOLDER COMPANY",
-      "role": "PLACEHOLDER ROLE",
-      "date": "YOUR_START_DATE \u2013 YOUR_END_DATE",
-      "text": "PLACEHOLDER: Add another confirmed experience if needed.",
-      "location": "PLACEHOLDER LOCATION",
-      "employmentType": "PLACEHOLDER EMPLOYMENT TYPE",
-      "methodology": "PLACEHOLDER METHODOLOGY",
-      "collaboration": "PLACEHOLDER TEAM",
-      "responsibilities": [
-        "PLACEHOLDER: Add a confirmed responsibility.",
-        "PLACEHOLDER: Add a confirmed responsibility.",
-        "PLACEHOLDER: Add a confirmed responsibility."
-      ],
-      "achievements": [
-        "PLACEHOLDER: Add a verified achievement.",
-        "PLACEHOLDER: Add a verified achievement."
-      ],
-      "technologies": [
-        "PLACEHOLDER TECHNOLOGY",
-        "PLACEHOLDER TECHNOLOGY",
-        "PLACEHOLDER TECHNOLOGY",
-        "PLACEHOLDER TECHNOLOGY",
-        "PLACEHOLDER TECHNOLOGY",
-        "PLACEHOLDER TECHNOLOGY",
-        "PLACEHOLDER TECHNOLOGY",
-        "PLACEHOLDER TECHNOLOGY",
-        "PLACEHOLDER TECHNOLOGY",
-        "PLACEHOLDER TECHNOLOGY",
-        "PLACEHOLDER TECHNOLOGY"
-      ]
+      "employmentType": "Internship"
     }
   ]
 }

@@ -1,16 +1,12 @@
 import { useMemo, useState } from "react";
-import { allSkills, type SkillTier } from "../../data/skillCatalog";
-import { ProficiencyDistribution } from "./components/ProficiencyDistribution";
+import { allSkills } from "../../data/skillCatalog";
 import { SkillLevelSection } from "./components/SkillLevelSection";
 import { SkillsControls } from "./components/SkillsControls";
 import { SkillsOverview } from "./components/SkillsOverview";
 import { SkillsPageHeader } from "./components/SkillsPageHeader";
 import "./skills.css";
 
-import pageContent from "../../data/pageContent.json";
-
 const skillCategories = [...new Set(allSkills.map((skill) => skill.category))];
-const skillTiers = pageContent.skills.tiers as SkillTier[];
 
 export function SkillsPage() {
   const [query, setQuery] = useState("");
@@ -39,17 +35,18 @@ export function SkillsPage() {
           onCategoryChange={setCategory}
         />
         <p className="skills-result-count" aria-live="polite">
-          Showing <strong>{filteredSkills.length}</strong> of {allSkills.length} skills
+          Showing <strong>{filteredSkills.length}</strong> of {allSkills.length} resume-listed
+          skills
         </p>
         <div className="skills-tier-list">
-          {skillTiers.map((tier, index) => {
-            const tierSkills = filteredSkills.filter((skill) => skill.tier === tier);
-            if (tierSkills.length === 0) return null;
-
-            return <SkillLevelSection key={tier} tier={tier} skills={tierSkills} index={index} />;
+          {skillCategories.map((item, index) => {
+            const categorySkills = filteredSkills.filter((skill) => skill.category === item);
+            if (!categorySkills.length) return null;
+            return (
+              <SkillLevelSection key={item} category={item} skills={categorySkills} index={index} />
+            );
           })}
         </div>
-        <ProficiencyDistribution skills={filteredSkills} />
       </div>
     </div>
   );

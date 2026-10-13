@@ -13,30 +13,30 @@ export function ArticlesPage() {
           <h1>{pageContent.articles.title}</h1>
           <p>{pageContent.articles.description}</p>
         </div>
-        <div className="articles-placeholder-grid">
-          {articles.map((item, i) => (
-            <article key={i} className="article-card">
-              <div className="article-image-placeholder">
-                <span>PLACEHOLDER ARTICLE IMAGE</span>
-              </div>
-              <div className="article-card-body">
-                <span className="category-label">{item.category}</span>
-                <h2>{item.title}</h2>
-                <p>{item.description}</p>
-                <div className="article-card-footer">
-                  <span>{item.date}</span>
-                  {item.url && !item.url.startsWith("YOUR_") ? (
-                    <a href={item.url} target="_blank" rel="noreferrer">
-                      Read Article <ArrowUpRight size={14} />
-                    </a>
-                  ) : (
-                    <span className="article-link-placeholder">Article link TBD</span>
-                  )}
+        {articles.length ? (
+          <div className="articles-grid">
+            {articles.map((item, i) => (
+              <article key={i} className="article-card">
+                {item.image && <img className="article-image" src={item.image} alt="" />}
+                <div className="article-card-body">
+                  <span className="category-label">{item.category}</span>
+                  <h2>{item.title}</h2>
+                  <p>{item.description}</p>
+                  <div className="article-card-footer">
+                    <span>{item.date}</span>
+                    {item.url && (
+                      <a href={item.url} target="_blank" rel="noreferrer">
+                        Read Article <ArrowUpRight size={14} />
+                      </a>
+                    )}
+                  </div>
                 </div>
-              </div>
-            </article>
-          ))}
-        </div>
+              </article>
+            ))}
+          </div>
+        ) : (
+          <p className="articles-empty-state">{pageContent.articles.emptyState}</p>
+        )}
       </div>
     </div>
   );

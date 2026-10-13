@@ -7,9 +7,7 @@ type Experience = {
   date: string;
   text: string;
   location: string;
-  employmentType: string;
-  methodology: string;
-  collaboration: string;
+  employmentType?: string;
   responsibilities: string[];
   achievements: string[];
   technologies: string[];
@@ -46,9 +44,11 @@ export function AboutExperienceCard({ item }: { item: Experience }) {
         <div>
           <h3>{item.role}</h3>
           <p className="about-company">{item.company}</p>
-          <p className="about-experience-meta">
-            {item.location} · {item.employmentType}
-          </p>
+          {(item.location || item.employmentType) && (
+            <p className="about-experience-meta">
+              {[item.location, item.employmentType].filter(Boolean).join(" · ")}
+            </p>
+          )}
         </div>
         <div className="about-experience-date">
           <CalendarDays size={16} />
@@ -56,16 +56,6 @@ export function AboutExperienceCard({ item }: { item: Experience }) {
         </div>
       </div>
       <p className="about-experience-description">{item.text}</p>
-      <div className="about-experience-facts">
-        <p>
-          <strong>Methodology:</strong>
-          <span>{item.methodology}</span>
-        </p>
-        <p>
-          <strong>Collaboration:</strong>
-          <span>{item.collaboration}</span>
-        </p>
-      </div>
       <div className="about-experience-list">
         <h4>Key Responsibilities</h4>
         <ul>

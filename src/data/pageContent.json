@@ -1,175 +1,188 @@
 {
   "awards": {
     "title": "Awards & Certifications",
-    "description": "Professional recognitions and industry certifications. Replace each placeholder with your confirmed details.",
+    "description": "Awards and certifications listed in my resumes.",
     "awardsHeading": "Featured Recognitions",
     "certificationsHeading": "Cloud Certifications",
     "summaryHeading": "Professional Summary",
     "summaryStats": [
       {
-        "value": "TBD",
-        "label": "Certifications"
+        "value": "0",
+        "label": "Certifications Listed"
       },
       {
-        "value": "TBD",
-        "label": "Professional Awards"
+        "value": "1",
+        "label": "Professional Award"
       },
       {
-        "value": "TBD",
+        "value": "0",
         "label": "Azure Certifications"
       },
       {
-        "value": "TBD",
+        "value": "0",
         "label": "Other Certifications"
       }
-    ]
+    ],
+    "emptyCertifications": "No certifications are listed in the resumes yet."
   },
   "skills": {
     "title": "Technical Skills",
-    "description": "Skills, technologies, and tools to be confirmed and maintained in the skills data.",
+    "description": "Technologies and practices listed across my current and previous resumes.",
     "overviewStats": [
       {
-        "label": "Expert Level",
-        "value": "TBD",
+        "label": "Skills listed",
+        "value": "",
         "tone": "blue"
       },
       {
-        "label": "Certifications",
-        "value": "TBD",
+        "label": "Companies",
+        "value": "",
         "tone": "purple"
       },
       {
-        "label": "Experience",
-        "value": "TBD",
+        "label": "Certifications listed",
+        "value": "",
         "tone": "green"
       }
     ],
     "tiers": [
-      "Expert Level",
-      "Advanced Level",
-      "Intermediate Level",
-      "Beginner Level"
+      "Frontend",
+      "Backend",
+      "Cloud & DevOps",
+      "Databases",
+      "Testing & CS",
+      "Mobile & Design"
     ]
   },
   "articles": {
     "eyebrow": "Technical Writing",
     "title": "Latest Articles",
-    "description": "Articles to be added after publication details are confirmed."
+    "description": "No articles are listed in the resumes yet.",
+    "emptyState": "No articles have been added yet."
   },
   "about": {
     "title": "About Me",
-    "description": "A short professional introduction can be added here once the details are confirmed.",
-    "quickStats": [
-      [
-        "TBD",
-        "Years Exp.",
-        "blue"
-      ],
-      [
-        "TBD",
-        "Certifications",
-        "purple"
-      ],
-      [
-        "TBD",
-        "Technologies",
-        "green"
-      ],
-      [
-        "TBD",
-        "Projects",
-        "orange"
-      ]
-    ],
+    "description": "Software Engineer experienced in building scalable backend systems, REST APIs, microservices, and full-stack applications.",
     "competencies": [
       {
-        "title": "PLACEHOLDER COMPETENCY",
+        "title": "Frontend",
         "items": [
-          "PLACEHOLDER SKILL",
-          "PLACEHOLDER SKILL",
-          "PLACEHOLDER SKILL",
-          "PLACEHOLDER SKILL",
-          "PLACEHOLDER SKILL"
+          "React.js",
+          "Next.js",
+          "Redux",
+          "TypeScript",
+          "JavaScript",
+          "Tailwind CSS",
+          "Sass / SCSS",
+          "Bootstrap",
+          "CSS",
+          "HTML",
+          "jQuery",
+          "Material UI",
+          "Chart.js",
+          "React Hooks"
         ]
       },
       {
-        "title": "PLACEHOLDER COMPETENCY",
+        "title": "Backend",
         "items": [
-          "PLACEHOLDER SKILL",
-          "PLACEHOLDER SKILL",
-          "PLACEHOLDER SKILL",
-          "PLACEHOLDER SKILL",
-          "PLACEHOLDER SKILL"
+          "Node.js",
+          "NestJS",
+          "Express.js",
+          "Java",
+          "Python",
+          "REST APIs",
+          "GraphQL",
+          "MERN Stack",
+          "Object-Oriented Programming",
+          "Microservices",
+          "System Design",
+          "API Architecture",
+          "Multi-tenant Architecture",
+          "Redis Caching",
+          "Azure AI Search Orchestration",
+          "C++",
+          "Power BI",
+          "Angular.js"
         ]
       },
       {
-        "title": "PLACEHOLDER COMPETENCY",
+        "title": "Cloud & DevOps",
         "items": [
-          "PLACEHOLDER SKILL",
-          "PLACEHOLDER SKILL",
-          "PLACEHOLDER SKILL",
-          "PLACEHOLDER SKILL",
-          "PLACEHOLDER SKILL"
+          "AWS EC2",
+          "AWS S3",
+          "AWS ECS",
+          "AWS CloudFront",
+          "AWS Lambda",
+          "AWS API Gateway",
+          "Google Cloud Platform",
+          "Docker",
+          "Jenkins",
+          "CI/CD",
+          "Git",
+          "Bitbucket",
+          "npm",
+          "Bash",
+          "Azure AI Search"
         ]
       },
       {
-        "title": "PLACEHOLDER COMPETENCY",
+        "title": "Databases",
         "items": [
-          "PLACEHOLDER SKILL",
-          "PLACEHOLDER SKILL",
-          "PLACEHOLDER SKILL",
-          "PLACEHOLDER SKILL",
-          "PLACEHOLDER SKILL"
+          "SQL",
+          "MySQL",
+          "MongoDB",
+          "SQLite",
+          "Database Schema Design"
+        ]
+      },
+      {
+        "title": "Testing & CS",
+        "items": [
+          "Jest",
+          "Unit Testing",
+          "Integration Testing",
+          "Automated Acceptance Testing",
+          "Data Structures & Algorithms",
+          "Agile / Scrum",
+          "Lean",
+          "Leadership",
+          "Communication",
+          "Independent Work",
+          "Fast-Paced Environments"
+        ]
+      },
+      {
+        "title": "Mobile & Design",
+        "items": [
+          "Flutter",
+          "Dart",
+          "Figma",
+          "UI/UX",
+          "Mapbox",
+          "Leadership",
+          "Communication",
+          "Independent Work",
+          "Fast-Paced Environments"
         ]
       }
     ],
-    "careerStats": [
-      [
-        "TBD",
-        "Years of Experience"
-      ],
-      [
-        "TBD",
-        "Projects Delivered"
-      ],
-      [
-        "TBD",
-        "Cloud Certifications"
-      ],
-      [
-        "TBD",
-        "Technologies"
-      ],
-      [
-        "TBD",
-        "Users Served"
-      ]
-    ],
     "badges": [
-      "PLACEHOLDER AWARD",
-      "PLACEHOLDER CERTIFICATION"
+      "Best Idea Award · HACKIIITV"
     ],
     "professionalSummary": [
-      "PLACEHOLDER: Add a verified professional summary.",
-      "PLACEHOLDER: Add a verified overview of recent work and contributions.",
-      "PLACEHOLDER: Add verified education and community details."
+      "Software Engineer experienced in architecting and shipping scalable backend systems, RESTful APIs, and microservices with Node.js, NestJS, Express.js, and Java, alongside React.js, Next.js, and TypeScript frontend work. Experienced with system design, API architecture, database schema design, Redis caching, multi-tenant platforms, Docker, CI/CD, and AWS infrastructure.",
+      "Currently at Moresand Technologies, architecting a multi-tenant CMS for luxury travel brands. Previous experience includes MAQ Software, Techolution, DrinkPrime, and GeeksforGeeks.",
+      "Bachelor of Technology in Information Technology from the Indian Institute of Information Technology Vadodara."
     ],
-    "seeking": "PLACEHOLDER: Add the roles and opportunities you want to highlight.",
-    "focusAreas": "PLACEHOLDER: Add the professional areas you want to emphasize.",
+    "focusAreas": "Backend systems, full-stack applications, REST APIs, microservices, multi-tenant platforms, cloud infrastructure, and frontend engineering.",
     "education": [
       {
-        "title": "B.Tech in Information Technology",
+        "title": "Bachelor of Technology",
         "area": "Information Technology",
-        "organization": "Indian Institute of Information Technology, Vadodara",
-        "date": "YOUR_START_DATE \u2013 YOUR_END_DATE",
-        "description": "PLACEHOLDER: Add confirmed education details."
-      },
-      {
-        "title": "PLACEHOLDER DEGREE",
-        "area": "YOUR FIELD OF STUDY",
-        "organization": "YOUR INSTITUTION",
-        "date": "YOUR_START_DATE \u2013 YOUR_END_DATE",
-        "description": "PLACEHOLDER: Add verified degree details."
+        "organization": "Indian Institute of Information Technology Vadodara",
+        "date": "July 2019 – June 2023",
+        "description": "GPA: 7.5. Coursework included computer science fundamentals, data structures, algorithms, OOP, DBMS, computer networks, and operating systems."
       }
     ],
     "sectionTitles": {
@@ -178,103 +191,86 @@
       "recognition": "Featured Certifications & Awards",
       "career": "Career Highlights"
     },
-    "experienceDetails": {
-      "location": "PLACEHOLDER LOCATION",
-      "employmentType": "PLACEHOLDER EMPLOYMENT TYPE",
-      "methodology": "PLACEHOLDER METHODOLOGY",
-      "collaboration": "PLACEHOLDER TEAM",
-      "responsibilities": [
-        "PLACEHOLDER: Add a confirmed responsibility.",
-        "PLACEHOLDER: Add a confirmed responsibility.",
-        "PLACEHOLDER: Add a confirmed responsibility."
-      ],
-      "achievements": [
-        "PLACEHOLDER: Add a verified achievement.",
-        "PLACEHOLDER: Add a verified achievement."
-      ],
-      "technologies": [
-        "PLACEHOLDER TECHNOLOGY",
-        "PLACEHOLDER TECHNOLOGY",
-        "PLACEHOLDER TECHNOLOGY",
-        "PLACEHOLDER TECHNOLOGY",
-        "PLACEHOLDER TECHNOLOGY",
-        "PLACEHOLDER TECHNOLOGY",
-        "PLACEHOLDER TECHNOLOGY",
-        "PLACEHOLDER TECHNOLOGY",
-        "PLACEHOLDER TECHNOLOGY",
-        "PLACEHOLDER TECHNOLOGY",
-        "PLACEHOLDER TECHNOLOGY"
-      ]
-    },
     "careerMetrics": [
       [
-        "TBD",
-        "Test Coverage"
+        "90%",
+        "Test Coverage (Techolution)"
       ],
       [
-        "TBD",
-        "Time Saved"
+        "60%",
+        "Deployment Time Reduction (Techolution)"
       ],
       [
-        "TBD",
-        "Response Time"
+        "28%",
+        "Prompt Accuracy Improvement (MAQ Software)"
       ]
     ]
   },
   "contact": {
     "title": "Get in Touch",
-    "description": "Contact details and availability can be updated in the profile data.",
+    "description": "Have a project in mind or want to discuss opportunities? I’d love to hear from you!",
     "faq": [
       [
-        "Response Time",
-        "PLACEHOLDER: Add your expected response time."
-      ],
-      [
         "Project Types",
-        "PLACEHOLDER: Add the projects you are open to."
-      ],
-      [
-        "Consultation",
-        "PLACEHOLDER: Add consultation availability."
-      ],
-      [
-        "Collaboration",
-        "PLACEHOLDER: Add collaboration preferences."
+        "Full-stack web applications, backend systems, and frontend engineering projects."
       ]
-    ]
-  },
-  "home": {
-    "heroRole": "Software Engineer | Frontend & Data Platforms",
-    "heroBio": "PLACEHOLDER: Add a verified professional introduction.",
-    "heroAwards": [
-      "PLACEHOLDER AWARD",
-      "PLACEHOLDER CERTIFICATION"
     ],
-    "heroTech": [
-      "PLACEHOLDER TECHNOLOGY",
-      "PLACEHOLDER TECHNOLOGY",
-      "PLACEHOLDER TECHNOLOGY"
-    ],
-    "heroStats": [
+    "formTitle": "Send Me a Message",
+    "formFields": [
       {
-        "value": "TBD",
-        "label": "Years Experience"
+        "id": "name",
+        "label": "Name *",
+        "type": "text",
+        "placeholder": "Your name"
       },
       {
-        "value": "TBD",
-        "label": "Projects Delivered"
+        "id": "email",
+        "label": "Email *",
+        "type": "email",
+        "placeholder": "you@example.com"
       },
       {
-        "value": "TBD",
-        "label": "Certifications"
+        "id": "subject",
+        "label": "Subject *",
+        "type": "text",
+        "placeholder": "Project collaboration"
       }
     ],
+    "messageField": {
+      "id": "message",
+      "label": "Message *",
+      "placeholder": "Tell me about your project...",
+      "rows": 6
+    },
+    "submitLabel": "Send Message",
+    "submitSuccess": "Demo form received",
+    "privacyNote": "This demo form does not send or store messages."
+  },
+  "home": {
+    "heroRole": "Software Development Engineer 2",
+    "heroBio": "Software Engineer experienced in architecting and shipping scalable backend systems, RESTful APIs, and microservices with Node.js, NestJS, Express.js, and Java, alongside React.js, Next.js, and TypeScript frontend work. Experienced with system design, API architecture, database schema design, Redis caching, multi-tenant platforms, Docker, CI/CD, and AWS infrastructure.",
+    "heroAwards": [
+      "HACKIIITV Best Idea Award"
+    ],
+    "heroTech": [
+      "Node.js",
+      "NestJS",
+      "Express.js",
+      "React.js",
+      "Next.js",
+      "TypeScript",
+      "Java",
+      "AWS",
+      "Docker",
+      "SQL",
+      "MongoDB"
+    ],
     "featuredTitle": "Featured Projects",
-    "featuredDescription": "A selection of projects to be added after details are confirmed."
+    "featuredDescription": "Resume projects across full-stack web development, data visualization, and mapping."
   },
   "projects": {
     "title": "All Projects",
-    "description": "PLACEHOLDER: Add a verified portfolio overview for the projects listed below.",
+    "description": "Projects listed in my current and previous resumes.",
     "searchPlaceholder": "Search project titles and technologies...",
     "emptyState": "No projects match your search.",
     "clearFilters": "Clear search and filters"

@@ -5,19 +5,46 @@
       "color": "blue",
       "skills": [
         {
-          "name": "React",
-          "level": "TBD",
-          "years": "TBD"
+          "name": "React.js"
         },
         {
-          "name": "TypeScript",
-          "level": "TBD",
-          "years": "TBD"
+          "name": "Next.js"
         },
         {
-          "name": "Next.js",
-          "level": "TBD",
-          "years": "TBD"
+          "name": "Redux"
+        },
+        {
+          "name": "TypeScript"
+        },
+        {
+          "name": "JavaScript"
+        },
+        {
+          "name": "Tailwind CSS"
+        },
+        {
+          "name": "Sass / SCSS"
+        },
+        {
+          "name": "Bootstrap"
+        },
+        {
+          "name": "CSS"
+        },
+        {
+          "name": "HTML"
+        },
+        {
+          "name": "jQuery"
+        },
+        {
+          "name": "Material UI"
+        },
+        {
+          "name": "Chart.js"
+        },
+        {
+          "name": "React Hooks"
         }
       ]
     },
@@ -26,133 +53,193 @@
       "color": "purple",
       "skills": [
         {
-          "name": "Node.js",
-          "level": "TBD",
-          "years": "TBD"
+          "name": "Node.js"
         },
         {
-          "name": "JavaScript",
-          "level": "TBD",
-          "years": "TBD"
+          "name": "NestJS"
         },
         {
-          "name": "REST APIs",
-          "level": "TBD",
-          "years": "TBD"
+          "name": "Express.js"
+        },
+        {
+          "name": "Java"
+        },
+        {
+          "name": "Python"
+        },
+        {
+          "name": "REST APIs"
+        },
+        {
+          "name": "GraphQL"
+        },
+        {
+          "name": "MERN Stack"
+        },
+        {
+          "name": "Object-Oriented Programming"
+        },
+        {
+          "name": "Microservices"
+        },
+        {
+          "name": "System Design"
+        },
+        {
+          "name": "API Architecture"
+        },
+        {
+          "name": "Multi-tenant Architecture"
+        },
+        {
+          "name": "Redis Caching"
+        },
+        {
+          "name": "Azure AI Search Orchestration"
+        },
+        {
+          "name": "C++"
+        },
+        {
+          "name": "Power BI"
+        },
+        {
+          "name": "Angular.js"
         }
       ]
     },
     {
-      "title": "Database",
+      "title": "Cloud & DevOps",
       "color": "green",
       "skills": [
         {
-          "name": "SQL",
-          "level": "TBD",
-          "years": "TBD"
+          "name": "AWS EC2"
         },
         {
-          "name": "Dataverse",
-          "level": "TBD",
-          "years": "TBD"
+          "name": "AWS S3"
+        },
+        {
+          "name": "AWS ECS"
+        },
+        {
+          "name": "AWS CloudFront"
+        },
+        {
+          "name": "AWS Lambda"
+        },
+        {
+          "name": "AWS API Gateway"
+        },
+        {
+          "name": "Google Cloud Platform"
+        },
+        {
+          "name": "Docker"
+        },
+        {
+          "name": "Jenkins"
+        },
+        {
+          "name": "CI/CD"
+        },
+        {
+          "name": "Git"
+        },
+        {
+          "name": "Bitbucket"
+        },
+        {
+          "name": "npm"
+        },
+        {
+          "name": "Bash"
+        },
+        {
+          "name": "Azure AI Search"
         }
       ]
     },
     {
-      "title": "DevOps",
+      "title": "Databases",
       "color": "orange",
       "skills": [
         {
-          "name": "Git",
-          "level": "TBD",
-          "years": "TBD"
+          "name": "SQL"
         },
         {
-          "name": "Vite",
-          "level": "TBD",
-          "years": "TBD"
+          "name": "MySQL"
+        },
+        {
+          "name": "MongoDB"
+        },
+        {
+          "name": "SQLite"
+        },
+        {
+          "name": "Database Schema Design"
         }
       ]
     },
     {
-      "title": "AI/ML",
+      "title": "Testing & CS",
+      "color": "blue",
+      "skills": [
+        {
+          "name": "Jest"
+        },
+        {
+          "name": "Unit Testing"
+        },
+        {
+          "name": "Integration Testing"
+        },
+        {
+          "name": "Automated Acceptance Testing"
+        },
+        {
+          "name": "Data Structures & Algorithms"
+        },
+        {
+          "name": "Agile / Scrum"
+        },
+        {
+          "name": "Lean"
+        },
+        {
+          "name": "Leadership"
+        },
+        {
+          "name": "Communication"
+        },
+        {
+          "name": "Independent Work"
+        },
+        {
+          "name": "Fast-Paced Environments"
+        }
+      ]
+    },
+    {
+      "title": "Mobile & Design",
       "color": "purple",
       "skills": [
         {
-          "name": "LLM APIs",
-          "level": "TBD",
-          "years": "TBD"
+          "name": "Flutter"
         },
         {
-          "name": "AI workflows",
-          "level": "TBD",
-          "years": "TBD"
+          "name": "Dart"
         },
         {
-          "name": "AI Technology TBD",
-          "level": "TBD",
-          "years": "TBD"
+          "name": "Figma"
         },
         {
-          "name": "AI Framework TBD",
-          "level": "TBD",
-          "years": "TBD"
+          "name": "UI/UX"
+        },
+        {
+          "name": "Mapbox"
         }
       ]
     }
   ],
-  "complementarySkills": [
-    "Power BI",
-    "Microsoft Fabric",
-    "Dataverse",
-    "SQL",
-    "MySQL",
-    "MongoDB",
-    "Java",
-    "Node.js",
-    "Express.js",
-    "REST APIs",
-    "Azure",
-    "LLM APIs",
-    "Prompt Engineering",
-    "Git",
-    "Vite",
-    "Figma",
-    "Tailwind CSS",
-    "Sass",
-    "TanStack Query",
-    "React Konva",
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "TypeScript",
-    "Next.js",
-    "React",
-    "PLACEHOLDER TECHNOLOGY",
-    "PLACEHOLDER TECHNOLOGY",
-    "PLACEHOLDER TECHNOLOGY",
-    "PLACEHOLDER TECHNOLOGY",
-    "PLACEHOLDER TECHNOLOGY",
-    "PLACEHOLDER TECHNOLOGY",
-    "PLACEHOLDER TECHNOLOGY",
-    "PLACEHOLDER TECHNOLOGY",
-    "PLACEHOLDER TECHNOLOGY",
-    "PLACEHOLDER TECHNOLOGY",
-    "PLACEHOLDER TECHNOLOGY",
-    "PLACEHOLDER TECHNOLOGY",
-    "PLACEHOLDER TECHNOLOGY",
-    "PLACEHOLDER TECHNOLOGY",
-    "PLACEHOLDER TECHNOLOGY",
-    "PLACEHOLDER TECHNOLOGY",
-    "PLACEHOLDER TECHNOLOGY",
-    "PLACEHOLDER TECHNOLOGY",
-    "PLACEHOLDER TECHNOLOGY",
-    "PLACEHOLDER TECHNOLOGY",
-    "PLACEHOLDER TECHNOLOGY",
-    "PLACEHOLDER TECHNOLOGY",
-    "PLACEHOLDER TECHNOLOGY",
-    "PLACEHOLDER TECHNOLOGY",
-    "PLACEHOLDER TECHNOLOGY",
-    "PLACEHOLDER TECHNOLOGY"
-  ]
+  "complementarySkills": []
 }
