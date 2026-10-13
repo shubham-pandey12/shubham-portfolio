@@ -26,12 +26,13 @@ src/
 │   ├── projects.ts             # Project content and PortfolioProject type
 │   ├── skills.ts               # Skill groups, catalog, and complementary skills
 │   ├── recognition.ts          # Awards, certifications, and articles
+│   ├── skillCatalog.ts         # Typed 95-skill catalog and proficiency data
 │   ├── home.ts                 # Home page data composition
 │   └── about.ts                # About page data composition
 ├── features/
 │   ├── home/HomePage.tsx
 │   ├── projects/               # Listing, detail page, and feature CSS
-│   ├── skills/SkillsPage.tsx
+│   ├── skills/                 # Skills page and reusable skill components/styles
 │   ├── awards/AwardsPage.tsx
 │   ├── articles/ArticlesPage.tsx
 │   ├── about/AboutPage.tsx
@@ -50,7 +51,7 @@ Edit the focused files in `src/data/`:
 
 - `profile.ts` for your profile and work history
 - `projects.ts` for project descriptions, technologies, metrics, and detail content
-- `skills.ts` for skill groups and the searchable catalog
+- `skills.ts` for home skill groups and complementary skills; `skillCatalog.ts` for the searchable catalog
 - `recognition.ts` for awards, certifications, and articles
 
 Replace placeholder text and URLs only with information you have verified. The current contact form is a front-end demo and does not send messages until connected to a form service.
