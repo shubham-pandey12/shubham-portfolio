@@ -3,8 +3,9 @@ import { ArrowUpRight } from "lucide-react";
 import { projects } from "./data/projects";
 import { fetchPortfolioProjects } from "./data/githubProjects";
 import { fetchPortfolioArticles } from "./data/githubArticles";
+import { fetchPortfolioCertifications } from "./data/githubCertifications";
 import { profile } from "./data/profile";
-import { articles } from "./data/recognition";
+import { articles, certifications } from "./data/recognition";
 import { Header, Footer, NotFound } from "./components/SiteLayout";
 import { HomePage } from "./features/home/HomePage";
 import { ProjectsPage } from "./features/projects/ProjectsPage";
@@ -29,6 +30,7 @@ function App() {
   const [path, setPath] = useState(routePath);
   const [allProjects, setAllProjects] = useState(projects);
   const [allArticles, setAllArticles] = useState(articles);
+  const [allCertifications, setAllCertifications] = useState(certifications);
   const [dark, setDark] = useState(() => localStorage.getItem("portfolio-theme") !== "light");
   const [menuOpen, setMenuOpen] = useState(false);
   const [showTop, setShowTop] = useState(false);
@@ -64,6 +66,15 @@ function App() {
     let cancelled = false;
     void fetchPortfolioArticles(articles).then((items) => {
       if (!cancelled) setAllArticles(items);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+  useEffect(() => {
+    let cancelled = false;
+    void fetchPortfolioCertifications(certifications).then((items) => {
+      if (!cancelled) setAllCertifications(items);
     });
     return () => {
       cancelled = true;
@@ -112,7 +123,7 @@ function App() {
         )}
         {path === "/projects" && <ProjectsPage navigate={navigate} projects={allProjects} />}
         {path === "/skills" && <SkillsPage />}
-        {path === "/awards" && <AwardsPage />}
+        {path === "/awards" && <AwardsPage certifications={allCertifications} />}
         {path === "/articles" && <ArticlesPage articles={allArticles} />}
         {path === "/about" && <AboutPage navigate={navigate} />}
         {path === "/contact" && <ContactPage />}

@@ -8,6 +8,8 @@ export type Recognition = {
   type: string;
   id?: string;
   verifyUrl?: string;
+  imageUrl?: string;
+  pdfUrl?: string;
 };
 export const awards = recognitionData.awards as Recognition[];
 export const certifications = recognitionData.certifications as Recognition[];

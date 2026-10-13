@@ -5163,6 +5163,24 @@ select:focus-visible {
 .dark .recognition-card-featured {
   background: linear-gradient(135deg, #172554, #2e1065);
 }
+.certification-preview-link {
+  display: grid;
+  min-height: 180px;
+  max-height: 240px;
+  place-items: center;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border);
+  background: #f8fafc;
+}
+.dark .certification-preview-link {
+  background: #0f172a;
+}
+.certification-preview {
+  display: block;
+  width: 100%;
+  max-height: 240px;
+  object-fit: contain;
+}
 .recognition-card-content {
   display: flex;
   align-items: flex-start;

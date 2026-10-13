@@ -1,17 +1,27 @@
 import { Award, ExternalLink, ShieldCheck, Trophy } from "lucide-react";
-import { awards, certifications } from "../../data/recognition";
+import { awards, type Recognition } from "../../data/recognition";
 import pageContent from "../../data/pageContent.json";
 import { PageHeading, SectionHeader } from "../../components/PortfolioUI";
 
-function RecognitionCard({
-  item,
-  featured = false,
-}: {
-  item: (typeof awards)[number];
-  featured?: boolean;
-}) {
+function RecognitionCard({ item, featured = false }: { item: Recognition; featured?: boolean }) {
   return (
     <article className={`recognition-card reveal${featured ? " recognition-card-featured" : ""}`}>
+      {item.imageUrl && (
+        <a
+          className="certification-preview-link"
+          href={item.pdfUrl || item.verifyUrl || item.imageUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`Open ${item.title} certificate`}
+        >
+          <img
+            className="certification-preview"
+            src={item.imageUrl}
+            alt={`${item.title} certificate`}
+            loading="lazy"
+          />
+        </a>
+      )}
       <div className="recognition-card-content">
         <div className="recognition-icon" aria-hidden="true">
           {featured ? <Trophy size={27} /> : <Award size={27} />}
@@ -29,8 +39,23 @@ function RecognitionCard({
             </p>
           )}
           {item.verifyUrl && (
-            <a className="recognition-link" href={item.verifyUrl} target="_blank" rel="noreferrer">
+            <a
+              className="recognition-link"
+              href={item.verifyUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {featured ? "Learn More" : "Verify"} <ExternalLink size={14} />
+            </a>
+          )}
+          {item.pdfUrl && (
+            <a
+              className="recognition-link"
+              href={item.pdfUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View Certificate <ExternalLink size={14} />
             </a>
           )}
         </div>
@@ -39,7 +64,7 @@ function RecognitionCard({
   );
 }
 
-export function AwardsPage() {
+export function AwardsPage({ certifications }: { certifications: Recognition[] }) {
   const content = pageContent.awards;
   const azureCertifications = certifications.filter(({ title, organization }) =>
     `${title} ${organization}`.toLowerCase().includes("azure"),
