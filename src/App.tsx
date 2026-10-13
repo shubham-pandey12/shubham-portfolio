@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { lazy, Suspense, useEffect, useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { projects } from "./data/projects";
 import { fetchPortfolioProjects } from "./data/githubProjects";
@@ -7,14 +7,33 @@ import { fetchPortfolioCertifications } from "./data/githubCertifications";
 import { profile } from "./data/profile";
 import { articles, certifications } from "./data/recognition";
 import { Header, Footer, NotFound } from "./components/SiteLayout";
-import { HomePage } from "./features/home/HomePage";
-import { ProjectsPage } from "./features/projects/ProjectsPage";
-import { ProjectDetailPage } from "./features/projects/ProjectDetailPage";
-import { SkillsPage } from "./features/skills/SkillsPage";
-import { AwardsPage } from "./features/awards/AwardsPage";
-import { ArticlesPage } from "./features/articles/ArticlesPage";
-import { AboutPage } from "./features/about/AboutPage";
-import { ContactPage } from "./features/contact/ContactPage";
+
+const HomePage = lazy(() =>
+  import("./features/home/HomePage").then((module) => ({ default: module.HomePage })),
+);
+const ProjectsPage = lazy(() =>
+  import("./features/projects/ProjectsPage").then((module) => ({ default: module.ProjectsPage })),
+);
+const ProjectDetailPage = lazy(() =>
+  import("./features/projects/ProjectDetailPage").then((module) => ({
+    default: module.ProjectDetailPage,
+  })),
+);
+const SkillsPage = lazy(() =>
+  import("./features/skills/SkillsPage").then((module) => ({ default: module.SkillsPage })),
+);
+const AwardsPage = lazy(() =>
+  import("./features/awards/AwardsPage").then((module) => ({ default: module.AwardsPage })),
+);
+const ArticlesPage = lazy(() =>
+  import("./features/articles/ArticlesPage").then((module) => ({ default: module.ArticlesPage })),
+);
+const AboutPage = lazy(() =>
+  import("./features/about/AboutPage").then((module) => ({ default: module.AboutPage })),
+);
+const ContactPage = lazy(() =>
+  import("./features/contact/ContactPage").then((module) => ({ default: module.ContactPage })),
+);
 
 const paths = ["/", "/projects", "/skills", "/awards", "/articles", "/about", "/contact"];
 const githubUsername = profile.github.replace(/\/+$/, "").split("/").pop() || "";
@@ -54,34 +73,35 @@ function App() {
   }, [dark]);
   useEffect(() => {
     let cancelled = false;
-    if (!githubUsername) return;
+    if (!githubUsername || !(path === "/" || path === "/projects" || isProjectDetail(path))) return;
     void fetchPortfolioProjects(githubUsername, projects).then((items) => {
       if (!cancelled) setAllProjects(items);
     });
     return () => {
       cancelled = true;
     };
-  }, []);
+  }, [path]);
   useEffect(() => {
     let cancelled = false;
+    if (path !== "/" && path !== "/articles") return;
     void fetchPortfolioArticles(articles).then((items) => {
       if (!cancelled) setAllArticles(items);
     });
     return () => {
       cancelled = true;
     };
-  }, []);
+  }, [path]);
   useEffect(() => {
     let cancelled = false;
+    if (path !== "/awards") return;
     void fetchPortfolioCertifications(certifications).then((items) => {
       if (!cancelled) setAllCertifications(items);
     });
     return () => {
       cancelled = true;
     };
-  }, []);
+  }, [path]);
   useEffect(() => {
-    const nodes = [...document.querySelectorAll<HTMLElement>(".reveal")];
     const observer = new IntersectionObserver(
       (entries) =>
         entries.forEach((entry) => {
@@ -92,8 +112,27 @@ function App() {
         }),
       { threshold: 0.08 },
     );
-    nodes.forEach((node) => observer.observe(node));
-    return () => observer.disconnect();
+    const observeReveals = (root: ParentNode) => {
+      root
+        .querySelectorAll<HTMLElement>(".reveal:not(.revealed)")
+        .forEach((node) => observer.observe(node));
+    };
+    observeReveals(document);
+    const mutations = new MutationObserver((records) => {
+      records.forEach((record) =>
+        record.addedNodes.forEach((node) => {
+          if (node instanceof HTMLElement) {
+            if (node.matches(".reveal:not(.revealed)")) observer.observe(node);
+            observeReveals(node);
+          }
+        }),
+      );
+    });
+    mutations.observe(document.querySelector("main")!, { childList: true, subtree: true });
+    return () => {
+      observer.disconnect();
+      mutations.disconnect();
+    };
   }, [path]);
 
   const navigate = (to: string) => {
@@ -118,22 +157,24 @@ function App() {
         navigate={navigate}
       />
       <main key={path}>
-        {path === "/" && (
-          <HomePage navigate={navigate} projects={allProjects} articles={allArticles} />
-        )}
-        {path === "/projects" && <ProjectsPage navigate={navigate} projects={allProjects} />}
-        {path === "/skills" && <SkillsPage />}
-        {path === "/awards" && <AwardsPage certifications={allCertifications} />}
-        {path === "/articles" && <ArticlesPage articles={allArticles} />}
-        {path === "/about" && <AboutPage navigate={navigate} />}
-        {path === "/contact" && <ContactPage />}
-        {isProjectDetail(path) &&
-          (detail ? (
-            <ProjectDetailPage project={detail} navigate={navigate} />
-          ) : (
-            <NotFound navigate={navigate} />
-          ))}
-        {!paths.includes(path) && !isProjectDetail(path) && <NotFound navigate={navigate} />}
+        <Suspense fallback={<div className="route-loading" aria-label="Loading page" />}>
+          {path === "/" && (
+            <HomePage navigate={navigate} projects={allProjects} articles={allArticles} />
+          )}
+          {path === "/projects" && <ProjectsPage navigate={navigate} projects={allProjects} />}
+          {path === "/skills" && <SkillsPage />}
+          {path === "/awards" && <AwardsPage certifications={allCertifications} />}
+          {path === "/articles" && <ArticlesPage articles={allArticles} />}
+          {path === "/about" && <AboutPage navigate={navigate} />}
+          {path === "/contact" && <ContactPage />}
+          {isProjectDetail(path) &&
+            (detail ? (
+              <ProjectDetailPage project={detail} navigate={navigate} />
+            ) : (
+              <NotFound navigate={navigate} />
+            ))}
+          {!paths.includes(path) && !isProjectDetail(path) && <NotFound navigate={navigate} />}
+        </Suspense>
       </main>
       <Footer navigate={navigate} />
       <button

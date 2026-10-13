@@ -62,9 +62,7 @@ export function ProjectDetailPage({
                 <Rocket size={14} aria-hidden="true" /> {project.projectKind}
               </span>
             )}
-            {project.type !== "Resume Project" && (
-              <span className="tag-green">{project.type}</span>
-            )}
+            {project.type !== "Resume Project" && <span className="tag-green">{project.type}</span>}
             <span className="project-detail-tag">{project.category}</span>
             {project.status && (
               <span
@@ -165,6 +163,7 @@ export function ProjectDetailPage({
                         src={screenshot.src}
                         alt={screenshot.alt || screenshot.caption}
                         loading="lazy"
+                        decoding="async"
                       />
                       <span>
                         <ImageIcon size={16} aria-hidden="true" /> View image

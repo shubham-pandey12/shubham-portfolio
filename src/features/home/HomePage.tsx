@@ -37,7 +37,7 @@ export function HomePage({
   }, []);
   const heroStats = [
     { value: `${yearsOfExperience()}+`, label: "Years Experience" },
-    { value: String(projects.length), label: "Resume Projects" },
+    { value: String(projects.length), label: "Projects" },
     { value: String(companies.length), label: "Companies" },
   ];
   return (
@@ -148,7 +148,11 @@ export function HomePage({
           />
           <div className="featured-grid">
             {articles.slice(0, 3).map((article, index) => (
-              <TechnicalArticleCard key={article.url || article.title} article={article} index={index} />
+              <TechnicalArticleCard
+                key={article.url || article.title}
+                article={article}
+                index={index}
+              />
             ))}
           </div>
           <div className="center-action">
@@ -163,13 +167,7 @@ export function HomePage({
   );
 }
 
-function TechnicalArticleCard({
-  article,
-  index,
-}: {
-  article: PortfolioArticle;
-  index: number;
-}) {
+function TechnicalArticleCard({ article, index }: { article: PortfolioArticle; index: number }) {
   return (
     <article
       className="featured-project-card home-article-card"

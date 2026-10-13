@@ -2,7 +2,7 @@
   "profile": {
     "name": "Shubham Pandey",
     "photo": "/images/profile.jpg",
-    "title": "Software Development Engineer 2",
+    "title": "Senior Software Developer",
     "subTitle": "Backend & Full-Stack Software Engineer",
     "location": "Bengaluru, India",
     "education": "B.Tech in Information Technology · IIIT Vadodara",
@@ -19,7 +19,7 @@
   "companies": [
     {
       "company": "Moresand Technologies",
-      "role": "Software Development Engineer 2",
+      "role": "Senior Software Developer",
       "date": "March 2025 – Present",
       "text": "Architected a multi-tenant CMS for 5+ luxury travel brands and led reusable widgets, templates, API integrations, and Redis-backed caching.",
       "location": "Bengaluru, Karnataka",
@@ -58,16 +58,8 @@
         "Built custom React.js visuals for Power BI reports used by leadership for cross-team business reporting.",
         "Drove code review standards across the team."
       ],
-      "achievements": [
-        "Improved prompt accuracy by 28%."
-      ],
-      "technologies": [
-        "Node.js",
-        "Azure AI Search",
-        "React.js",
-        "TypeScript",
-        "Power BI"
-      ]
+      "achievements": ["Improved prompt accuracy by 28%."],
+      "technologies": ["Node.js", "Azure AI Search", "React.js", "TypeScript", "Power BI"]
     },
     {
       "company": "Techolution",
@@ -80,10 +72,7 @@
         "Established unit, integration, and automated acceptance testing standards.",
         "Designed CI/CD pipelines with Jenkins and Docker to automate microservice deployments."
       ],
-      "achievements": [
-        "Achieved 90% test coverage.",
-        "Cut deployment time by 60%."
-      ],
+      "achievements": ["Achieved 90% test coverage.", "Cut deployment time by 60%."],
       "technologies": [
         "React.js",
         "Angular.js",

@@ -17,7 +17,15 @@ export function ArticlesPage({ articles }: { articles: PortfolioArticle[] }) {
           <div className="articles-grid">
             {articles.map((item) => (
               <article key={item.url || item.title} className="article-card">
-                {item.image && <img className="article-image" src={item.image} alt="" />}
+                {item.image && (
+                  <img
+                    className="article-image"
+                    src={item.image}
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
+                )}
                 <div className="article-card-body">
                   <span className="category-label">{item.category}</span>
                   <h2>{item.title}</h2>

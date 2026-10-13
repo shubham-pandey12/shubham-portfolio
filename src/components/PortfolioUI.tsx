@@ -88,7 +88,13 @@ export function Portrait({
     <div className={`portrait-wrap ${small ? "small-portrait" : ""}`}>
       <div className="portrait-ring">
         <div className="portrait-placeholder">
-          <img className="portrait-image" src={profile.photo} alt={`Portrait of ${profile.name}`} />
+          <img
+            className="portrait-image"
+            src={profile.photo}
+            alt={`Portrait of ${profile.name}`}
+            fetchPriority="high"
+            decoding="async"
+          />
         </div>
       </div>
       {children}

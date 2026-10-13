@@ -45,12 +45,7 @@
         "tone": "green"
       }
     ],
-    "tiers": [
-      "Expert Level",
-      "Advanced Level",
-      "Intermediate Level",
-      "Beginner Level"
-    ]
+    "tiers": ["Expert Level", "Advanced Level", "Intermediate Level", "Beginner Level"]
   },
   "articles": {
     "eyebrow": "Technical Writing",
@@ -151,9 +146,7 @@
         ]
       }
     ],
-    "badges": [
-      "Best Idea Award · HACKIIITV"
-    ],
+    "badges": ["Best Idea Award · HACKIIITV"],
     "professionalSummary": [
       "Software Engineer experienced in architecting and shipping scalable backend systems, RESTful APIs, and microservices with Node.js, NestJS, Express.js, and Java, alongside React.js, Next.js, and TypeScript frontend work. Experienced with system design, API architecture, database schema design, Redis caching, multi-tenant platforms, Docker, CI/CD, and AWS infrastructure.",
       "Currently at Moresand Technologies, architecting a multi-tenant CMS for luxury travel brands. Previous experience includes MAQ Software, Techolution, DrinkPrime, and GeeksforGeeks.",
@@ -176,18 +169,9 @@
       "career": "Career Highlights"
     },
     "careerMetrics": [
-      [
-        "90%",
-        "Test Coverage (Techolution)"
-      ],
-      [
-        "60%",
-        "Deployment Time Reduction (Techolution)"
-      ],
-      [
-        "28%",
-        "Prompt Accuracy Improvement (MAQ Software)"
-      ]
+      ["90%", "Test Coverage (Techolution)"],
+      ["60%", "Deployment Time Reduction (Techolution)"],
+      ["28%", "Prompt Accuracy Improvement (MAQ Software)"]
     ],
     "seeking": "Backend engineering and full-stack product roles focused on scalable platforms and AI-enabled applications."
   },
@@ -195,10 +179,7 @@
     "title": "Get in Touch",
     "description": "Have a project in mind or want to discuss opportunities? I’d love to hear from you!",
     "faq": [
-      [
-        "Response Time",
-        "I typically reply within one business day."
-      ],
+      ["Response Time", "I typically reply within one business day."],
       [
         "Project Types",
         "Scalable backend services, full-stack web products, and AI-assisted applications."
@@ -246,11 +227,9 @@
     "availabilityDescription": "Open to engineering opportunities and project conversations."
   },
   "home": {
-    "heroRole": "Software Development Engineer 2",
+    "heroRole": "Senior Software Developer",
     "heroBio": "Software Engineer experienced in architecting and shipping scalable backend systems, RESTful APIs, and microservices with Node.js, NestJS, Express.js, and Java, alongside React.js, Next.js, and TypeScript frontend work. Experienced with system design, API architecture, database schema design, Redis caching, multi-tenant platforms, Docker, CI/CD, and AWS infrastructure.",
-    "heroAwards": [
-      "HACKIIITV Best Idea Award"
-    ],
+    "heroAwards": ["HACKIIITV Best Idea Award"],
     "heroTech": [
       "Node.js",
       "NestJS",
@@ -265,7 +244,7 @@
       "MongoDB"
     ],
     "featuredTitle": "Featured Projects",
-    "featuredDescription": "Resume projects across full-stack web development, data visualization, and mapping.",
+    "featuredDescription": "Selected projects across full-stack web development, data visualization, and mapping.",
     "articlesTitle": "Technical Articles",
     "articlesDescription": "Technical articles and practical notes on building reliable software."
   },

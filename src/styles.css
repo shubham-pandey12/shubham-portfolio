@@ -6778,3 +6778,7 @@ select:focus-visible {
     font-size: 15px;
   }
 }
+
+.route-loading {
+  min-height: 50vh;
+}
