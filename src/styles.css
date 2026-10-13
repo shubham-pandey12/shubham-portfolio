@@ -6816,3 +6816,15 @@ select:focus-visible {
 .route-loading {
   min-height: 50vh;
 }
+
+/* Use one top spacer at each section boundary instead of stacking both sections' padding. */
+.featured-section,
+.home-articles-section,
+.skills-home-section {
+  padding-top: clamp(4rem, 8vw, 6rem);
+  padding-bottom: 0;
+}
+
+.skills-home-section {
+  padding-bottom: clamp(4rem, 8vw, 6rem);
+}
