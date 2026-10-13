@@ -73,9 +73,39 @@
           "progress": 75
         },
         {
+          "name": "JavaScript",
+          "icon": "javascript",
+          "years": 3,
+          "progress": 75
+        },
+        {
           "name": "TypeScript",
           "icon": "typescript",
           "years": 2,
+          "progress": 50
+        },
+        {
+          "name": "HTML",
+          "icon": "html5",
+          "years": 3,
+          "progress": 75
+        },
+        {
+          "name": "CSS",
+          "icon": "css3",
+          "years": 3,
+          "progress": 75
+        },
+        {
+          "name": "Tailwind CSS",
+          "icon": "tailwindcss",
+          "years": 1,
+          "progress": 25
+        },
+        {
+          "name": "Angular.js",
+          "icon": "angular",
+          "years": 3,
           "progress": 50
         },
         {
@@ -98,10 +128,34 @@
           "progress": 50
         },
         {
+          "name": "PostgreSQL",
+          "icon": "database",
+          "years": 2,
+          "progress": 50
+        },
+        {
+          "name": "MySQL",
+          "icon": "technology",
+          "years": 2,
+          "progress": 50
+        },
+        {
           "name": "MongoDB",
           "icon": "mongodb",
           "years": 2,
           "progress": 50
+        },
+        {
+          "name": "SQLite",
+          "icon": "sqlite",
+          "years": 1,
+          "progress": 25
+        },
+        {
+          "name": "DynamoDB",
+          "icon": "amazonwebservices",
+          "years": 1,
+          "progress": 25
         },
         {
           "name": "Redis Caching",
@@ -150,6 +204,42 @@
         {
           "name": "Python",
           "icon": "python",
+          "years": 1,
+          "progress": 25
+        },
+        {
+          "name": "RAG",
+          "icon": "architecture",
+          "years": 1,
+          "progress": 25
+        },
+        {
+          "name": "LangChain",
+          "icon": "network",
+          "years": 1,
+          "progress": 25
+        },
+        {
+          "name": "LLM API Integration",
+          "icon": "api",
+          "years": 1,
+          "progress": 25
+        },
+        {
+          "name": "Prompt Engineering",
+          "icon": "python",
+          "years": 1,
+          "progress": 25
+        },
+        {
+          "name": "Embeddings & Vector Search",
+          "icon": "database",
+          "years": 1,
+          "progress": 25
+        },
+        {
+          "name": "AI Agents",
+          "icon": "network",
           "years": 1,
           "progress": 25
         },

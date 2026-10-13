@@ -12,17 +12,19 @@ import {
   SectionIntro,
 } from "../../components/PortfolioUI";
 import { companies } from "../../data/profile";
-import { certifications, type PortfolioArticle } from "../../data/recognition";
+import type { PortfolioArticle } from "../../data/recognition";
 import { orderProjectsBySlug, readSavedProjectOrder } from "../projects/projectOrder";
 
 export function HomePage({
   navigate,
   projects,
   articles,
+  certificateCount,
 }: {
   navigate: (to: string) => void;
   projects: PortfolioProject[];
   articles: PortfolioArticle[];
+  certificateCount: number;
 }) {
   const [savedProjectOrder, setSavedProjectOrder] = useState(readSavedProjectOrder);
   const featuredDescription = (project: PortfolioProject) => project.description;
@@ -162,7 +164,7 @@ export function HomePage({
           </div>
         </div>
       </section>
-      <HomeSkillsSection navigate={navigate} />
+      <HomeSkillsSection navigate={navigate} certificateCount={certificateCount} />
     </>
   );
 }
@@ -317,7 +319,13 @@ export function FeaturedProjectCard({
   );
 }
 
-export function HomeSkillsSection({ navigate }: { navigate: (to: string) => void }) {
+export function HomeSkillsSection({
+  navigate,
+  certificateCount,
+}: {
+  navigate: (to: string) => void;
+  certificateCount: number;
+}) {
   return (
     <section id="skills" className="skills-home-section page-section reveal">
       <div className="container">
@@ -353,8 +361,8 @@ export function HomeSkillsSection({ navigate }: { navigate: (to: string) => void
             <span>Years Experience</span>
           </div>
           <div>
-            <strong>{certifications.length}</strong>
-            <span>Cloud Certifications</span>
+            <strong>{certificateCount}</strong>
+            <span>Certificates</span>
           </div>
         </div>
         <div className="center-action">

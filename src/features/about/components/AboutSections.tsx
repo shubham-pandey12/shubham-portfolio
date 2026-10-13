@@ -1,5 +1,6 @@
-import { CalendarDays } from "lucide-react";
+import { CalendarDays, ExternalLink } from "lucide-react";
 import { ProjectTechList } from "../../../components/PortfolioUI";
+import type { Recognition } from "../../../data/recognition";
 
 type Experience = {
   company: string;
@@ -19,13 +20,6 @@ type Education = {
   organization: string;
   date: string;
   description: string;
-};
-
-type Recognition = {
-  title: string;
-  organization: string;
-  date: string;
-  type: string;
 };
 
 export function AboutSectionTitle({ icon, title }: { icon: React.ReactNode; title: string }) {
@@ -97,10 +91,36 @@ export function AboutEducationCard({ item }: { item: Education }) {
 export function AboutRecognitionCard({ item }: { item: Recognition }) {
   return (
     <article className="about-recognition-card reveal">
+      {item.imageUrl && (
+        <a
+          className="about-recognition-preview"
+          href={item.pdfUrl || item.verifyUrl || item.imageUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`Open ${item.title} certificate`}
+        >
+          <img
+            src={item.imageUrl}
+            alt={`${item.title} certificate`}
+            loading="lazy"
+            decoding="async"
+          />
+        </a>
+      )}
       <span className="about-recognition-type">{item.type}</span>
       <h3>{item.title}</h3>
       <p>{item.organization}</p>
       <time>{item.date}</time>
+      {item.verifyUrl && (
+        <a
+          className="about-recognition-link"
+          href={item.verifyUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View certificate <ExternalLink size={13} />
+        </a>
+      )}
     </article>
   );
 }

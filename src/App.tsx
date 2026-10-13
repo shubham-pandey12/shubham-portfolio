@@ -93,7 +93,7 @@ function App() {
   }, [path]);
   useEffect(() => {
     let cancelled = false;
-    if (path !== "/awards") return;
+    if (path !== "/" && path !== "/awards" && path !== "/about") return;
     void fetchPortfolioCertifications(certifications).then((items) => {
       if (!cancelled) setAllCertifications(items);
     });
@@ -159,13 +159,20 @@ function App() {
       <main key={path}>
         <Suspense fallback={<div className="route-loading" aria-label="Loading page" />}>
           {path === "/" && (
-            <HomePage navigate={navigate} projects={allProjects} articles={allArticles} />
+            <HomePage
+              navigate={navigate}
+              projects={allProjects}
+              articles={allArticles}
+              certificateCount={allCertifications.length}
+            />
           )}
           {path === "/projects" && <ProjectsPage navigate={navigate} projects={allProjects} />}
           {path === "/skills" && <SkillsPage />}
           {path === "/awards" && <AwardsPage certifications={allCertifications} />}
           {path === "/articles" && <ArticlesPage articles={allArticles} />}
-          {path === "/about" && <AboutPage navigate={navigate} />}
+          {path === "/about" && (
+            <AboutPage navigate={navigate} certifications={allCertifications} />
+          )}
           {path === "/contact" && <ContactPage />}
           {isProjectDetail(path) &&
             (detail ? (

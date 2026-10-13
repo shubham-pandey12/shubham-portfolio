@@ -1,5 +1,6 @@
 import { Award, BriefcaseBusiness, GraduationCap, Mail, MapPin } from "lucide-react";
-import { awards, certifications, companies, profile, yearsOfExperience } from "../../data/about";
+import { awards, companies, profile, yearsOfExperience } from "../../data/about";
+import type { Recognition } from "../../data/recognition";
 import pageContent from "../../data/pageContent.json";
 import { PageHeading, Portrait } from "../../components/PortfolioUI";
 import { allSkills } from "../../data/skillCatalog";
@@ -12,9 +13,15 @@ import {
   CareerHighlights,
 } from "./components/AboutSections";
 
-export function AboutPage({ navigate }: { navigate: (to: string) => void }) {
+export function AboutPage({
+  navigate,
+  certifications,
+}: {
+  navigate: (to: string) => void;
+  certifications: Recognition[];
+}) {
   const content = pageContent.about;
-  const recognitions = [...awards.slice(0, 2), ...certifications.slice(0, 4)];
+  const recognitions = [...awards.slice(0, 1), ...certifications.slice(0, 2)];
   const stats = [
     [`${yearsOfExperience()}+`, "Years Exp.", "blue"],
     [String(certifications.length), "Certifications Listed", "purple"],

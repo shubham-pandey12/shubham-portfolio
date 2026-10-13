@@ -96,6 +96,14 @@
     "progress": 80
   },
   {
+    "name": "PostgreSQL",
+    "category": "Databases",
+    "icon": "database",
+    "tier": "Advanced Level",
+    "years": 2,
+    "progress": 80
+  },
+  {
     "name": "MySQL",
     "category": "Databases",
     "icon": "technology",
@@ -273,7 +281,7 @@
   },
   {
     "name": "Azure AI Search Orchestration",
-    "category": "Backend",
+    "category": "AI/ML",
     "icon": "azure",
     "tier": "Intermediate Level",
     "years": 3,
@@ -289,7 +297,7 @@
   },
   {
     "name": "Angular.js",
-    "category": "Backend",
+    "category": "Frontend",
     "icon": "angular",
     "tier": "Intermediate Level",
     "years": 3,
@@ -299,6 +307,14 @@
     "name": "SQLite",
     "category": "Databases",
     "icon": "sqlite",
+    "tier": "Intermediate Level",
+    "years": 1,
+    "progress": 60
+  },
+  {
+    "name": "DynamoDB",
+    "category": "Databases",
+    "icon": "amazonwebservices",
     "tier": "Intermediate Level",
     "years": 1,
     "progress": 60
@@ -377,11 +393,59 @@
   },
   {
     "name": "Azure AI Search",
-    "category": "Cloud & DevOps",
+    "category": "AI/ML",
     "icon": "azure",
     "tier": "Intermediate Level",
     "years": 1,
     "progress": 60
+  },
+  {
+    "name": "RAG",
+    "category": "AI/ML",
+    "icon": "architecture",
+    "tier": "Beginner Level",
+    "years": 1,
+    "progress": 40
+  },
+  {
+    "name": "LangChain",
+    "category": "AI/ML",
+    "icon": "network",
+    "tier": "Beginner Level",
+    "years": 1,
+    "progress": 40
+  },
+  {
+    "name": "LLM API Integration",
+    "category": "AI/ML",
+    "icon": "api",
+    "tier": "Beginner Level",
+    "years": 1,
+    "progress": 40
+  },
+  {
+    "name": "Prompt Engineering",
+    "category": "AI/ML",
+    "icon": "python",
+    "tier": "Beginner Level",
+    "years": 1,
+    "progress": 40
+  },
+  {
+    "name": "Embeddings & Vector Search",
+    "category": "AI/ML",
+    "icon": "database",
+    "tier": "Beginner Level",
+    "years": 1,
+    "progress": 40
+  },
+  {
+    "name": "AI Agents",
+    "category": "AI/ML",
+    "icon": "network",
+    "tier": "Beginner Level",
+    "years": 1,
+    "progress": 40
   },
   {
     "name": "Tailwind CSS",
@@ -473,7 +537,7 @@
   },
   {
     "name": "Python",
-    "category": "Backend",
+    "category": "AI/ML",
     "icon": "python",
     "tier": "Beginner Level",
     "years": 3,
@@ -489,7 +553,7 @@
   },
   {
     "name": "Power BI",
-    "category": "Backend",
+    "category": "AI/ML",
     "icon": "chart",
     "tier": "Beginner Level",
     "years": 3,
