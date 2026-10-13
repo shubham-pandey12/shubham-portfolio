@@ -138,6 +138,10 @@ select:focus-visible {
   color: #fff;
   box-shadow: 0 2px 5px rgba(79, 70, 229, 0.24);
 }
+.nav-item.active:hover {
+  background: var(--gradient);
+  color: #fff;
+}
 .header-actions {
   display: flex;
   align-items: center;

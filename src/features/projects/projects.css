@@ -467,7 +467,9 @@
 .projects-card-link.is-drop-target .projects-card {
   transform: translateY(-3px);
   border-color: #3b82f6;
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2), 0 18px 30px -12px rgba(37, 99, 235, 0.2);
+  box-shadow:
+    0 0 0 3px rgba(59, 130, 246, 0.2),
+    0 18px 30px -12px rgba(37, 99, 235, 0.2);
 }
 .projects-card-heading {
   display: flex;
@@ -759,6 +761,7 @@
 .projects-card-actions {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 8px;
   margin-top: 16px;
 }
