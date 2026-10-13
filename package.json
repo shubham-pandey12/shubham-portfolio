@@ -8,8 +8,8 @@
     "build": "tsc -b && vite build",
     "preview": "vite preview",
     "lint": "eslint .",
-    "format": "prettier --write src/components src/features README.md",
-    "format:check": "prettier --check src/components src/features README.md"
+    "format": "prettier --write \"src/**/*.{ts,tsx,css}\" README.md package.json eslint.config.js",
+    "format:check": "prettier --check \"src/**/*.{ts,tsx,css}\" README.md package.json eslint.config.js"
   },
   "dependencies": {
     "lucide-react": "^0.468.0",

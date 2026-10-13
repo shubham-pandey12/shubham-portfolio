@@ -10,7 +10,7 @@ import {
   Rocket,
   Search,
 } from "lucide-react";
-import { projects, type PortfolioProject } from "../../content";
+import { projects, type PortfolioProject } from "../../data/projects";
 import { InternalLink } from "../../components/InternalLink";
 import "./projects.css";
 
