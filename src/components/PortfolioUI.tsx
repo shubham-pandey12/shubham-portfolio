@@ -92,7 +92,6 @@ export function Portrait({
             className="portrait-image"
             src={profile.photo}
             alt={`Portrait of ${profile.name}`}
-            fetchPriority="high"
             decoding="async"
           />
         </div>

@@ -73,7 +73,7 @@ export function HomePage({
             <div className="hero-awards">
               {pageContent.home.heroAwards.map((label) => (
                 <span className="award-chip blue-chip" key={label}>
-                  {label}
+                  🏆 {label}
                 </span>
               ))}
             </div>
