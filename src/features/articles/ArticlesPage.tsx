@@ -1,8 +1,8 @@
 import { ArrowUpRight, BookOpen } from "lucide-react";
-import { articles } from "../../data/recognition";
+import type { PortfolioArticle } from "../../data/recognition";
 import pageContent from "../../data/pageContent.json";
 
-export function ArticlesPage() {
+export function ArticlesPage({ articles }: { articles: PortfolioArticle[] }) {
   return (
     <div className="articles-page page-shell">
       <div className="container">
@@ -15,8 +15,8 @@ export function ArticlesPage() {
         </div>
         {articles.length ? (
           <div className="articles-grid">
-            {articles.map((item, i) => (
-              <article key={i} className="article-card">
+            {articles.map((item) => (
+              <article key={item.url || item.title} className="article-card">
                 {item.image && <img className="article-image" src={item.image} alt="" />}
                 <div className="article-card-body">
                   <span className="category-label">{item.category}</span>

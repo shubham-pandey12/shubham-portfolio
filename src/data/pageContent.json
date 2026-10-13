@@ -55,8 +55,8 @@
   "articles": {
     "eyebrow": "Technical Writing",
     "title": "Latest Articles",
-    "description": "No articles are listed in the resumes yet.",
-    "emptyState": "No articles have been added yet."
+    "description": "Practical writing on frontend architecture, backend engineering, AI systems, and software delivery.",
+    "emptyState": "No published articles are available right now."
   },
   "about": {
     "title": "About Me",

@@ -2,7 +2,9 @@ import { useEffect, useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { projects } from "./data/projects";
 import { fetchPortfolioProjects } from "./data/githubProjects";
+import { fetchPortfolioArticles } from "./data/githubArticles";
 import { profile } from "./data/profile";
+import { articles } from "./data/recognition";
 import { Header, Footer, NotFound } from "./components/SiteLayout";
 import { HomePage } from "./features/home/HomePage";
 import { ProjectsPage } from "./features/projects/ProjectsPage";
@@ -26,6 +28,7 @@ function isProjectDetail(path: string) {
 function App() {
   const [path, setPath] = useState(routePath);
   const [allProjects, setAllProjects] = useState(projects);
+  const [allArticles, setAllArticles] = useState(articles);
   const [dark, setDark] = useState(() => localStorage.getItem("portfolio-theme") !== "light");
   const [menuOpen, setMenuOpen] = useState(false);
   const [showTop, setShowTop] = useState(false);
@@ -52,6 +55,15 @@ function App() {
     if (!githubUsername) return;
     void fetchPortfolioProjects(githubUsername, projects).then((items) => {
       if (!cancelled) setAllProjects(items);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+  useEffect(() => {
+    let cancelled = false;
+    void fetchPortfolioArticles(articles).then((items) => {
+      if (!cancelled) setAllArticles(items);
     });
     return () => {
       cancelled = true;
@@ -99,7 +111,7 @@ function App() {
         {path === "/projects" && <ProjectsPage navigate={navigate} projects={allProjects} />}
         {path === "/skills" && <SkillsPage />}
         {path === "/awards" && <AwardsPage />}
-        {path === "/articles" && <ArticlesPage />}
+        {path === "/articles" && <ArticlesPage articles={allArticles} />}
         {path === "/about" && <AboutPage navigate={navigate} />}
         {path === "/contact" && <ContactPage />}
         {isProjectDetail(path) &&
