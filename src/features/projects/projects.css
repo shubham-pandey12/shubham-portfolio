@@ -795,6 +795,73 @@
 .projects-card-action:hover svg {
   transform: translateX(4px);
 }
+.github-readme-content {
+  display: grid;
+  gap: 16px;
+  color: var(--foreground);
+}
+.github-readme-content h2,
+.github-readme-content h3,
+.github-readme-content h4 {
+  margin: 12px 0 0;
+  line-height: 1.35;
+}
+.github-readme-content p,
+.github-readme-content ul {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.75;
+}
+.github-readme-content ul {
+  padding-left: 22px;
+}
+.github-readme-content li + li {
+  margin-top: 6px;
+}
+.github-readme-content a:not(.github-readme-image-link):not(.github-readme-source) {
+  color: var(--blue);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.github-readme-content p code,
+.github-readme-content li code {
+  padding: 2px 5px;
+  border-radius: 4px;
+  background: var(--soft);
+  font-size: 0.9em;
+}
+.github-readme-content pre {
+  overflow-x: auto;
+  margin: 0;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--soft);
+  color: var(--foreground);
+  line-height: 1.6;
+}
+.github-readme-image-link {
+  display: block;
+  max-width: 100%;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--soft);
+}
+.github-readme-image-link img {
+  display: block;
+  width: 100%;
+  max-height: 520px;
+  object-fit: contain;
+}
+.github-readme-source {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  justify-self: start;
+  color: var(--blue);
+  font-weight: 600;
+}
 .projects-github-action {
   display: inline-flex;
   width: 36px;

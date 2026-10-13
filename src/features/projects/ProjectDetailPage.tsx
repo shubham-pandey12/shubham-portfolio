@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import type { PortfolioProject, ProjectScreenshot } from "../../data/projects";
 import { ProjectMetrics, DetailPanel } from "../../components/PortfolioUI";
+import { GitHubReadme } from "./GitHubReadme";
 
 export function ProjectDetailPage({
   project,
@@ -107,6 +108,8 @@ export function ProjectDetailPage({
                 <p>{project.overview}</p>
               </DetailPanel>
             )}
+
+            {project.githubUrl && <GitHubReadme repositoryUrl={project.githubUrl} />}
 
             {project.stack.length > 0 && (
               <DetailPanel title="Technologies & Tools">
