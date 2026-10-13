@@ -1,3 +1,4 @@
+import { useEffect, useMemo, useState } from "react";
 import { ArrowRight, Github, Linkedin, Mail, Twitter, Globe } from "lucide-react";
 import { profile, skillGroups, complementarySkills, type PortfolioProject } from "../../data/home";
 import { yearsOfExperience } from "../../data/profile";
@@ -12,6 +13,7 @@ import {
 } from "../../components/PortfolioUI";
 import { companies } from "../../data/profile";
 import { certifications } from "../../data/recognition";
+import { orderProjectsBySlug, readSavedProjectOrder } from "../projects/projectOrder";
 
 export function HomePage({
   navigate,
@@ -20,11 +22,17 @@ export function HomePage({
   navigate: (to: string) => void;
   projects: PortfolioProject[];
 }) {
+  const [savedProjectOrder, setSavedProjectOrder] = useState(readSavedProjectOrder);
   const featuredDescription = (project: PortfolioProject) => project.description;
-  const featuredProjects = [
-    ...projects.filter((project) => project.featured && project.type === "GitHub Project"),
-    ...projects.filter((project) => project.featured && project.type !== "GitHub Project"),
-  ].slice(0, 3);
+  const featuredProjects = useMemo(
+    () => orderProjectsBySlug(projects, savedProjectOrder).slice(0, 3),
+    [projects, savedProjectOrder],
+  );
+  useEffect(() => {
+    const syncProjectOrder = () => setSavedProjectOrder(readSavedProjectOrder());
+    window.addEventListener("storage", syncProjectOrder);
+    return () => window.removeEventListener("storage", syncProjectOrder);
+  }, []);
   const heroStats = [
     { value: `${yearsOfExperience()}+`, label: "Years Experience" },
     { value: String(projects.length), label: "Resume Projects" },

@@ -7,34 +7,72 @@ import {
   Code2,
   Filter,
   Github,
+  GripVertical,
   GraduationCap,
   Rocket,
   Search,
+  ArrowUp,
+  ArrowDown,
+  RotateCcw,
 } from "lucide-react";
 import type { PortfolioProject } from "../../data/projects";
 import pageContent from "../../data/pageContent.json";
 import { InternalLink } from "../../components/InternalLink";
+import {
+  orderProjectsBySlug,
+  projectOrderStorageKey,
+  readSavedProjectOrder,
+} from "./projectOrder";
 import "./projects.css";
 
 type ProjectsPageProps = { navigate: (to: string) => void };
 
 const sortOptions = [
+  "Custom Order",
   "Newest First",
   "Oldest First",
   "Title (A-Z)",
   "Title (Z-A)",
   "Category",
 ] as const;
+
+function moveProjectSlug(order: string[], fromSlug: string, toSlug: string) {
+  const fromIndex = order.indexOf(fromSlug);
+  const targetIndex = order.indexOf(toSlug);
+  if (fromIndex < 0 || targetIndex < 0 || fromIndex === targetIndex) return order;
+  const nextOrder = [...order];
+  const [movingSlug] = nextOrder.splice(fromIndex, 1);
+  const newTargetIndex = nextOrder.indexOf(toSlug);
+  nextOrder.splice(newTargetIndex + (fromIndex < targetIndex ? 1 : 0), 0, movingSlug);
+  return nextOrder;
+}
+
 export function ProjectsPage({
   navigate,
   projects,
 }: ProjectsPageProps & { projects: PortfolioProject[] }) {
   const [query, setQuery] = useState("");
-  const [sort, setSort] = useState<(typeof sortOptions)[number]>("Newest First");
+  const [customOrder, setCustomOrder] = useState<string[]>(readSavedProjectOrder);
+  const [sort, setSort] = useState<(typeof sortOptions)[number]>(() =>
+    customOrder.length > 0 ? "Custom Order" : "Newest First",
+  );
   const [category, setCategory] = useState("All");
   const [filtersOpen, setFiltersOpen] = useState(false);
+  const [orderEditing, setOrderEditing] = useState(false);
+  const [draggedProjectSlug, setDraggedProjectSlug] = useState<string>();
+  const [dropTargetSlug, setDropTargetSlug] = useState<string>();
+  const [orderAnnouncement, setOrderAnnouncement] = useState("");
   const filterWrapRef = useRef<HTMLDivElement>(null);
   const categories = ["All", ...Array.from(new Set(projects.map((project) => project.category)))];
+
+  useEffect(() => {
+    if (customOrder.length === 0) return;
+    try {
+      localStorage.setItem(projectOrderStorageKey, JSON.stringify(customOrder));
+    } catch {
+      // Reordering remains available for this session when storage is unavailable.
+    }
+  }, [customOrder]);
 
   useEffect(() => {
     if (!filtersOpen) return;
@@ -52,9 +90,22 @@ export function ProjectsPage({
     };
   }, [filtersOpen]);
 
+  const orderedProjects = useMemo(() => {
+    if (sort === "Custom Order") return orderProjectsBySlug(projects, customOrder);
+    const rows = [...projects];
+    if (sort === "Category")
+      return rows.sort(
+        (a, b) => a.category.localeCompare(b.category) || a.title.localeCompare(b.title),
+      );
+    if (sort === "Title (A-Z)") return rows.sort((a, b) => a.title.localeCompare(b.title));
+    if (sort === "Title (Z-A)") return rows.sort((a, b) => b.title.localeCompare(a.title));
+    if (sort === "Oldest First") return rows.reverse();
+    return rows;
+  }, [projects, sort, customOrder]);
+
   const filteredProjects = useMemo(() => {
     const normalizedQuery = query.trim().toLocaleLowerCase();
-    let rows = projects.filter((project) => {
+    return orderedProjects.filter((project) => {
       const searchableText = [
         project.title,
         project.description,
@@ -71,16 +122,70 @@ export function ProjectsPage({
         (category === "All" || project.category === category)
       );
     });
+  }, [query, category, orderedProjects]);
 
-    if (sort === "Category")
-      rows = [...rows].sort(
-        (a, b) => a.category.localeCompare(b.category) || a.title.localeCompare(b.title),
-      );
-    if (sort === "Title (A-Z)") rows = [...rows].sort((a, b) => a.title.localeCompare(b.title));
-    if (sort === "Title (Z-A)") rows = [...rows].sort((a, b) => b.title.localeCompare(a.title));
-    if (sort === "Oldest First") rows = [...rows].reverse();
-    return rows;
-  }, [query, sort, category, projects]);
+  const startOrderEditing = () => {
+    const initialOrder =
+      customOrder.length > 0
+        ? orderProjectsBySlug(projects, customOrder)
+        : sort === "Custom Order"
+          ? projects
+          : orderedProjects;
+    setCustomOrder(initialOrder.map((project) => project.slug));
+    setSort("Custom Order");
+    setQuery("");
+    setCategory("All");
+    setFiltersOpen(false);
+    setDropTargetSlug(undefined);
+    setOrderEditing(true);
+    setOrderAnnouncement("Project order editing is on.");
+  };
+
+  const resetProjectOrder = () => {
+    try {
+      localStorage.removeItem(projectOrderStorageKey);
+    } catch {
+      // The in-memory order is still reset if storage is unavailable.
+    }
+    setCustomOrder([]);
+    setSort("Newest First");
+    setOrderEditing(false);
+    setDraggedProjectSlug(undefined);
+    setDropTargetSlug(undefined);
+    setOrderAnnouncement("Project order reset to the default.");
+  };
+
+  const reorderProjects = (fromSlug: string, toSlug: string) => {
+    if (!fromSlug || fromSlug === toSlug) return;
+    const completeOrder = orderProjectsBySlug(projects, customOrder).map(
+      (project) => project.slug,
+    );
+    const nextOrder = moveProjectSlug(completeOrder, fromSlug, toSlug);
+    if (nextOrder === completeOrder) return;
+    setCustomOrder(nextOrder);
+    const projectTitle = projects.find((project) => project.slug === fromSlug)?.title || "Project";
+    setOrderAnnouncement(
+      `${projectTitle} moved to position ${nextOrder.indexOf(fromSlug) + 1} of ${nextOrder.length}.`,
+    );
+  };
+
+  const moveProject = (slug: string, direction: -1 | 1) => {
+    const completeOrder = orderProjectsBySlug(projects, customOrder).map(
+      (project) => project.slug,
+    );
+    const currentIndex = completeOrder.indexOf(slug);
+    const nextIndex = currentIndex + direction;
+    if (currentIndex < 0 || nextIndex < 0 || nextIndex >= completeOrder.length) return;
+    [completeOrder[currentIndex], completeOrder[nextIndex]] = [
+      completeOrder[nextIndex],
+      completeOrder[currentIndex],
+    ];
+    setCustomOrder(completeOrder);
+    const projectTitle = projects.find((project) => project.slug === slug)?.title || "Project";
+    setOrderAnnouncement(
+      `${projectTitle} moved to position ${nextIndex + 1} of ${completeOrder.length}.`,
+    );
+  };
 
   return (
     <section className="projects-page" aria-labelledby="projects-title">
@@ -93,7 +198,7 @@ export function ProjectsPage({
         </header>
 
         <div
-          className="projects-controls projects-enter"
+          className={`projects-controls projects-enter${orderEditing ? " is-order-editing" : ""}`}
           style={{ "--enter-order": 1 } as React.CSSProperties}
         >
           <div className="projects-toolbar">
@@ -105,6 +210,7 @@ export function ProjectsPage({
                 onChange={(event) => setQuery(event.target.value)}
                 placeholder={pageContent.projects.searchPlaceholder}
                 aria-label="Search projects and technologies"
+                disabled={orderEditing}
               />
             </label>
             <div className="projects-toolbar-actions">
@@ -112,7 +218,12 @@ export function ProjectsPage({
                 <span className="sr-only">Sort projects</span>
                 <select
                   value={sort}
-                  onChange={(event) => setSort(event.target.value as (typeof sortOptions)[number])}
+                  onChange={(event) => {
+                    const nextSort = event.target.value as (typeof sortOptions)[number];
+                    setSort(nextSort);
+                    if (nextSort !== "Custom Order") setOrderEditing(false);
+                  }}
+                  disabled={orderEditing}
                 >
                   {sortOptions.map((option) => (
                     <option key={option}>{option}</option>
@@ -126,6 +237,7 @@ export function ProjectsPage({
                   type="button"
                   aria-expanded={filtersOpen}
                   aria-controls="projects-filter-menu"
+                  disabled={orderEditing}
                   onClick={() => setFiltersOpen((open) => !open)}
                 >
                   <Filter size={16} aria-hidden="true" /> Filters
@@ -155,8 +267,46 @@ export function ProjectsPage({
                   </div>
                 )}
               </div>
+              {orderEditing ? (
+                <>
+                  <button
+                    className="projects-order-reset"
+                    type="button"
+                    onClick={resetProjectOrder}
+                  >
+                    <RotateCcw size={15} aria-hidden="true" /> Reset
+                  </button>
+                  <button
+                    className="projects-order-done"
+                    type="button"
+                    onClick={() => {
+                      setOrderEditing(false);
+                      setDraggedProjectSlug(undefined);
+                      setDropTargetSlug(undefined);
+                      setOrderAnnouncement("Custom project order saved in this browser.");
+                    }}
+                  >
+                    Done
+                  </button>
+                </>
+              ) : (
+                <button
+                  className="projects-order-toggle"
+                  type="button"
+                  disabled={projects.length < 2}
+                  onClick={startOrderEditing}
+                >
+                  <GripVertical size={16} aria-hidden="true" /> Edit order
+                </button>
+              )}
             </div>
           </div>
+          {orderEditing && (
+            <p className="projects-order-hint" role="status">
+              Drag a project by its grip, or use the arrow buttons to move it. Your order is saved
+              in this browser.
+            </p>
+          )}
         </div>
 
         <p
@@ -168,10 +318,50 @@ export function ProjectsPage({
         </p>
 
         {filteredProjects.length > 0 ? (
-          <div className="projects-grid">
+          <div className={`projects-grid${orderEditing ? " is-order-editing" : ""}`}>
             {filteredProjects.map((project, index) => (
-              <ProjectCard key={project.slug} project={project} index={index} navigate={navigate} />
+              <ProjectCard
+                key={project.slug}
+                project={project}
+                index={index}
+                navigate={navigate}
+                orderEditing={orderEditing}
+                isDropTarget={dropTargetSlug === project.slug}
+                position={index}
+                total={filteredProjects.length}
+                onMoveUp={() => moveProject(project.slug, -1)}
+                onMoveDown={() => moveProject(project.slug, 1)}
+                onDragStart={(event) => {
+                  event.dataTransfer.effectAllowed = "move";
+                  event.dataTransfer.setData("text/plain", project.slug);
+                  setDraggedProjectSlug(project.slug);
+                }}
+                onDragOver={(event) => {
+                  if (!orderEditing || !draggedProjectSlug || draggedProjectSlug === project.slug)
+                    return;
+                  event.preventDefault();
+                  event.dataTransfer.dropEffect = "move";
+                  setDropTargetSlug(project.slug);
+                }}
+                onDrop={(event) => {
+                  if (!orderEditing) return;
+                  event.preventDefault();
+                  reorderProjects(
+                    event.dataTransfer.getData("text/plain") || draggedProjectSlug || "",
+                    project.slug,
+                  );
+                  setDraggedProjectSlug(undefined);
+                  setDropTargetSlug(undefined);
+                }}
+                onDragEnd={() => {
+                  setDraggedProjectSlug(undefined);
+                  setDropTargetSlug(undefined);
+                }}
+              />
             ))}
+            <span className="sr-only" role="status" aria-live="polite">
+              {orderAnnouncement}
+            </span>
           </div>
         ) : (
           <div
@@ -201,17 +391,78 @@ function ProjectCard({
   project,
   index,
   navigate,
+  orderEditing,
+  isDropTarget,
+  position,
+  total,
+  onMoveUp,
+  onMoveDown,
+  onDragStart,
+  onDragOver,
+  onDrop,
+  onDragEnd,
 }: {
   project: PortfolioProject;
   index: number;
   navigate: (to: string) => void;
+  orderEditing: boolean;
+  isDropTarget: boolean;
+  position: number;
+  total: number;
+  onMoveUp: () => void;
+  onMoveDown: () => void;
+  onDragStart: (event: React.DragEvent<HTMLButtonElement>) => void;
+  onDragOver: (event: React.DragEvent<HTMLDivElement>) => void;
+  onDrop: (event: React.DragEvent<HTMLDivElement>) => void;
+  onDragEnd: () => void;
 }) {
   return (
-    <div className="projects-card-link" style={{ "--card-order": index } as React.CSSProperties}>
+    <div
+      className={`projects-card-link${isDropTarget ? " is-drop-target" : ""}`}
+      style={{ "--card-order": index } as React.CSSProperties}
+      onDragOver={onDragOver}
+      onDrop={onDrop}
+    >
       <article className="projects-card">
         <span className="projects-card-wash" aria-hidden="true" />
         <span className="projects-card-glow" aria-hidden="true" />
         <div className="projects-card-content">
+          {orderEditing && (
+            <div className="projects-card-order-tools" aria-label={`Reorder ${project.title}`}>
+              <button
+                className="projects-drag-handle"
+                type="button"
+                draggable
+                onDragStart={onDragStart}
+                onDragEnd={onDragEnd}
+                aria-label={`Drag ${project.title} to reorder`}
+                title="Drag to reorder"
+              >
+                <GripVertical size={17} aria-hidden="true" />
+                <span>Drag to reorder</span>
+              </button>
+              <div className="projects-move-buttons">
+                <button
+                  type="button"
+                  onClick={onMoveUp}
+                  disabled={position === 0}
+                  aria-label={`Move ${project.title} up`}
+                  title="Move up"
+                >
+                  <ArrowUp size={16} aria-hidden="true" />
+                </button>
+                <button
+                  type="button"
+                  onClick={onMoveDown}
+                  disabled={position === total - 1}
+                  aria-label={`Move ${project.title} down`}
+                  title="Move down"
+                >
+                  <ArrowDown size={16} aria-hidden="true" />
+                </button>
+              </div>
+            </div>
+          )}
           <div className="projects-card-heading">
             <h2>{project.title}</h2>
             {project.featured && <span className="projects-featured">Featured</span>}
