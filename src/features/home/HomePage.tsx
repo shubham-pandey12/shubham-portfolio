@@ -1,4 +1,4 @@
-import { ArrowRight, Github, Linkedin, Mail, Twitter, UserRound, Globe } from "lucide-react";
+import { ArrowRight, Github, Linkedin, Mail, Twitter, Globe } from "lucide-react";
 import {
   profile,
   projects,
@@ -10,7 +10,7 @@ import { yearsOfExperience } from "../../data/profile";
 import { InternalLink } from "../../components/InternalLink";
 import { SkillIcon } from "../../components/SkillIcon";
 import pageContent from "../../data/pageContent.json";
-import { ProjectMetrics, ProjectTechList, SectionIntro } from "../../components/PortfolioUI";
+import { Portrait, ProjectMetrics, ProjectTechList, SectionIntro } from "../../components/PortfolioUI";
 import { companies } from "../../data/profile";
 import { certifications } from "../../data/recognition";
 
@@ -73,22 +73,16 @@ export function HomePage({ navigate }: { navigate: (to: string) => void }) {
             <SocialLinks />
           </div>
           <div className="hero-portrait-column">
-            <div className="portrait-wrap">
-              <div className="portrait-ring">
-                <div className="portrait-placeholder">
-                  <UserRound size={70} />
-                  <span>Profile photo</span>
-                </div>
-              </div>
+            <Portrait>
               <div className="portrait-seal seal-left">
                 <span>💻</span>
-                <small>{profile.company}</small>
+                {/* <small>{profile.company}</small> */}
               </div>
               <div className="portrait-seal seal-right">
                 <span>🎓</span>
                 <small>IIIT</small>
               </div>
-            </div>
+            </Portrait>
             <div className="hero-mobile-awards">
               {pageContent.home.heroAwards.map((label) => (
                 <span className="award-chip blue-chip" key={label}>

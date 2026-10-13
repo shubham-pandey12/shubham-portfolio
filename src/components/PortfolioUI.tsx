@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { ArrowRight, UserRound } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { profile } from "../data/profile";
 
 export function ProjectTechList({ stack, max = 4 }: { stack: string[]; max?: number }) {
   const [expanded, setExpanded] = useState(false);
@@ -76,15 +77,21 @@ export function SectionHeader({
   );
 }
 
-export function Portrait({ small = false }: { small?: boolean }) {
+export function Portrait({
+  small = false,
+  children,
+}: {
+  small?: boolean;
+  children?: React.ReactNode;
+}) {
   return (
     <div className={`portrait-wrap ${small ? "small-portrait" : ""}`}>
       <div className="portrait-ring">
         <div className="portrait-placeholder">
-          <UserRound size={small ? 42 : 70} />
-          <span>Profile photo</span>
+          <img className="portrait-image" src={profile.photo} alt={`Portrait of ${profile.name}`} />
         </div>
       </div>
+      {children}
     </div>
   );
 }
